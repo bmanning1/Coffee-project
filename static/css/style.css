@@ -1,0 +1,133 @@
+/************ BASE.HTML *************/
+.masthead {
+    background-color: forestgreen;
+}
+.starbex {
+    color: white;
+    font-size: 30px;
+    margin: 20px;
+    padding: 0;
+    height: auto;
+    font-family: 'Indie Flower', cursive;
+}
+.starbex:hover {
+    color: rgba(255,255,255,0.7);
+}
+a.options {
+    color: rgba(255,255,255,0.7);
+}
+body {
+    padding-top: 106px !important;
+}
+.header1 {
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    font-size: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.header1>div>a {
+    color: rgba(255,255,255,0.4);
+}
+.header1>div>a:hover {
+    color: rgba(255,255,255,0.8);
+}
+.nav.nav-pills.pull-left, .nav.nav-pills.pull-right {
+    margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .nav.nav-pills.pull-left>li, .nav.nav-pills.pull-right>li, .nav.nav-pills.pull-right, .nav.nav-pills.pull-left {
+      width: 100%;
+      text-align: center;
+  }
+}
+.collapse.navbar-collapse {
+    padding-right: 5px;
+}
+@media (max-width: 860px) {
+  .glyphicon-user,.glyphicon-log-in {
+      display: none;
+  }
+}
+.mobile-nav {
+    margin-top: 17px;
+}
+h2 {
+    color: #333;
+}
+/************ HOME *************/
+
+/************ ABOUT *************/
+
+/************ PRICES *************/
+.Price-img {
+    background: url('../../media/images/Coffee1.jpg') no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+.Price-img>h2, .Buy-img>h2, .Blog-img>h2, .Forum-img>h2 {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 80px;
+    width: 80%;
+    background-color: rgba(34,138,34,0.7);
+}
+
+
+
+/************ PURCHASES *************/
+.Buy-img {
+    background: url('../../media/images/Coffee2.jpg') no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+/************ BLOG *************/
+.Blog-img {
+    background: url('../../media/images/Coffee3.jpg') no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+/************ FORUM *************/
+.Forum-img {
+    background: url('../../media/images/Coffee2.jpg') no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+/************ CONTACT *************/
+.time {
+    text-align: right;
+}
+.contact-details>tbody>tr>td {
+    border: none;
+}
+/************ PROFILE *************/
+
+/************ LOGIN *************/
+
+/************ LOGOUT *************/
+
+/************ REGISTER *************/

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load coffee_extras %}
+{% block content %}
+
+    <div class="Buy-img"></div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Subscribe</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for coffee in coffees %}
+                <tr>
+                    <td>{{ coffee.name }}</td>
+                    <td>{{ coffee.description }}</td>
+                    <td>${{ coffee.price }}</td>
+                    <td>{% paypal_form_for coffee user %}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

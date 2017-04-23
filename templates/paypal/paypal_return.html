@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Success!</h1>
+    <br/>
+    <p>Your payment of ${{ post.payment_gross }} was paid to {{ post.receiver_email }}</p>
+    <br/>
+    <p>You have now purchased {{ post.item_name }}</p>
+    
+{% endblock %}
+

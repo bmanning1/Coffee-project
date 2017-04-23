@@ -1,0 +1,95 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Starbex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/font-awesome-4.7.0/css/font-awesome.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+    {% block head_js %}{% endblock head_js %}
+
+</head>
+<body>
+
+    <div class="masthead navbar-fixed-top">
+
+        <div class="navbar-header header1">
+            <div class="pull-right">
+                <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-share-alt-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle mobile-nav" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand starbex" href="/"><i class="fa fa-coffee" aria-hidden="true"></i> Starbex</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+            <ul class="nav nav-pills pull-left">
+                <li><a class="options" href="/about/">About</a></li>
+                <li><a class="options" href="/prices/">Prices</a></li>
+                <li><a class="options" href="/coffees/">Buy</a></li>
+                <li><a class="options" href="/blog/">Blog</a></li>
+                <li><a class="options" href="/forum/">Forum</a></li>
+                <li><a class="options" href="/contact/">Contact</a></li>
+            </ul>
+
+            <ul class="nav nav-pills pull-right">
+                {% if user.is_authenticated %}
+                    <li><a class="options" href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+                    <li><a class="options" href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+                {% else %}
+                    <li><a class="options" href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a class="options" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+                {% endif %}
+            </ul>
+        </div>
+
+   </div>
+
+<div class="container">
+
+    {% if messages %}
+        <div class="alert alert-success">
+            <div class="messages">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+   <div class="container">
+       {% block content %}
+       {% endblock %}
+   </div>
+
+   <hr>
+
+   <div class="footer">
+       <p> Rebecca Manning &copy; </p>
+   </div>
+</div>
+</body>
+
+<!-- script references -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js">
+</script>
+
+</html>

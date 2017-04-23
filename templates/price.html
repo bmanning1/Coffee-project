@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load coffee_extras %}
+{% block content %}
+
+    <div class="Price-img">
+        <h2>Price</h2>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for coffee in coffees %}
+                <tr>
+                    <td>{{ coffee.name }}</td>
+                    <td>{{ coffee.description }}</td>
+                    <td>${{ coffee.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
