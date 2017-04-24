@@ -41,9 +41,12 @@ body {
       text-align: center;
   }
 }
-.collapse.navbar-collapse {
-    padding-right: 5px;
+@media (min-width: 600px) {
+  .collapse.navbar-collapse {
+     padding-right: 5px;
+  }
 }
+
 @media (max-width: 860px) {
   .glyphicon-user,.glyphicon-log-in {
       display: none;
@@ -58,7 +61,22 @@ h2 {
 /************ HOME *************/
 
 /************ ABOUT *************/
-
+img.members {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    border: thick forestgreen solid;
+}
+.about-members {
+    margin-top: 30px;
+}
+.about-members>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 /************ PRICES *************/
 .Price-img {
     background: url('../../media/images/Coffee1.jpg') no-repeat;
@@ -70,6 +88,11 @@ h2 {
     justify-content: center;
     align-items: flex-end;
     text-align: center;
+}
+@media (max-width: 600px) {
+  .Price-img,.Blog-img,.Forum-img,.Buy-img {
+     height: 250px;
+  }
 }
 .Price-img>h2, .Buy-img>h2, .Blog-img>h2, .Forum-img>h2 {
     color: white;
@@ -83,7 +106,7 @@ h2 {
 
 /************ PURCHASES *************/
 .Buy-img {
-    background: url('../../media/images/Coffee2.jpg') no-repeat;
+    background: url('../../media/images/Coffee3.jpg') no-repeat;
     width: 100%;
     height: 350px;
     background-size: cover;
