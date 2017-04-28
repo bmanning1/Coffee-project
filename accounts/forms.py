@@ -14,9 +14,17 @@ class UserRegistrationForm(UserCreationForm):
         widget=forms.PasswordInput
     )
 
+    first_name = forms.CharField(
+        label='First Name',
+    )
+
+    last_name = forms.CharField(
+        label='Last Name',
+    )
+
     class Meta:
         model = User
-        fields = ['email', 'password1', 'password2']
+        fields = ['email', 'password1', 'password2', 'first_name', 'last_name']
         exclude = ['username']
 
     def clean_password2(self):

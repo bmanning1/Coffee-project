@@ -59,7 +59,9 @@ h2 {
     color: #333;
 }
 /************ HOME *************/
-
+.carousel-inner, #myCarousel {
+    height: 400px;
+}
 /************ ABOUT *************/
 img.members {
     width: 180px;
@@ -91,7 +93,7 @@ img.members {
 }
 @media (max-width: 600px) {
   .Price-img,.Blog-img,.Forum-img,.Buy-img {
-     height: 250px;
+     height: 250px !important;
   }
 }
 .Price-img>h2, .Buy-img>h2, .Blog-img>h2, .Forum-img>h2 {
@@ -101,8 +103,11 @@ img.members {
     width: 80%;
     background-color: rgba(34,138,34,0.7);
 }
-
-
+@media (max-width: 600px) {
+  .Price-img>h2 {
+     font-size: 60px;
+  }
+}
 
 /************ PURCHASES *************/
 .Buy-img {
@@ -116,6 +121,33 @@ img.members {
     align-items: flex-end;
     text-align: center;
 }
+@media (max-width: 600px) {
+  .Buy-img>h2 {
+     font-size: 60px;
+  }
+}
+@media (max-width: 321px) {
+  .Buy-img>h2, .Forum-img>h2 {
+     font-size: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .Subscribe-paypal>form>input {
+     width: 100px;
+  }
+}
+.Subscribe-paypal {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 450px) {
+  .Coffee-description {
+     display: none;
+  }
+}
+.Subscribe-label {
+    text-align: center !important;
+}
 /************ BLOG *************/
 .Blog-img {
     background: url('../../media/images/Coffee3.jpg') no-repeat;
@@ -127,6 +159,15 @@ img.members {
     justify-content: center;
     align-items: flex-end;
     text-align: center;
+}
+.btn {
+    background-color: forestgreen;
+    background-image: none;
+    color: white;
+    border: none;
+}
+.btn:hover {
+    background-color: rgba(34, 139, 34, 0.7);
 }
 /************ FORUM *************/
 .Forum-img {
@@ -140,6 +181,115 @@ img.members {
     align-items: flex-end;
     text-align: center;
 }
+.subject {
+    text-align: center;
+}
+.subject-name>a {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    width: 40%;
+    background-color: rgba(34,138,34,0.6);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.subject-name>a:hover {
+    color: white;
+    background-color: rgba(34,138,34,0.9);
+}
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 0px !important;
+    background-size: cover;
+    background-position: 0% 50%;
+    padding-bottom: 30px !important;
+    background: url('../../media/images/Coffee7.jpg') no-repeat;
+
+}
+.jumbotron>h1 {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(34,138,34,0.7);
+}
+.forum-thread>section>header>table>tbody>tr>td>a>h4 {
+    color: #333333;
+}
+.forum-thread {
+    text-align: center;
+}
+.forum-thread>section>header>table {
+    width: 100%;
+}
+.thread-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.progress-bar-info {
+    background-color: forestgreen;
+}
+.poll {
+    width: 100%;
+    padding-top: 10px;
+}
+@media (max-width: 600px) {
+  .poll {
+     padding-top: 40px;
+  }
+}
+.poll-title {
+    margin: 0 0 5px 0;
+}
+.thread-image {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    background: url('../../media/images/User.jpg') no-repeat;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 100%;
+}
+@media (max-width: 600px) {
+  .thread-image {
+     margin: 0 auto;
+  }
+}
+.thread-image>div>p {
+    margin: 0;
+}
+.posts {
+    padding-top: 20px;
+}
+@media (max-width: 600px) {
+  .posts {
+     text-align: center;
+  }
+}
+.poll>div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.align-center {
+    text-align: center;
+}
+.thread-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.thread-btn>a {
+    margin: 5px;
+}
 /************ CONTACT *************/
 .time {
     text-align: right;
@@ -147,8 +297,89 @@ img.members {
 .contact-details>tbody>tr>td {
     border: none;
 }
+@media (max-width: 321px) {
+  iframe {
+     height: 300px;
+  }
+}
 /************ PROFILE *************/
-
+.Profile-img {
+    background: url('../../media/images/Coffee4.jpg') no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+@media (max-width: 600px) {
+  .Profile-img {
+     height: 300px;
+  }
+}
+.Profile-img>h2 {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 80px;
+    width: 80%;
+    background-color: rgba(139, 69, 19, 0.6);
+}
+@media (max-width: 600px) {
+  .Profile-img>h2 {
+     font-size: 50px;
+  }
+}
+@media (max-width: 321px) {
+  .Profile-img>h2 {
+     font-size: 42px;
+  }
+}
+@media (max-width: 321px) {
+  .Profile-img {
+     height: 280px;
+  }
+}
+.topup-btn {
+    background-color: rgba(139, 69, 19, 0.6);
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.topup-btn:hover {
+    background-color: rgba(139, 69, 19, 0.9);
+}
+.num-coffees {
+    background: url('../../media/images/Coffee12.jpg') no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: 43% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 100%;
+}
+.num-coffees>div {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 80px;
+}
+.Coffees-left {
+    text-align: center;
+}
+.Profile-info {
+    text-align: center;
+}
+.alert-success {
+    margin: 0 0 0 15px;
+    width: 100%;
+    border-radius: 0;
+}
 /************ LOGIN *************/
 
 /************ LOGOUT *************/

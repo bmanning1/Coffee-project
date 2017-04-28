@@ -10,18 +10,18 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Description</th>
+                <th class="Coffee-description">Description</th>
                 <th>Price</th>
-                <th>Subscribe</th>
+                <th class="Subscribe-label">Subscribe</th>
             </tr>
         </thead>
         <tbody>
             {% for coffee in coffees %}
                 <tr>
                     <td>{{ coffee.name }}</td>
-                    <td>{{ coffee.description }}</td>
-                    <td>${{ coffee.price }}</td>
-                    <td>{% paypal_form_for coffee user %}</td>
+                    <td class="Coffee-description">{{ coffee.description }}</td>
+                    <td>£{{ coffee.price }}</td>
+                    <td class="Subscribe-paypal">{% paypal_form_for coffee user %}</td>
                 </tr>
             {% endfor %}
         </tbody>

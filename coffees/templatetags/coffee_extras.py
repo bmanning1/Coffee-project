@@ -12,7 +12,7 @@ def paypal_form_for(coffee, user):
     else:
         paypal_dict = {
             "business": settings.PAYPAL_RECEIVER_EMAIL,
-            "currency_code": "USD",
+            "currency_code": "GBP",
             "cmd": "_xclick-subscriptions",
             "a3": coffee.price,
             "p3": 1,

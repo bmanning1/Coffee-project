@@ -4,14 +4,29 @@
  <div class="row header">
    <div class="jumbotron"><h1>{{ subject.name }}</h1></div>
  </div>
- <div class="col-md-12">
+
+ <div class="thread-content">
+    <p><a href="/forum/"><b>Forum</b></a> | <b>Subject:</b> {{ subject.name }}</p>
+
+ <table class="table table-striped">
+        <tbody>
+            {% for thread in subject.threads.all %}
+                <tr>
+                    <td class="forum-thread">{% include "forum/thread_item.html" %}
+                        <p><b>Created:</b>
+                            <time datetime="{{ thread.created_at }}">
+                                {{ thread.created_at|started_time }}
+                            </time>
+                        </p></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
    {% if user.is_authenticated %}
      <p>
-       <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
+        <a href="/forum/" class="btn btn-primary">Back</a>
+        <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
      </p>
    {% endif %}
-   {% for thread in subject.threads.all %}
-     {% include "forum/thread_item.html" %}
-   {% endfor %}
  </div>
 {% endblock %}

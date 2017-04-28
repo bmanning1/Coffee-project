@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
-    <p>You are logged in as *create a name bit on the log in form* {{ user.name }} </p>
+
+    <div class="Profile-img">
+            <div class="Coffees-left">
+                <div class="num-coffees">
+                    <div>23</div>
+                </div>
+            </div>
+            <h2>Star-{{ user.first_name }}</h2>
+        </div>
+
+    <div class="col-sm-2"></div>
+    <div class="Profile-info col-sm-8">
+        <h2>Welcome</h2>
+        <p>You are logged in as {{ user.email }} </p>
+        <p>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex profile</p>
+
+
+        <h2> 23 Coffees left for the month</h2>
+        <a href="/coffees/" class="btn btn-primary topup-btn">Top up your coffees</a>
+
+        <p>Come visit soon, We can't wait to see you!</p>
+    </div>
+
+    <div class="col-sm-2"></div>
 {% endblock %}

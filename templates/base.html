@@ -51,7 +51,7 @@
 
             <ul class="nav nav-pills pull-right">
                 {% if user.is_authenticated %}
-                    <li><a class="options" href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+                    <li><a class="options" href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                     <li><a class="options" href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
                 {% else %}
                     <li><a class="options" href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
@@ -82,7 +82,7 @@
    <hr>
 
    <div class="footer">
-       <p> Rebecca Manning &copy; </p>
+       <p> Rebecca Manning &copy; <i>Coffee-righted</i></p>
    </div>
 </div>
 </body>
