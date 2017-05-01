@@ -58,6 +58,36 @@ body {
 h2 {
     color: #333;
 }
+body>.container>.container {
+    margin: 0;
+    padding: 0;
+}
+@media (min-width: 768px) {
+    body>.container {
+        width: 80%;
+    }
+    body>.container>.container {
+        width: 100%;
+    }
+}
+@media (min-width: 1400px) {
+    body>.container {
+        width: 70%;
+    }
+    body>.container>.container {
+        width: 100%;
+    }
+}
+a {
+    color: #333333;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+.icon-bar {
+    background-color: white;
+}
 /************ HOME *************/
 .carousel-inner, #myCarousel {
     height: 400px;
@@ -91,9 +121,9 @@ img.members {
     align-items: flex-end;
     text-align: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .Price-img,.Blog-img,.Forum-img,.Buy-img {
-     height: 250px !important;
+     height: 170px !important;
   }
 }
 .Price-img>h2, .Buy-img>h2, .Blog-img>h2, .Forum-img>h2 {
@@ -108,7 +138,15 @@ img.members {
      font-size: 60px;
   }
 }
-
+.buypagelink {
+    background-color: rgb(34, 139, 34);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+.buypagelink>a {
+    color: white;
+    text-decoration: underline;
+}
 /************ PURCHASES *************/
 .Buy-img {
     background: url('../../media/images/Coffee3.jpg') no-repeat;
@@ -148,17 +186,100 @@ img.members {
 .Subscribe-label {
     text-align: center !important;
 }
+.contactstarb {
+    font-family: 'Indie Flower', cursive;
+    background-color: rgba(139, 69, 19, 0.6) !important;
+}
+.contactstarb:hover {
+    background-color: rgba(139, 69, 19, 0.8) !important;
+}
+.querycontact {
+    padding: 20px;
+    color: white;
+    background-color: rgba(139, 69, 19, 0.6);
+    width: 50%;
+    margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .querycontact {
+      width: 100%;
+  }
+}
 /************ BLOG *************/
 .Blog-img {
-    background: url('../../media/images/Coffee3.jpg') no-repeat;
+    background: url('../../media/images/Coffee9.jpg') no-repeat;
     width: 100%;
     height: 350px;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 0%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     text-align: center;
+}
+@media (max-width: 600px) {
+  .Blog-img>h2 {
+     font-size: 60px;
+  }
+}
+.Blogpost-img {
+    background: url('../../media/images/Coffee8.jpg');
+    width: 80%;
+    height: 200px;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    margin: 0 auto;
+}
+.Blogpost-img>a,.Blogpost-img>h2 {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    width: 80%;
+    background-color: rgba(139, 69, 19, 0.8);
+    margin: 0 auto;
+}
+.blog-post {
+    text-align: center;
+}
+.blogpostpage-img {
+    width: 100% !important;
+}
+.blogpostpage-img2 {
+    height: 350px !important;
+}
+@media (max-width: 600px) {
+  .blogpostpage-img2 {
+     height: 250px !important;
+  }
+}
+.news-info {
+    background-color: rgba(139, 69, 19, 0.6);
+    color: rgba(255,255,255,0.7);
+    padding: 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+.news-info>b>a {
+    color: white;
+}
+.blogpost-summary {
+    width: 60%;
+    margin: 10px auto;
+}
+@media (max-width: 900px) {
+  .blogpost-summary {
+     width: 80%;
+  }
+}
+.read-moreblog {
+    background-color: rgba(139, 69, 19, 0.8) !important;
+}
+.read-moreblog:hover {
+    background-color: rgba(139, 69, 19, 1) !important;
 }
 .btn {
     background-color: forestgreen;
@@ -180,6 +301,11 @@ img.members {
     justify-content: center;
     align-items: flex-end;
     text-align: center;
+}
+@media (max-width: 600px) {
+  .Forum-img>h2 {
+     font-size: 60px;
+  }
 }
 .subject {
     text-align: center;
@@ -258,7 +384,7 @@ img.members {
     font-size: 30px;
     border-radius: 100%;
 }
-@media (max-width: 600px) {
+@media (max-width: 991px) {
   .thread-image {
      margin: 0 auto;
   }
@@ -268,8 +394,9 @@ img.members {
 }
 .posts {
     padding-top: 20px;
+    padding-bottom: 20px;
 }
-@media (max-width: 600px) {
+@media (max-width: 991px) {
   .posts {
      text-align: center;
   }
@@ -285,10 +412,33 @@ img.members {
 .thread-btn {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+}
+@media (max-width: 991px) {
+  .thread-btn {
+     justify-content: center;
+  }
 }
 .thread-btn>a {
-    margin: 5px;
+    margin: 5px 5px 20px 5px
+}
+.btn-default:hover {
+    color: white;
+}
+.btn-vote {
+    width: auto;
+    font-family: 'Indie Flower', cursive;
+    margin: 3px;
+}
+.btn-vote>a {
+    background-color: rgba(34, 139, 34, 0.8) !important;
+}
+.btn-vote>a:hover {
+    background-color: forestgreen !important;
+}
+.forum-header {
+    width: 100%;
+    margin: 0;
 }
 /************ CONTACT *************/
 .time {
@@ -376,12 +526,55 @@ img.members {
     text-align: center;
 }
 .alert-success {
-    margin: 0 0 0 15px;
+    margin: 0;
     width: 100%;
     border-radius: 0;
+    text-align: center;
+}
+.center-form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.box {
+    display: none;
+    width: 320px;
+    height: 192px;
+    padding: 0;
+    overflow: hidden;
+    bottom: 20px;
+    right: 20px;
+    border: thick solid rgba(34, 139, 34, 0.7);
+    border-radius: 10px;
+}
+.iframe-box {
+    width: 1280px;
+    height: 786px;
+
+    zoom: 0.75;
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    transform: scale(0.338);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
 /************ LOGIN *************/
-
+.login {
+    padding-top: 30px;
+}
+@media (max-width: 500px) {
+  .login {
+     text-align: center;
+  }
+}
 /************ LOGOUT *************/
 
 /************ REGISTER *************/

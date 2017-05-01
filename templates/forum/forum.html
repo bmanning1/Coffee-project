@@ -5,11 +5,18 @@
     <div class="Forum-img">
         <h2>Forum</h2>
     </div>
-
+<br>
+<p class="text-center">
+    Welcome to the forum page where all you questions will be answered.
+    Create new threads, comment and even answer polls.
+    ...go on, start exploring!
+</p>
    {% load bootstrap_tags %}
    {% for subject in subjects %}
+<hr>
        <section class="subject">
-           <h2 class="subject-name"><a href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
+           <h2 class="subject-name"><a class="backforum-btn" href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
+           <div class="box"><iframe class="iframe-box" src="{% url "threads" subject.id %}"></iframe></div>
            <p>
                <a href="{% url "threads" subject.id %}">
                    {% autoescape off %}{{ subject.description }}{% endautoescape %}

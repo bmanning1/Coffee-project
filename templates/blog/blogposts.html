@@ -1,0 +1,49 @@
+{% extends "blog/blogbase.html" %}
+
+
+{% block blogtitle %}
+<div class="Blog-img">
+    <h2>Blog</h2>
+</div>
+{% endblock %}
+
+
+{% block blogcontent %}
+    <br>
+ <p class="text-center">
+     Come check out our blogs below! Get involved with the local community and
+     share your views by leaving a comment.
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+ </p>
+
+{% for post in posts %}
+    <hr>
+<div class="Blogpost-img" {% if post.image %}
+     style="background: url('/media/{{ post.image }}')" {% endif %}>
+    <a href={{ post.id }}>{{ post.title }}</a>
+</div>
+<div class="news-info">{{ post.published_date }} |
+    <strong>Views</strong> {{ post.views }} |
+    <strong>Tag</strong> {{ post.tag }}</div>
+
+
+<article class="col-md-12 blog-post">
+<div class="blogpost-summary">
+<p>{{ post.content|truncatewords:40 }}</p>
+</div>
+
+<a class="read-moreblog btn btn-primary" href={{ post.id }}>Read More</a>
+<hr>
+</article>
+{% endfor %}
+
+    <p class="text-center">One of our key aims is to get the community involved with one another. We write these
+    blogs to share interesting facts and opinions on coffee for you to talk about with other regulars. So please feel free to comment on the blogs!</p>
+    <hr>
+    <p class="text-center querycontact">
+    Got an idea for a good blog? Want to have a part on our website?
+        Share you idea below and email it over to our team!
+    <br><br>
+        <a class="btn btn-primary contactstarb" href="mailto:contact@starbex.co.uk">contact@starbex.co.uk</a></p>
+
+{% endblock %}

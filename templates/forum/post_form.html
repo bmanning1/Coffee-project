@@ -12,13 +12,14 @@
 </script>
 {% endblock %}
 {% block content %}
- <section>
+ <section class="center-form">
    <div class="col-md-9">
      <form method="post" action="{{ form_action }}">
        {% csrf_token %}
        {{ form|as_bootstrap }}
        <div class="form-group">
-         <button type="submit" class="btn btn-primary">{{button_text}}</button>
+           <a class="btn btn-primary" href="javascript:history.back()">Back</a>
+            <button type="submit" class="btn btn-primary">{{button_text}}</button>
        </div>
      </form>
    </div>

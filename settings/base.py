@@ -42,12 +42,12 @@ INSTALLED_APPS = [
     'paypal_store',
     'paypal.standard.ipn',
     'coffees',
-    'reusable_blog',
     'disqus',
     'tinymce',
     'emoticons',
     'threads',
     'polls',
+    'blog',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -138,4 +138,4 @@ MEDIA_URL = '/media/'
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
 
 # disqus
-DISQUS_WEBSITE_SHORTNAME = 'Starbex'
+DISQUS_WEBSITE_SHORTNAME = 'starbex'

@@ -1,7 +1,7 @@
 {% load thread_extras %}
 <div class="details">
    <div class="col-md-9">
-       <div class="pull-left">
+       <div>
            <time datetime="{{ post.created_at }}">
               <p><i><b>{{ post.user.first_name }} {{ post.user.last_name }}</b>
                | <b>Posted:</b> {{ post.created_at|started_time }} </i></p>
