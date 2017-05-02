@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_34saw!bco()q8$4(_5iyik-+nmr+u7jrsfywjq)guc9+j%==c'
 
-ALLOWED_HOSTS = ['127.0.0.1', '10346756.ngrok.io']
+ALLOWED_HOSTS = ['127.0.0.1', '10346756.ngrok.io', 'starbex.herokuapp.com']
 SITE_ID = 3
 
 # Application definition

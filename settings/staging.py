@@ -10,6 +10,6 @@ DATABASES = {
 }
 
 # Paypal environment variables
-SITE_URL = '<your Heroku URL>'
-PAYPAL_NOTIFY_URL = '<your Heroku URL>/a-very-hard-to-guess-url/'
-PAYPAL_RECEIVER_EMAIL = '<your PayPal merchant>'
+SITE_URL = 'starbex.herokuapp.com'
+PAYPAL_NOTIFY_URL = 'starbex.herokuapp.com/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'rebm01-facilitator@hotmail.co.uk'
