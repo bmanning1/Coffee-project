@@ -16,3 +16,4 @@ stripe
 gunicorn==19.4
 dj-database-url==0.2.1
 whitenoise==3.2
+debug_toolbar.middleware
