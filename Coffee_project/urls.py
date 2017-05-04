@@ -31,7 +31,6 @@ urlpatterns = [
     url(r'^$', views.get_index),
     url(r'^about/$', views.get_about),
     url(r'^contact/$', views.get_contact),
-    # url(r'^prices/$', views.get_price),
 
     # Auth URLs
     # url(r'^pages/', include('django.contrib.flatpages.urls')),

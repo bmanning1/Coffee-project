@@ -6,7 +6,7 @@ def get_index(request):
 
 
 def get_about(request):
-    return render(request, 'about.html')
+    return render(request, 'About.html')
 
 
 def get_contact(request):
