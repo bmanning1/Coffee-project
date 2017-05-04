@@ -17,7 +17,7 @@ a.options {
     color: rgba(255,255,255,0.7);
 }
 body {
-    padding-top: 106px !important;
+    padding-top: 100px !important;
     background-color: gainsboro;;
 }
 .container {
@@ -540,6 +540,7 @@ img.members {
     width: 100%;
     border-radius: 0;
     text-align: center;
+    padding-top: 25px;
 }
 .center-form {
     display: flex;

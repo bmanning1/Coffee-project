@@ -12,6 +12,3 @@ def get_about(request):
 def get_contact(request):
     return render(request, 'contact.html')
 
-# def get_price(request):
-  #   coffees = Coffee.objects.all()
-    # return render(request, "coffees/price.html", {"coffees": coffees})
