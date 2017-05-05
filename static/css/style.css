@@ -102,6 +102,12 @@ a:hover {
 .icon-bar {
     background-color: white;
 }
+.hr-footer {
+    margin: 20px 0 10px 0;
+}
+.footer>p {
+    font-size: 11px;
+}
 /************ HOME *************/
 .home-announcements {
     font-family: 'Indie Flower', cursive;
