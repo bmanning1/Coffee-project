@@ -12,7 +12,7 @@
     font-family: 'Indie Flower', cursive;
 }
 
-.starbex:hover {
+.starbex:hover, .starbex:focus {
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -53,7 +53,7 @@ body {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.header1 > div > a:hover {
+.header1 > div > a:hover, .header1 > div > a:focus{
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -118,7 +118,7 @@ a {
     color: #333333;
 }
 
-a:hover {
+a:hover, a:focus {
     text-decoration: none;
     color: black;
 }
@@ -282,7 +282,7 @@ img.members {
     background-color: rgba(139, 69, 19, 0.6) !important;
 }
 
-.contactstarb:hover {
+.contactstarb:hover, .contactstarb:focus {
     background-color: rgba(139, 69, 19, 0.8) !important;
 }
 
@@ -395,7 +395,7 @@ img.members {
     background-color: rgba(139, 69, 19, 0.8) !important;
 }
 
-.read-moreblog:hover {
+.read-moreblog:hover, .read-moreblog:focus {
     background-color: rgba(139, 69, 19, 1) !important;
 }
 
@@ -406,7 +406,7 @@ img.members {
     border: none;
 }
 
-.btn:hover {
+.btn:hover, btn:focus {
     background-color: rgba(34, 139, 34, 0.7);
 }
 
@@ -446,7 +446,7 @@ img.members {
     padding-right: 5%;
 }
 
-.subject-name > a:hover {
+.subject-name > a:hover, .subject-name > a:focus {
     color: white;
     background-color: rgba(34, 138, 34, 0.9);
 }
@@ -571,7 +571,7 @@ img.members {
     margin: 5px 5px 20px 5px
 }
 
-.btn-default:hover {
+.btn-default:hover, .btn-default:focus {
     color: white;
 }
 
@@ -585,7 +585,7 @@ img.members {
     background-color: rgba(34, 139, 34, 0.8) !important;
 }
 
-.btn-vote > a:hover {
+.btn-vote > a:hover, .btn-vote > a:focus {
     background-color: forestgreen !important;
 }
 
@@ -663,7 +663,7 @@ img.members {
     margin-bottom: 20px;
 }
 
-.topup-btn:hover {
+.topup-btn:hover, .topup-btn:focus {
     background-color: rgba(139, 69, 19, 0.9);
 }
 
