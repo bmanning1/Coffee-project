@@ -107,8 +107,13 @@ a:hover {
     font-family: 'Indie Flower', cursive;
     font-size: 20px;
 }
+@media (max-width: 500px) {
+  .home-announcements {
+      font-size: 16px;
+  }
+}
 .home-info {
-    padding: 20px 0;
+    padding: 20px 2%;
 }
 @media (min-width: 768px) {
   .home-info {
@@ -116,7 +121,7 @@ a:hover {
   }
 }
 .home-title {
-    font-size: 50px;
+    font-size: 60px;
     font-family: 'Indie Flower', cursive;
     margin-top: 25px;
 }

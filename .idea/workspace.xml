@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="477dfe14-030e-4ea4-abdd-8e3b3df18029" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +35,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+            <state relative-caret-position="340">
+              <caret line="117" column="10" lean-forward="false" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -1024,8 +1023,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+        <state relative-caret-position="340">
+          <caret line="117" column="10" lean-forward="false" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
           <folding />
         </state>
       </provider>
