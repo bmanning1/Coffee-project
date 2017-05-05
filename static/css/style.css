@@ -2,6 +2,7 @@
 .masthead {
     background-color: forestgreen;
 }
+
 .starbex {
     color: white;
     font-size: 28px;
@@ -10,127 +11,158 @@
     height: auto;
     font-family: 'Indie Flower', cursive;
 }
+
 .starbex:hover {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
+
 a.options {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
+
 body {
     padding-top: 80px !important;
     background-color: gainsboro;;
 }
+
 @media (min-width: 768px) {
     body {
         font-size: 13px;
     }
 }
+
 .container {
     background-color: white;
 }
+
 .header1 {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     font-size: 25px;
     padding-right: 10px;
     padding-left: 10px;
 }
+
 @media (min-width: 768px) {
     .header1 {
         font-size: 20px;
     }
 }
-.header1>div>a {
-    color: rgba(255,255,255,0.4);
+
+.header1 > div > a {
+    color: rgba(255, 255, 255, 0.4);
 }
-.header1>div>a:hover {
-    color: rgba(255,255,255,0.8);
+
+.header1 > div > a:hover {
+    color: rgba(255, 255, 255, 0.8);
 }
+
 .nav.nav-pills.pull-left, .nav.nav-pills.pull-right {
     margin-top: 20px;
 }
+
 @media (max-width: 600px) {
-  .nav.nav-pills.pull-left>li, .nav.nav-pills.pull-right>li, .nav.nav-pills.pull-right, .nav.nav-pills.pull-left {
-      width: 100%;
-      text-align: center;
-  }
+    .nav.nav-pills.pull-left > li, .nav.nav-pills.pull-right > li, .nav.nav-pills.pull-right, .nav.nav-pills.pull-left {
+        width: 100%;
+        text-align: center;
+    }
 }
+
 @media (min-width: 600px) {
-  .collapse.navbar-collapse {
-     padding-right: 5px;
-  }
+    .collapse.navbar-collapse {
+        padding-right: 5px;
+    }
 }
+
 @media (min-width: 768px) {
-  .collapse.navbar-collapse {
+    .collapse.navbar-collapse {
         -moz-box-shadow: 0 0 30px 5px rgba(52, 52, 52, 0.5);
         -webkit-box-shadow: 0 0 30px 5px rgba(52, 52, 52, 0.5);
     }
 }
+
 @media (max-width: 860px) {
-  .glyphicon-user,.glyphicon-log-in {
-      display: none;
-  }
+    .glyphicon-user, .glyphicon-log-in {
+        display: none;
+    }
 }
+
 .mobile-nav {
     margin-top: 17px;
 }
+
 h2 {
     color: #333;
 }
-body>.container>.container {
+
+body > .container > .container {
     margin: 0;
     padding: 0;
 }
-body>.container {
+
+body > .container {
     padding-top: 15px;
 }
+
 @media (min-width: 768px) {
-    body>.container {
+    body > .container {
         width: 80%;
     }
-    body>.container>.container {
+
+    body > .container > .container {
         width: 100%;
     }
 }
+
 a {
     color: #333333;
 }
+
 a:hover {
     text-decoration: none;
     color: black;
 }
+
 .icon-bar {
     background-color: white;
 }
+
 .hr-footer {
     margin: 20px 0 10px 0;
 }
-.footer>p {
+
+.footer > p {
     font-size: 11px;
 }
+
 /************ HOME *************/
 .home-announcements {
     font-family: 'Indie Flower', cursive;
     font-size: 20px;
 }
+
 @media (max-width: 500px) {
-  .home-announcements {
-      font-size: 16px;
-  }
+    .home-announcements {
+        font-size: 16px;
+    }
 }
+
 .home-info {
     padding: 20px 2%;
 }
+
 @media (min-width: 768px) {
-  .home-info {
-     padding: 20px 20%;
-  }
+    .home-info {
+        padding: 20px 20%;
+    }
 }
+
 .home-title {
     font-size: 60px;
     font-family: 'Indie Flower', cursive;
     margin-top: 25px;
 }
+
 /************ ABOUT *************/
 img.members {
     width: 180px;
@@ -138,16 +170,19 @@ img.members {
     border-radius: 100px;
     border: thick forestgreen solid;
 }
+
 .about-members {
     margin-top: 30px;
 }
-.about-members>div {
+
+.about-members > div {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
 /************ PRICES *************/
 .Price-img {
     background: url('../../media/images/Coffee1.jpg') no-repeat;
@@ -160,31 +195,41 @@ img.members {
     align-items: flex-end;
     text-align: center;
 }
+
 @media (max-width: 750px) {
-  .Price-img,.Blog-img,.Forum-img,.Buy-img {
-     height: 170px !important;
-  }
+    .Price-img, .Blog-img, .Forum-img, .Buy-img {
+        height: 170px !important;
+    }
 }
-.Price-img>h2, .Buy-img>h2, .Blog-img>h2, .Forum-img>h2 {
+
+.Price-img > h2, .Buy-img > h2, .Blog-img > h2, .Forum-img > h2 {
     color: white;
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
     width: 80%;
-    background-color: rgba(34,138,34,0.7);
+    background-color: rgba(34, 138, 34, 0.7);
 }
+
 @media (max-width: 600px) {
-  .Price-img>h2 {
-     font-size: 60px;
-  }
+    .Price-img > h2 {
+        font-size: 60px;
+    }
 }
+
 .buypagelink {
     background-color: rgb(34, 139, 34);
     color: rgba(255, 255, 255, 0.6);
     padding: 20px;
 }
-.buypagelink>a {
+
+.buypagelink > a {
     color: white;
     text-decoration: underline;
+}
+
+.stretch {
+    width: calc(100% + 30px);
+    margin-left: -15px;
 }
 /************ PURCHASES *************/
 .Buy-img {
@@ -198,40 +243,49 @@ img.members {
     align-items: flex-end;
     text-align: center;
 }
+
 @media (max-width: 600px) {
-  .Buy-img>h2 {
-     font-size: 60px;
-  }
+    .Buy-img > h2 {
+        font-size: 60px;
+    }
 }
+
 @media (max-width: 321px) {
-  .Buy-img>h2, .Forum-img>h2 {
-     font-size: 50px;
-  }
+    .Buy-img > h2, .Forum-img > h2 {
+        font-size: 50px;
+    }
 }
+
 @media (max-width: 450px) {
-  .Subscribe-paypal>form>input {
-     width: 100px;
-  }
+    .Subscribe-paypal > form > input {
+        width: 100px;
+    }
 }
+
 .Subscribe-paypal {
     display: flex;
     justify-content: center;
 }
+
 @media (max-width: 450px) {
-  .Coffee-description {
-     display: none;
-  }
+    .Coffee-description {
+        display: none;
+    }
 }
+
 .Subscribe-label {
     text-align: center !important;
 }
+
 .contactstarb {
     font-family: 'Indie Flower', cursive;
     background-color: rgba(139, 69, 19, 0.6) !important;
 }
+
 .contactstarb:hover {
     background-color: rgba(139, 69, 19, 0.8) !important;
 }
+
 .querycontact {
     padding: 20px;
     color: white;
@@ -239,18 +293,22 @@ img.members {
     width: 50%;
     margin: 0 auto;
 }
+
 @media (max-width: 600px) {
-  .querycontact {
-      width: 100%;
-  }
+    .querycontact {
+        width: 100%;
+    }
 }
+
 .modal-body {
     height: 25em;
     overflow-y: scroll
 }
+
 .modal-footer {
     padding: 10px 20px;
 }
+
 /************ BLOG *************/
 .Blog-img {
     background: url('../../media/images/Coffee2.jpg') no-repeat;
@@ -263,11 +321,13 @@ img.members {
     align-items: flex-end;
     text-align: center;
 }
+
 @media (max-width: 600px) {
-  .Blog-img>h2 {
-     font-size: 60px;
-  }
+    .Blog-img > h2 {
+        font-size: 60px;
+    }
 }
+
 .Blogpost-img {
     background: url('../../media/images/Coffee8.jpg');
     width: 80%;
@@ -280,7 +340,8 @@ img.members {
     text-align: center;
     margin: 0 auto;
 }
-.Blogpost-img>a,.Blogpost-img>h2 {
+
+.Blogpost-img > a, .Blogpost-img > h2 {
     color: white;
     font-family: 'Indie Flower', cursive;
     font-size: 40px;
@@ -288,57 +349,71 @@ img.members {
     background-color: rgba(139, 69, 19, 0.8);
     margin: 0 auto;
 }
+
 .blog-post {
     text-align: center;
 }
+
 .blogpostpage-img {
     width: 100% !important;
 }
+
 .blogpostpage-img2 {
     height: 350px !important;
 }
+
 @media (max-width: 600px) {
-  .blogpostpage-img2 {
-     height: 250px !important;
-  }
+    .blogpostpage-img2 {
+        height: 250px !important;
+    }
 }
+
 .news-info {
     background-color: rgba(139, 69, 19, 0.6);
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     padding: 5px;
     width: 80%;
     margin: 0 auto;
 }
-.news-info>b>a {
+
+.news-info > b > a {
     color: white;
 }
+
 .blogpost-summary {
     width: 60%;
     margin: 10px auto;
 }
+
 @media (max-width: 900px) {
-  .blogpost-summary {
-     width: 80%;
-  }
+    .blogpost-summary {
+        width: 80%;
+    }
 }
+
 .read-moreblog {
     background-color: rgba(139, 69, 19, 0.8) !important;
 }
+
 .read-moreblog:hover {
     background-color: rgba(139, 69, 19, 1) !important;
 }
+
 .btn {
     background-color: forestgreen;
     background-image: none;
     color: white;
     border: none;
 }
+
 .btn:hover {
     background-color: rgba(34, 139, 34, 0.7);
 }
+
 .blogsearch {
     margin-top: 20px;
 }
+
 /************ FORUM *************/
 .Forum-img {
     background: url('../../media/images/Coffee9.jpg') no-repeat;
@@ -351,26 +426,31 @@ img.members {
     align-items: flex-end;
     text-align: center;
 }
+
 @media (max-width: 600px) {
-  .Forum-img>h2 {
-     font-size: 60px;
-  }
+    .Forum-img > h2 {
+        font-size: 60px;
+    }
 }
+
 .subject {
     text-align: center;
 }
-.subject-name>a {
+
+.subject-name > a {
     color: white;
     font-family: 'Indie Flower', cursive;
     width: 40%;
-    background-color: rgba(34,138,34,0.6);
+    background-color: rgba(34, 138, 34, 0.6);
     padding-left: 5%;
     padding-right: 5%;
 }
-.subject-name>a:hover {
+
+.subject-name > a:hover {
     color: white;
-    background-color: rgba(34,138,34,0.9);
+    background-color: rgba(34, 138, 34, 0.9);
 }
+
 .jumbotron {
     display: flex;
     justify-content: center;
@@ -382,42 +462,52 @@ img.members {
     background: url('../../media/images/Coffee7.jpg') no-repeat;
 
 }
-.jumbotron>h1 {
+
+.jumbotron > h1 {
     color: white;
     font-family: 'Indie Flower', cursive;
     width: 80%;
     text-align: center;
-    background-color: rgba(34,138,34,0.7);
+    background-color: rgba(34, 138, 34, 0.7);
 }
-.forum-thread>section>header>table>tbody>tr>td>a>h4 {
+
+.forum-thread > section > header > table > tbody > tr > td > a > h4 {
     color: #333333;
 }
+
 .forum-thread {
     text-align: center;
 }
-.forum-thread>section>header>table {
+
+.forum-thread > section > header > table {
     width: 100%;
 }
+
 .thread-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .progress-bar-info {
     background-color: forestgreen;
 }
+
 .poll {
     width: 100%;
     padding-top: 10px;
 }
+
 @media (max-width: 600px) {
-  .poll {
-     padding-top: 40px;
-  }
+    .poll {
+        padding-top: 40px;
+    }
 }
+
 .poll-title {
     margin: 0 0 5px 0;
 }
+
 .thread-image {
     color: white;
     font-family: 'Indie Flower', cursive;
@@ -433,74 +523,92 @@ img.members {
     font-size: 30px;
     border-radius: 100%;
 }
+
 @media (max-width: 991px) {
-  .thread-image {
-     margin: 0 auto;
-  }
+    .thread-image {
+        margin: 0 auto;
+    }
 }
-.thread-image>div>p {
+
+.thread-image > div > p {
     margin: 0;
 }
+
 .posts {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 @media (max-width: 991px) {
-  .posts {
-     text-align: center;
-  }
+    .posts {
+        text-align: center;
+    }
 }
-.poll>div {
+
+.poll > div {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .align-center {
     text-align: center;
 }
+
 .thread-btn {
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
+
 @media (max-width: 991px) {
-  .thread-btn {
-     justify-content: center;
-  }
+    .thread-btn {
+        justify-content: center;
+    }
 }
-.thread-btn>a {
+
+.thread-btn > a {
     margin: 5px 5px 20px 5px
 }
+
 .btn-default:hover {
     color: white;
 }
+
 .btn-vote {
     width: auto;
     font-family: 'Indie Flower', cursive;
     margin: 3px;
 }
-.btn-vote>a {
+
+.btn-vote > a {
     background-color: rgba(34, 139, 34, 0.8) !important;
 }
-.btn-vote>a:hover {
+
+.btn-vote > a:hover {
     background-color: forestgreen !important;
 }
+
 .forum-header {
     width: 100%;
     margin: 0;
 }
+
 /************ CONTACT *************/
 .time {
     text-align: right;
 }
-.contact-details>tbody>tr>td {
+
+.contact-details > tbody > tr > td {
     border: none;
 }
+
 @media (max-width: 321px) {
-  iframe {
-     height: 300px;
-  }
+    iframe {
+        height: 300px;
+    }
 }
+
 /************ PROFILE *************/
 .Profile-img {
     background: url('../../media/images/Coffee4.jpg') no-repeat;
@@ -514,33 +622,39 @@ img.members {
     align-items: center;
     text-align: center;
 }
+
 @media (max-width: 600px) {
-  .Profile-img {
-     height: 300px;
-  }
+    .Profile-img {
+        height: 300px;
+    }
 }
-.Profile-img>h2 {
+
+.Profile-img > h2 {
     color: white;
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
     width: 80%;
     background-color: rgba(139, 69, 19, 0.6);
 }
+
 @media (max-width: 600px) {
-  .Profile-img>h2 {
-     font-size: 50px;
-  }
+    .Profile-img > h2 {
+        font-size: 50px;
+    }
 }
+
 @media (max-width: 321px) {
-  .Profile-img>h2 {
-     font-size: 42px;
-  }
+    .Profile-img > h2 {
+        font-size: 42px;
+    }
 }
+
 @media (max-width: 321px) {
-  .Profile-img {
-     height: 280px;
-  }
+    .Profile-img {
+        height: 280px;
+    }
 }
+
 .topup-btn {
     background-color: rgba(139, 69, 19, 0.6);
     color: white;
@@ -548,9 +662,11 @@ img.members {
     font-size: 20px;
     margin-bottom: 20px;
 }
+
 .topup-btn:hover {
     background-color: rgba(139, 69, 19, 0.9);
 }
+
 .num-coffees {
     background: url('../../media/images/Coffee12.jpg') no-repeat;
     width: 200px;
@@ -563,29 +679,35 @@ img.members {
     text-align: center;
     border-radius: 100%;
 }
-.num-coffees>div {
+
+.num-coffees > div {
     color: white;
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
 }
+
 .Coffees-left {
     text-align: center;
 }
+
 .Profile-info {
     text-align: center;
 }
+
 .alert-success {
     margin: 0;
     width: 100%;
     border-radius: 0;
     text-align: center;
 }
+
 .center-form {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 30px;
 }
+
 .box {
     display: none;
     width: 320px;
@@ -597,6 +719,7 @@ img.members {
     border: thick solid rgba(34, 139, 34, 0.7);
     border-radius: 10px;
 }
+
 .iframe-box {
     width: 1280px;
     height: 786px;
@@ -615,21 +738,24 @@ img.members {
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
+
 @media (min-width: 768px) {
-  .contact-page {
-      padding-top: 20px;
-  }
+    .contact-page {
+        padding-top: 20px;
+    }
 }
 
 /************ LOGIN *************/
 .login {
     padding-top: 50px;
 }
+
 @media (max-width: 500px) {
-  .login {
-     text-align: center;
-  }
+    .login {
+        text-align: center;
+    }
 }
+
 /************ LOGOUT *************/
 
 /************ REGISTER *************/
