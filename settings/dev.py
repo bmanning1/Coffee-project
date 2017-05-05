@@ -1,6 +1,5 @@
 from base import *
 
-
 DEBUG = True
 
 INSTALLED_APPS.append('debug_toolbar')
@@ -17,4 +16,3 @@ SITE_URL = 'http://127.0.0.1:8000'
 
 PAYPAL_NOTIFY_URL = 'http://10346756.ngrok.io/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'rebm01@hotmail.co.uk'
-

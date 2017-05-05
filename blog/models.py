@@ -4,7 +4,7 @@ from django.conf import settings
 
 
 class Post(models.Model):
-    class Meta: #include this to ensure build in the IDE
+    class Meta:  # include this to ensure build in the IDE
         app_label = "blog"
 
     # author is linked to a registered

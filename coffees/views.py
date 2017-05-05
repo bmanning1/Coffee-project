@@ -8,6 +8,7 @@ def all_coffees(request):
     coffees = Coffee.objects.all()
     return render(request, "coffees/coffees.html", {"coffees": coffees})
 
+
 def get_price(request):
     coffees = Coffee.objects.all()
     return render(request, "price.html", {"coffees": coffees})
