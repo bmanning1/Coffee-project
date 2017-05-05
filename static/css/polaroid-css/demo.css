@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Give+You+Glory);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../../../media/fonts/codropsicons/codropsicons.eot');
+	src:url('../../../media/fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../../../media/fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../../../media/fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../../../media/fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.clearfix:before,
+.clearfix:after {
+	content: '';
+	display: table;
+}
+ 
+.clearfix:after {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+.columns p {
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+}
+
+svg.polaroid {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
+
+svg.polaroid rect {
+	stroke: #beb4b7;
+	fill: #fff;
+	stroke-width: 6;
+}
+
+
+.related {
+	text-align: center;
+	font-size: 1.35em;
+	padding: 6em 2em;
+	overflow: hidden;
+	background-color: #444;
+}
+
+.related > a {
+	border: 3px solid #3c3c3c;
+	display: inline-block;
+	text-align: center;
+	margin: 20px 10px;
+	padding: 25px;
+	color: #3c3c3c;
+	-webkit-transition: color 0.3s, border-color 0.3s;
+	transition: color 0.3s, border-color 0.3s;
+}
+
+.related a:hover {
+	color: #beb4b7;
+	border-color: #beb4b7;
+}
+
+.related a img {
+	max-width: 100%;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.related a:hover img,
+.related a:active img {
+	opacity: 1;
+}
+
+.related a h3 {
+	margin: 0;
+	padding: 0.5em 0 0.3em;
+	max-width: 300px;
+	text-align: left;
+}
+
+@media screen and (min-width: 60em) {
+	.columns {
+		-moz-column-count: 2;
+		-moz-column-gap: 1em;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 1em;
+		column-count: 2;
+		column-gap: 1em;
+	}
+}
+

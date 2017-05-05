@@ -1,9 +1,10 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=.9">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Starbex</title>
     <meta name="description" content="">
     <meta name="author" content="">
@@ -12,6 +13,14 @@
     <link rel="stylesheet" href="{% static "css/font-awesome-4.7.0/css/font-awesome.css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <link rel="shortcut icon" type="image/x-icon" href="../media/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/normalize.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/demo.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/component.css" %}" />
+		<script src="{% static "js/polaroid-js/modernizr.min.js" %}"></script>
+        <script src="{% static "js/jquery.js" %}"></script>
+        <script src="{% static "js/polaroid-js/classie.js" %}"></script>
+		<script src="{% static "js/polaroid-js/photostack.js" %}"></script>
     {% block head_js %}{% endblock head_js %}
 
 </head>
@@ -59,8 +68,6 @@
             </ul>
         </div>
 
-   </div>
-
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -70,6 +77,9 @@
             </div>
         </div>
     {% endif %}
+   </div>
+
+
 <div class="container">
 
 
@@ -90,5 +100,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js">
 </script>
-<script src="{% static "js/jquery.js" %}"></script>
+
+
 </html>

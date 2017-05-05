@@ -4,7 +4,7 @@
 }
 .starbex {
     color: white;
-    font-size: 30px;
+    font-size: 28px;
     margin: 20px;
     padding: 0;
     height: auto;
@@ -17,8 +17,13 @@ a.options {
     color: rgba(255,255,255,0.7);
 }
 body {
-    padding-top: 100px !important;
+    padding-top: 80px !important;
     background-color: gainsboro;;
+}
+@media (min-width: 768px) {
+    body {
+        font-size: 13px;
+    }
 }
 .container {
     background-color: white;
@@ -29,6 +34,11 @@ body {
     font-size: 25px;
     padding-right: 10px;
     padding-left: 10px;
+}
+@media (min-width: 768px) {
+    .header1 {
+        font-size: 20px;
+    }
 }
 .header1>div>a {
     color: rgba(255,255,255,0.4);
@@ -50,9 +60,11 @@ body {
      padding-right: 5px;
   }
 }
-.collapse.navbar-collapse {
-    -moz-box-shadow: 0 0 30px 5px rgba(52, 52, 52, 0.5);
-    -webkit-box-shadow: 0 0 30px 5px rgba(52, 52, 52, 0.5);
+@media (min-width: 768px) {
+  .collapse.navbar-collapse {
+        -moz-box-shadow: 0 0 30px 5px rgba(52, 52, 52, 0.5);
+        -webkit-box-shadow: 0 0 30px 5px rgba(52, 52, 52, 0.5);
+    }
 }
 @media (max-width: 860px) {
   .glyphicon-user,.glyphicon-log-in {
@@ -69,17 +81,12 @@ body>.container>.container {
     margin: 0;
     padding: 0;
 }
+body>.container {
+    padding-top: 15px;
+}
 @media (min-width: 768px) {
     body>.container {
         width: 80%;
-    }
-    body>.container>.container {
-        width: 100%;
-    }
-}
-@media (min-width: 1400px) {
-    body>.container {
-        width: 70%;
     }
     body>.container>.container {
         width: 100%;
@@ -540,7 +547,6 @@ img.members {
     width: 100%;
     border-radius: 0;
     text-align: center;
-    padding-top: 25px;
 }
 .center-form {
     display: flex;
@@ -579,7 +585,7 @@ img.members {
 }
 @media (min-width: 768px) {
   .contact-page {
-      padding-top: 30px;
+      padding-top: 20px;
   }
 }
 
