@@ -238,6 +238,13 @@ img.members {
       width: 100%;
   }
 }
+.modal-body {
+    height: 25em;
+    overflow-y: scroll
+}
+.modal-footer {
+    padding: 10px 20px;
+}
 /************ BLOG *************/
 .Blog-img {
     background: url('../../media/images/Coffee2.jpg') no-repeat;
