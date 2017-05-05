@@ -8,4 +8,8 @@ $(document).ready(function () {
     $('.backforum-btn').mouseleave(function () {
         $('.box').css('display', 'none')
     });
+    $('.choices-coffee-info>ul>li>a').click(function () {
+        $('.choices-coffee-info>ul>li>a').removeClass('active');
+        $('this').addClass('active');
+    });
 });

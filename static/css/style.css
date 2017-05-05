@@ -53,7 +53,7 @@ body {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.header1 > div > a:hover, .header1 > div > a:focus{
+.header1 > div > a:hover, .header1 > div > a:focus {
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -116,12 +116,16 @@ body > .container {
 
 a {
     color: #333333;
-    outline:none !important;
+    outline: none !important;
 }
 
 a:hover, a:focus {
     text-decoration: none;
     color: black;
+}
+
+#myNavbar > ul > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .icon-bar {
@@ -185,7 +189,7 @@ img.members {
     }
 }
 
-.about-members>div {
+.about-members > div {
     margin: 0 2% 15px 2%;
     padding-right: 5%;
     display: flex;
@@ -193,18 +197,18 @@ img.members {
     justify-content: flex-start;
 }
 
-.about-members>div>div>h1 {
+.about-members > div > div > h1 {
     color: #333;
 }
 
 @media (max-width: 500px) {
-    .about-members>div>div>p {
+    .about-members > div > div > p {
         display: none;
     }
 }
 
 @media (max-width: 500px) {
-    .about-members>div {
+    .about-members > div {
         justify-content: flex-start;
     }
 }
@@ -217,7 +221,7 @@ img.members {
     color: white !important;
 }
 
-.personal-coffee>div>h2, .choices-coffee>div>h2 {
+.personal-coffee > div > h2, .choices-coffee > div > h2 {
     color: white !important;
     font-family: 'Indie Flower', cursive;
 }
@@ -228,11 +232,11 @@ img.members {
 
 .panel-heading {
     background-color: rgba(139, 69, 19, 0.7) !important;
-    color: rgba(255, 255, 255, 0.6)!important;
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.panel-heading:hover,.panel-heading:hover>h4>a,.panel-heading>h4>a {
-    color: rgba(255, 255, 255, 0.9)!important;
+.panel-heading:hover, .panel-heading:hover > h4 > a, .panel-heading > h4 > a {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .panel-heading:hover {
@@ -256,8 +260,13 @@ img.members {
     background-color: white;
 }
 
-.tab-content>div>h3 {
+.tab-content > div > h3 {
     margin: 0;
+    color: #555555;
+}
+
+.tab-content > div > p {
+    color: #555555;
 }
 
 .choices-coffee-info {
@@ -267,12 +276,12 @@ img.members {
     background-color: white;
 }
 
-.choices-coffee-info>div>div>h3 {
+.choices-coffee-info > div > div > h3 {
     color: #333333;
     padding-top: 10px;
 }
 
-.choices-coffee-info>ul>li {
+.choices-coffee-info > ul > li {
     width: 10px;
     height: 10px;
     margin: 5px;
@@ -280,7 +289,7 @@ img.members {
     border-radius: 100%;
 }
 
-.choices-coffee-info>ul>li:active, .choices-coffee-info>ul>li:focus, .choices-coffee-info>ul>li:hover {
+.choices-coffee-info > ul > li:active, .choices-coffee-info > ul > li:focus, .choices-coffee-info > ul > li:hover {
     width: 15px;
     height: 15px;
     margin: 5px 5px 0 5px;
@@ -293,13 +302,14 @@ img.members {
     justify-content: center;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     background-color: transparent;
 }
 
-.nav>li>a:hover, .nav>li>a:focus {
+.nav > li > a:hover, .nav > li > a:focus {
     background-color: transparent;
 }
+
 /************ PRICES *************/
 .Price-img {
     background: url('../../media/images/Coffee1.jpg') no-repeat;
@@ -348,6 +358,7 @@ img.members {
     width: calc(100% + 30px);
     margin-left: -15px;
 }
+
 /************ PURCHASES *************/
 .Buy-img {
     background: url('../../media/images/Coffee3.jpg') no-repeat;
