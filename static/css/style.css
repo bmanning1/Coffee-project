@@ -103,8 +103,22 @@ a:hover {
     background-color: white;
 }
 /************ HOME *************/
-.carousel-inner, #myCarousel {
-    height: 400px;
+.home-announcements {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+.home-info {
+    padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .home-info {
+     padding: 20px 20%;
+  }
+}
+.home-title {
+    font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+    margin-top: 25px;
 }
 /************ ABOUT *************/
 img.members {
