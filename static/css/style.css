@@ -170,33 +170,23 @@ a:hover, a:focus {
 
 /************ ABOUT *************/
 .About-title {
-    width: calc(100% + 30px);
-    margin-left: -15px;
     color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(139, 69, 19, 0.7);
-    height: 85px;
+    background-color: rgba(139, 69, 19, 0.4);
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.About-title>h2 {
-    color: white;
-    font-family: 'Indie Flower', cursive;
-    font-size: 50px;
-    padding: 0 13% 0 3%;
+.About-img > h2 {
+    background-color: rgba(139, 69, 19, 0.84) !important;
 }
 
-.About-title>p {
-    text-align: right;
-    padding: 0 0 0 13%;
+.About-title > p {
+    text-align: center;
+    padding: 10px 10%;
     margin-bottom: 0;
-}
-
-@media (max-width: 767px) {
-    .About-title>p {
-        display: none;
-    }
+    width: 100%;
 }
 
 img.members {
@@ -266,7 +256,7 @@ img.members {
 }
 
 @media (max-width: 1200px) {
-    .personal-coffee > .col-lg-4 {
+    .personal-coffee > .col-lg-4, .choices-coffee > .col-lg-4 {
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -309,6 +299,21 @@ img.members {
 .tab-content > div > h3 {
     margin: 0;
     color: #555555;
+    text-align: center;
+}
+
+.tab-content > div {
+    background-color: rgba(147, 191, 215, 0.74);
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.tab-content > div > img {
+    height: 120px;
+    padding-left: 40px;
+    margin: 10px auto;
 }
 
 .tab-content > div > p {
@@ -323,8 +328,9 @@ img.members {
 }
 
 .choices-coffee-info > div > div > h3 {
-    color: #333333;
+    color: rgba(255, 255, 255, 0.7);
     padding-top: 10px;
+    font-family: 'Indie Flower', cursive;
 }
 
 .choices-coffee-info > ul > li {
@@ -352,6 +358,23 @@ img.members {
     background-color: transparent;
 }
 
+.About-img {
+    background: url('../../media/images/Coffee11.jpg') no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .About-img > h2 {
+        font-size: 60px !important;
+    }
+}
 /************ PRICES *************/
 .Price-img {
     background: url('../../media/images/Coffee1.jpg') no-repeat;
@@ -366,12 +389,12 @@ img.members {
 }
 
 @media (max-width: 750px) {
-    .Price-img, .Blog-img, .Forum-img, .Buy-img {
+    .Price-img, .Blog-img, .Forum-img, .Buy-img, .About-img {
         height: 170px !important;
     }
 }
 
-.Price-img > h2, .Buy-img > h2, .Blog-img > h2, .Forum-img > h2 {
+.Price-img > h2, .Buy-img > h2, .Blog-img > h2, .Forum-img > h2, .About-img > h2 {
     color: white;
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
