@@ -9,6 +9,22 @@
 },
 {
     "fields": {
+        "expire_date": "2017-05-19T15:00:13.541Z",
+        "session_data": "YWNlMWJhMWNkNjA3OTkyNWZmMjNhMzRkODM4ZDdhZWJmNDEyMWMzMzp7Il9hdXRoX3VzZXJfaGFzaCI6ImYzMzgwYzFhMjZmMTJlODEwY2Q5NDEzNjZkNzkwN2ExOTk5YWMwOWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMTAifQ=="
+    },
+    "model": "sessions.session",
+    "pk": "5w3vym3qndhe1byqi8au699wszlj334g"
+},
+{
+    "fields": {
+        "expire_date": "2017-05-19T15:04:51.771Z",
+        "session_data": "YWNlMWJhMWNkNjA3OTkyNWZmMjNhMzRkODM4ZDdhZWJmNDEyMWMzMzp7Il9hdXRoX3VzZXJfaGFzaCI6ImYzMzgwYzFhMjZmMTJlODEwY2Q5NDEzNjZkNzkwN2ExOTk5YWMwOWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMTAifQ=="
+    },
+    "model": "sessions.session",
+    "pk": "80jqxfy2wy6ny14vjs1b7jruoinmq3os"
+},
+{
+    "fields": {
         "expire_date": "2017-05-07T19:53:23.114Z",
         "session_data": "NWM2ODMxNTAxOWYxMDUwMGI3NzE5MzNhOWI2MmRjYzMwYzk0OTVmYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImEyMGE2NDVhODY4ZDQzYTRmZTEwYTM5ZjQyYmJkYTIzZGQwNmY3YTgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiNiJ9"
     },
@@ -125,7 +141,7 @@
         "email": "root@root.com",
         "date_joined": "2017-04-18T19:36:27.498Z"
     },
-    "model": "accounts.User",
+    "model": "accounts.user",
     "pk": 6
 },
 {
@@ -143,7 +159,7 @@
         "email": "rebm01@hotmail.co.uk",
         "date_joined": "2017-04-24T19:21:05.186Z"
     },
-    "model": "accounts.User",
+    "model": "accounts.user",
     "pk": 10
 },
 {
