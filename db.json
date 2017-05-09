@@ -125,7 +125,7 @@
         "email": "root@root.com",
         "date_joined": "2017-04-18T19:36:27.498Z"
     },
-    "model": "accounts.user",
+    "model": "accounts.User",
     "pk": 6
 },
 {
@@ -143,7 +143,7 @@
         "email": "rebm01@hotmail.co.uk",
         "date_joined": "2017-04-24T19:21:05.186Z"
     },
-    "model": "accounts.user",
+    "model": "accounts.User",
     "pk": 10
 },
 {
