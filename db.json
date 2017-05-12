@@ -1,6 +1,14 @@
 [
 {
     "fields": {
+        "expire_date": "2017-05-26T14:47:44.813Z",
+        "session_data": "MmQ4MTVlYjcxZTAyOTI4ODYyNWYwZjExZGYxMDczNGY5MTUyOTVmMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImEyMGE2NDVhODY4ZDQzYTRmZTEwYTM5ZjQyYmJkYTIzZGQwNmY3YTgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0="
+    },
+    "model": "sessions.session",
+    "pk": "22jq5zlds5gyshu5899a9zdusaj4fnf2"
+},
+{
+    "fields": {
         "expire_date": "2017-05-07T19:55:02.909Z",
         "session_data": "NWM2ODMxNTAxOWYxMDUwMGI3NzE5MzNhOWI2MmRjYzMwYzk0OTVmYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImEyMGE2NDVhODY4ZDQzYTRmZTEwYTM5ZjQyYmJkYTIzZGQwNmY3YTgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiNiJ9"
     },
@@ -3556,5 +3564,23 @@
     },
     "model": "admin.logentry",
     "pk": 51
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2017-05-12T14:48:16.028Z",
+        "object_repr": "Test Blog",
+        "object_id": "1",
+        "change_message": "Changed image.",
+        "user": [
+            "root@root.com"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 52
 }
 ]
