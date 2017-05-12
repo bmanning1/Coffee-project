@@ -2,8 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import datetime
-from django.utils.timezone import utc
+import django.utils.timezone
 from django.conf import settings
 
 
@@ -27,7 +26,7 @@ class Migration(migrations.Migration):
             name='Purchase',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('subscription_end', models.DateTimeField(default=datetime.datetime(2017, 1, 20, 22, 45, 41, 661378, tzinfo=utc))),
+                ('subscription_end', models.DateTimeField(default=django.utils.timezone.now)),
                 ('coffee', models.ForeignKey(to='coffees.Coffee')),
                 ('user', models.ForeignKey(related_name='purchases', to=settings.AUTH_USER_MODEL)),
             ],
