@@ -14,5 +14,5 @@ DATABASES = {
 # PayPal Settings
 SITE_URL = 'http://127.0.0.1:8000'
 
-PAYPAL_NOTIFY_URL = 'http://10346756.ngrok.io/a-very-hard-to-guess-url/'
-PAYPAL_RECEIVER_EMAIL = 'rebm01@hotmail.co.uk'
+PAYPAL_NOTIFY_URL = 'http://98250be3.ngrok.io/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'rebm01-facilitator@hotmail.co.uk'

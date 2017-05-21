@@ -2,9 +2,15 @@
 {% block content %}
     <h1>Success!</h1>
     <br/>
-    <p>Your payment of ${{ post.payment_gross }} was paid to {{ post.receiver_email }}</p>
+    <p>Your payment of £{{ post.mc_gross }}</p>
     <br/>
     <p>You have now purchased {{ post.item_name }}</p>
-    
+
+
+    <h2>POST</h2>
+    {{ post }}
+
+    <h2>GET</h2>
+    {{ get }}
 {% endblock %}
 

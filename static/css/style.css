@@ -21,8 +21,9 @@ a.options {
 }
 
 body {
+    font-family: 'Raleway';
     padding-top: 80px !important;
-    background-color: gainsboro;;
+    background-color: gainsboro;
 }
 
 @media (min-width: 768px) {
@@ -134,6 +135,7 @@ a:hover, a:focus {
 
 .hr-footer {
     margin: 20px 0 10px 0;
+    width: 100%;
 }
 
 .footer > p {
@@ -171,15 +173,11 @@ a:hover, a:focus {
 /************ ABOUT *************/
 .About-title {
     color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(139, 69, 19, 0.4);
+    background-color: rgb(21, 90, 21);
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.About-img > h2 {
-    background-color: rgba(139, 69, 19, 0.84) !important;
 }
 
 .About-title > p {
@@ -193,7 +191,7 @@ img.members {
     width: 120px;
     height: 120px;
     border-radius: 100px;
-    border: medium rgba(139, 69, 19, 0.69) solid;
+    border: thin #333 solid;
     margin: 0 20px 0 0;
 }
 
@@ -234,7 +232,7 @@ img.members {
 }
 
 .personal-coffee {
-    background-color: rgba(139, 69, 19, 0.4);
+    background-color: rgb(27, 115, 27);
     padding: 5px 15px;
     width: calc(100% + 30px);
     margin-left: -15px;
@@ -267,7 +265,7 @@ img.members {
 }
 
 .panel-heading {
-    background-color: rgba(139, 69, 19, 0.7) !important;
+    background-color: rgb(16, 66, 16) !important;
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
@@ -276,7 +274,7 @@ img.members {
 }
 
 .panel-heading:hover {
-    background-color: rgba(139, 69, 19, 0.9) !important;
+    background-color: rgb(0, 41, 0) !important;
 }
 
 .panel-default {
@@ -284,8 +282,8 @@ img.members {
 }
 
 .choices-coffee {
-    background-color: rgba(139, 69, 19, 0.7);
-    padding: 5px 15px 20px 15px;
+    background-color: rgb(21, 90, 21);
+    padding: 0px 15px 0px 15px;
     width: calc(100% + 30px);
     margin-left: -15px;
     margin-top: 20px;
@@ -303,14 +301,46 @@ img.members {
 }
 
 .tab-content > div {
-    background-color: rgba(147, 191, 215, 0.74);
+    background-color: gainsboro;
     color: white;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
 }
 
-.tab-content > div > img {
+.tab-content > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .tab-content > div > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        text-align: right;
+    }
+}
+
+.personalise-img {
+    border: thin #333 solid;
+    height: 130px;
+}
+
+@media (max-width: 700px) {
+    .tab-content > div > div > p {
+        display: none;
+    }
+}
+
+.tab-content > div > div > p > b {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+}
+
+.tab-content > div > div > img {
     height: 120px;
     padding-left: 40px;
     margin: 10px auto;
@@ -337,7 +367,7 @@ img.members {
     width: 10px;
     height: 10px;
     margin: 5px;
-    background-color: rgba(139, 69, 19, 0.4);
+    background-color: rgb(27, 115, 27);
     border-radius: 100%;
 }
 
@@ -345,7 +375,7 @@ img.members {
     width: 15px;
     height: 15px;
     margin: 5px 5px 0 5px;
-    background-color: rgba(139, 69, 19, 0.4);
+    background-color: rgb(25, 101, 25);
     border-radius: 100%;
 }
 
@@ -359,7 +389,7 @@ img.members {
 }
 
 .About-img {
-    background: url('../../media/images/Coffee11.jpg') no-repeat;
+    background: url('../../media/images/Coffee13.jpg') no-repeat;
     width: 100%;
     height: 350px;
     background-size: cover;
@@ -473,6 +503,8 @@ img.members {
 .contactstarb {
     font-family: 'Indie Flower', cursive;
     background-color: rgba(139, 69, 19, 0.6) !important;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 .contactstarb:hover, .contactstarb:focus {
@@ -480,11 +512,12 @@ img.members {
 }
 
 .querycontact {
-    padding: 20px;
+    padding: 10px 30px;
     color: white;
     background-color: rgba(139, 69, 19, 0.6);
     width: 50%;
     margin: 0 auto;
+    font-size: 11px;
 }
 
 @media (max-width: 600px) {
@@ -495,7 +528,17 @@ img.members {
 
 .modal-body {
     height: 25em;
-    overflow-y: scroll
+    overflow-y: scroll;
+    font-size: 12px;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 23px;
+}
+
+.modal-header {
+    padding: 10px;
 }
 
 .modal-footer {
@@ -543,6 +586,12 @@ img.members {
     margin: 0 auto;
 }
 
+@media (max-width: 600px) {
+    .Blogpost-img > a {
+        font-size: 30px;
+    }
+}
+
 .blog-post {
     text-align: center;
 }
@@ -585,23 +634,29 @@ img.members {
 }
 
 input[type=text], textarea {
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
-  outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      padding: 3px 0px 3px 3px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid gainsboro;
+    background-color: gainsboro;
+    color: white;
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
 input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
 input:focus:-ms-input-placeholder { color:transparent; }
+input::-webkit-input-placeholder { color:white; }
+input:-moz-placeholder { color:white; } /* Firefox 18- */
+input::-moz-placeholder { color:white; } /* Firefox 19+ */
+input:-ms-input-placeholder { color:white; }
 
 input[type=text]:focus, textarea:focus {
-  box-shadow: 0 0 5px rgba(27, 106, 27, 0.71);
+  box-shadow: 0 0 5px rgba(132, 132, 132, 0.71);
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
 }
@@ -615,14 +670,15 @@ input[type=text]:focus, textarea:focus {
 }
 
 .btn {
-    background-color: forestgreen;
+    background-color: rgba(34, 139, 34, 0.8);
     background-image: none;
     color: white;
+    border-radius: 0;
     border: none;
 }
 
 .btn:hover, btn:focus {
-    background-color: rgba(34, 139, 34, 0.7);
+    background-color: rgba(34, 139, 34, 0.6);
 }
 
 .blogsearch {
