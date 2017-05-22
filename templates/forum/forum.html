@@ -2,9 +2,9 @@
 {% load thread_extras %}
 {% block content %}
 
-    <div class="Forum-img">
-        <h2>Forum</h2>
-    </div>
+<div class="Forum-img">
+    <h2>Forum</h2>
+</div>
 <br>
 <p class="text-center">
     Welcome to the forum page where all you questions will be answered.
@@ -15,23 +15,22 @@
 <form method="get" action="/results/" class="navbar-form text-center blogsearch">
     <i class="glyphicon glyphicon-search"></i>
     <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder=" Search Here...">
- </form>
+</form>
 
-   {% load bootstrap_tags %}
-   {% for subject in subjects %}
+{% load bootstrap_tags %}
+{% for subject in subjects %}
 <hr>
-       <section class="subject">
-           <h2 class="subject-name"><a class="backforum-btn" href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
-           <div class="box"><iframe class="iframe-box" src="{% url "threads" subject.id %}"></iframe></div>
-           <p>
-               <a href="{% url "threads" subject.id %}">
-                   {% autoescape off %}{{ subject.description }}{% endautoescape %}
-               </a>
-           </p>
-           <p>
-               <b>Threads</b> {{ subject.threads.count }} |
-               <b>Posts</b> {{ subject|get_total_subject_posts }}
-           </p>
-       </section>
-   {% endfor %}
+<section class="subject">
+    <h2 class="subject-name"><a class="backforum-btn" href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
+    <p>
+        <a href="{% url "threads" subject.id %}">
+            {% autoescape off %}{{ subject.description }}{% endautoescape %}
+        </a>
+    </p>
+    <p>
+        <b>Threads</b> {{ subject.threads.count }} |
+        <b>Posts</b> {{ subject|get_total_subject_posts }}
+    </p>
+</section>
+{% endfor %}
 {% endblock %}

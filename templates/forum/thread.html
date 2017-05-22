@@ -7,11 +7,6 @@
 
  <div class="row header forum-header">
    <div class="jumbotron"><h1>{{ thread.name }}</h1></div>
-     <div class="thread-content">
-         <div class="box">
-             <iframe class="iframe-box" src="{% url 'threads' thread.subject.id %}"></iframe>
-         </div>
-    </div>
  </div>
 
     <p class="align-center"><a href="/forum/"><b>Forum</b></a> |
@@ -69,7 +64,6 @@
                    CREATED
                  </th>
                  <th class="align-center">OWNER</th>
-                 <th class="align-center">LAST POST</th>
              </tr>
              <tr class="align-center">
                  <td>
@@ -78,9 +72,7 @@
                    </time>
                  </td>
                  <td>{{ thread.user.first_name }} {{ thread.user.last_name }}</td>
-                 <td>{% for post in thread.posts.all %}
-                    {% last_posted_user_name thread %}
-                    {% endfor %}</td>
+
              </tr>
            </tbody>
          </table>

@@ -639,11 +639,12 @@ input[type=text], textarea {
       -ms-transition: all 0.30s ease-in-out;
       -o-transition: all 0.30s ease-in-out;
       outline: none;
-      padding: 3px 0px 3px 3px;
-      margin: 5px 1px 3px 0px;
-      border: 1px solid gainsboro;
-    background-color: gainsboro;
+      padding: 3px 3px 3px 3px;
+      margin: 5px 3px 3px 3px;
+      border: 0px;
+    background-color: rgba(220, 220, 220, 0.5);
     color: white;
+    width: 140px;
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }
@@ -805,9 +806,14 @@ input[type=text]:focus, textarea:focus {
     margin: 0;
 }
 
+.poll > div > div > strong {
+    padding: 10px;
+}
+
 .posts {
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 30px;
 }
 
 @media (max-width: 991px) {
@@ -830,6 +836,7 @@ input[type=text]:focus, textarea:focus {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    padding: 0 20px;
 }
 
 @media (max-width: 991px) {
@@ -977,37 +984,6 @@ input[type=text]:focus, textarea:focus {
     justify-content: center;
     text-align: center;
     margin-top: 30px;
-}
-
-.box {
-    display: none;
-    width: 320px;
-    height: 192px;
-    padding: 0;
-    overflow: hidden;
-    bottom: 20px;
-    right: 20px;
-    border: thick solid rgba(34, 139, 34, 0.7);
-    border-radius: 10px;
-}
-
-.iframe-box {
-    width: 1280px;
-    height: 786px;
-
-    zoom: 0.75;
-    -moz-transform: scale(0.75);
-    -ms-transform: scale(0.25);
-    -moz-transform: scale(0.25);
-    -o-transform: scale(0.25);
-    -webkit-transform: scale(0.25);
-    transform: scale(0.338);
-
-    -ms-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
 }
 
 @media (min-width: 768px) {
