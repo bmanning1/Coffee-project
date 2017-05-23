@@ -7,7 +7,7 @@ from signals import subscription_created, subscription_was_cancelled
 from paypal.standard.ipn.signals import valid_ipn_received
 
 def get_subscription_end_date():
-    return timezone.now + timezone.timedelta(weeks=4)
+    return timezone.now + timezone.timedelta(days=30)
 
 
 class Coffee(models.Model):
