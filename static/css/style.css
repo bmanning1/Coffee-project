@@ -644,7 +644,6 @@ input[type=text], textarea {
       border: 0px;
     background-color: rgba(220, 220, 220, 0.5);
     color: white;
-    width: 140px;
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }
@@ -939,6 +938,7 @@ input[type=text]:focus, textarea:focus {
     font-family: 'Indie Flower', cursive;
     font-size: 20px;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .topup-btn:hover, .topup-btn:focus {

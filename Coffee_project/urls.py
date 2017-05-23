@@ -35,7 +35,7 @@ urlpatterns = [
     # Auth URLs
     # url(r'^pages/', include('django.contrib.flatpages.urls')),
     url(r'^register/$', register, name='register'),
-    url(r'^profile/$', profile, name='profile'),
+    url(r'^profile/$', coffee_views.user_purchases, name='profile'),
     url(r'^login/$', login, name='login'),
     url(r'^logout/$', logout, name='logout'),
 
@@ -45,6 +45,7 @@ urlpatterns = [
     url(r'^paypal-cancel/$', paypal_views.paypal_cancel),
     url(r'^coffees/$', coffee_views.all_coffees),
     url(r'^prices/$', coffee_views.get_price),
+
 
     # Blog URLs
     url(r'^blog/$', blog_views.post_list, name='post_list'),
