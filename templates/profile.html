@@ -4,10 +4,10 @@
     <div class="Profile-img">
             <div class="Coffees-left">
                 <div class="num-coffees">
-                    {% if number_purchases != 0 %}
-                    <div>{{ name.0 }}{{ name.1 }}</div>
+                    {% if subscription_valid == True %}
+                    <div>{{ coffees_left }}</div>
                     {% endif %}
-                    {% if number_purchases == 0 %}
+                    {% if subscription_valid == False %}
                     <div>0</div>
                     {% endif %}
                 </div>
@@ -21,10 +21,12 @@
         <p>You are logged in as {{ user.email }} </p>
         <p>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex profile</p>
 
-        {% if number_purchases != 0 %}
+        {% if subscription_valid == True %}
         <h2>Current subscription - {{ name }}</h2>
+            <p><i class="glyphicon glyphicon-star"></i>  <b>Renews on {{ end_date }}</b></p>
+            <p><i class="glyphicon glyphicon-star"></i> <b>{{ coffees_left }} Coffees left until renewal date</b></p>
         {% endif %}
-        {% if number_purchases == 0 %}
+        {% if subscription_valid == False %}
         <h2>You aren't currently subscribed - click below to shop</h2>
         {% endif %}
         <a href="/coffees/" class="btn btn-primary topup-btn">Top up your coffees</a>

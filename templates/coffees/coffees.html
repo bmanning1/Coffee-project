@@ -56,7 +56,6 @@
       </div>
     </div>
     <!--End Modal-->
-
     <hr>
     {% if subscription_valid == True %}
         <p class="text-center text-capitalize"><u><b>Currently subscribed to {{ name }} <br></b></u> Click <b><a href="#">here</a></b> to cancel subscription</p>
@@ -78,7 +77,6 @@
                     <td>{{ coffee.name }}</td>
                     <td class="Coffee-description">{{ coffee.description }}</td>
                     <td>£{{ coffee.price }}</td>
-
                     {% if subscription_valid == False %}
                     <td class="Subscribe-paypal">{% paypal_form_for coffee user %}</td>
                     {% endif %}

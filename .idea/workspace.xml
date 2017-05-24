@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="477dfe14-030e-4ea4-abdd-8e3b3df18029" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/models.py" afterPath="$PROJECT_DIR$/coffees/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/templatetags/coffee_extras.py" afterPath="$PROJECT_DIR$/coffees/templatetags/coffee_extras.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/views.py" afterPath="$PROJECT_DIR$/coffees/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/coffees/coffees.html" afterPath="$PROJECT_DIR$/templates/coffees/coffees.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/paypal/paypal_cancel.html" afterPath="$PROJECT_DIR$/templates/paypal/paypal_cancel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/profile.html" afterPath="$PROJECT_DIR$/templates/profile.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,45 +42,15 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coffees/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="1002" column="26" lean-forward="false" selection-start-line="1002" selection-start-column="9" selection-end-line="1002" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements/base.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="staging.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements/staging.txt">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coffees/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -82,21 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="940" column="17" lean-forward="false" selection-start-line="940" selection-start-column="17" selection-end-line="940" selection-end-column="17" />
+            <state relative-caret-position="306">
+              <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -105,10 +72,32 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coffees/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+            <state relative-caret-position="306">
+              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="51" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="644" column="20" lean-forward="false" selection-start-line="644" selection-start-column="20" selection-end-line="644" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coffee_extras.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coffees/templatetags/coffee_extras.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,19 +106,33 @@
       <file leaf-file-name="coffees.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/coffees/coffees.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+            <state relative-caret-position="166">
+              <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accounts/models.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/paypal_store/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="11" column="61" lean-forward="true" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signals.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coffees/signals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,36 +148,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>date.</find>
-      <find>daten</find>
-      <find>dateno</find>
-      <find>date-now</find>
-      <find>date.now</find>
-      <find>datenow</find>
-      <find>dateow</find>
-      <find>datew</find>
-      <find>date</find>
-      <find>n</find>
-      <find>now</find>
-      <find>t</find>
-      <find>time</find>
-      <find>timezone</find>
-      <find>timezone.</find>
-      <find>timezone.n</find>
-      <find>timezone.no</find>
-      <find>timezone.now</find>
-      <find>i</find>
-      <find>iframe-box</find>
-      <find>.posts</find>
-      <find>input[t</find>
-      <find>input[</find>
-      <find>iframe</find>
+      <find>subcripti</find>
+      <find>subcriptio</find>
+      <find>subcription</find>
+      <find>c</find>
+      <find>cancell</find>
+      <find>s</find>
+      <find>sub</find>
+      <find>subscr</find>
+      <find>subscription_was</find>
+      <find>subscription_wa</find>
+      <find>subscription_w</find>
+      <find>subscription_cr</find>
+      <find>subscription_cre</find>
+      <find>p</find>
+      <find>paypa</find>
+      <find>paypal_fo</find>
+      <find>paypal_for</find>
+      <find>paypal_form</find>
       <find>su</find>
+      <find>subscripti</find>
+      <find>subscription c</find>
+      <find>subscription</find>
       <find>subscription</find>
       <find>subscription_</find>
-      <find>subscription_end</find>
-      <find>topup-</find>
-      <find>option_selection1</find>
+      <find>subscription_c</find>
+      <find>subscription_crea</find>
+      <find>subscription_creat</find>
+      <find>subscription_create</find>
+      <find>subscription_created</find>
+      <find>input[</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Becca\Code_Institute_projects\Test\we-are-social\settings</dir>
@@ -196,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/forum/comment_details.html" />
         <option value="$PROJECT_DIR$/templates/forum/post_form.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/register.html" />
@@ -223,7 +225,6 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/settings/staging.py" />
         <option value="$PROJECT_DIR$/coffees/__init__.py" />
-        <option value="$PROJECT_DIR$/coffees/templatetags/coffee_extras.py" />
         <option value="$PROJECT_DIR$/coffees/signals.py" />
         <option value="$PROJECT_DIR$/requirements/base.txt" />
         <option value="$PROJECT_DIR$/templates/price.html" />
@@ -242,11 +243,13 @@
         <option value="$PROJECT_DIR$/templates/paypal/paypal_return.html" />
         <option value="$PROJECT_DIR$/Coffee_project/urls.py" />
         <option value="$PROJECT_DIR$/paypal_store/views.py" />
-        <option value="$PROJECT_DIR$/coffees/views.py" />
+        <option value="$PROJECT_DIR$/templates/paypal/paypal_cancel.html" />
         <option value="$PROJECT_DIR$/templates/coffees/coffees.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/profile.html" />
+        <option value="$PROJECT_DIR$/coffees/templatetags/coffee_extras.py" />
         <option value="$PROJECT_DIR$/coffees/models.py" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/coffees/views.py" />
+        <option value="$PROJECT_DIR$/templates/profile.html" />
       </list>
     </option>
   </component>
@@ -319,71 +322,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coffees" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="requirements" />
+              <option name="myItemId" value="paypal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,34 +369,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templatetags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coffee-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -748,7 +659,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -812,20 +723,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/paypal_store/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/paypal_store/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paypal_store/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -855,16 +752,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffees/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1028,14 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paypal_store/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1068,14 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffees/signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1128,39 +999,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coffees/templatetags/coffee_extras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/paypal_store/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="61" lean-forward="true" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Coffee_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="37" column="55" lean-forward="false" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffees/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,50 +1023,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="940" column="17" lean-forward="false" selection-start-line="940" selection-start-column="17" selection-end-line="940" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/coffees/coffees.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffees/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="1002" column="26" lean-forward="false" selection-start-line="1002" selection-start-column="9" selection-end-line="1002" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements/staging.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements/base.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1236,10 +1047,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements/base.txt">
+    <entry file="file://$PROJECT_DIR$/db.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="175">
+          <caret line="1002" column="26" lean-forward="false" selection-start-line="1002" selection-start-column="9" selection-end-line="1002" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffees/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/paypal/paypal_cancel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paypal_store/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paypal_store/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="61" lean-forward="true" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffees/templatetags/coffee_extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffees/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffees/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffees/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/coffees/coffees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="644" column="20" lean-forward="false" selection-start-line="644" selection-start-column="20" selection-end-line="644" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffees/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
           <folding />
         </state>
       </provider>
