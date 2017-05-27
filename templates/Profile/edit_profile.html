@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+
+<form class="login" method="POST" action="{% url 'edit_profile' %}" class="" />
+    <legend>Edit Profile</legend>
+    {% csrf_token %}
+    {{ form| as_bootstrap }}
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a class="btn btn-primary" href="/profile">Back</a>
+</form>
+
+{% endblock %}

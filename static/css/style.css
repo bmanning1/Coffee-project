@@ -283,7 +283,7 @@ img.members {
 
 .choices-coffee {
     background-color: rgb(21, 90, 21);
-    padding: 0px 15px 0px 15px;
+    padding: 10px 15px;
     width: calc(100% + 30px);
     margin-left: -15px;
     margin-top: 20px;
@@ -526,22 +526,22 @@ img.members {
     }
 }
 
-.modal-body {
+.modal-body_tc {
     height: 25em;
     overflow-y: scroll;
     font-size: 12px;
 }
 
-.modal-title {
+.modal-title_tc {
     text-align: center;
     font-size: 23px;
 }
 
-.modal-header {
+.modal-header_tc {
     padding: 10px;
 }
 
-.modal-footer {
+.modal-footer_tc {
     padding: 10px 20px;
 }
 
@@ -989,6 +989,41 @@ input[type=text]:focus, textarea:focus {
     .contact-page {
         padding-top: 20px;
     }
+}
+
+.delete_profile:hover {
+    cursor: pointer;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.delete_modal {
+    padding: 0 150px;
+}
+
+.delete_modal > div {
+    text-align: center;
+}
+
+.delete_modal > div > div {
+    padding: 15px 10px 10px 10px;
 }
 
 /************ LOGIN *************/

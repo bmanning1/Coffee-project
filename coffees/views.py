@@ -22,6 +22,7 @@ def all_coffees(request):
 def user_purchases(request):
     all_purcahses = request.user.purchases.all()
     number_purchases = len(all_purcahses)
+
     if number_purchases != 0:
         end_date = request.user.purchases.latest('subscription_end').subscription_end
         purchase = request.user.purchases.latest('subscription_end').coffee
@@ -32,7 +33,8 @@ def user_purchases(request):
     else:
         args = {'price': None, 'get': request.GET, 'name': None,
                 'number_purchases': 0, "subscription_valid": False, "subscription_end_date": None, "coffees_left": 0}
-    return render(request, "profile.html", args)
+
+    return render(request, "Profile/profile.html", args)
 
 
 def get_price(request):

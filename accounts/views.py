@@ -1,11 +1,11 @@
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 
-from accounts.forms import UserRegistrationForm, UserLoginForm
+from accounts.forms import UserRegistrationForm, UserLoginForm, EditProfileForm, RemoveUser
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
-
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 def register(request):
@@ -32,10 +32,44 @@ def register(request):
 
     return render(request, 'register.html', args)
 
+@login_required
+def edit_profile(request):
+    user = request.user
+    form = EditProfileForm(request.POST or None, initial={'first_name': user.first_name, 'last_name': user.last_name})
+    if request.method == 'POST':
+        if form.is_valid():
+            user.first_name = request.POST['first_name']
+            user.last_name = request.POST['last_name']
+
+            user.save()
+            return HttpResponseRedirect('%s' % (reverse('profile')))
+
+    args = {"form": form}
+
+    return render(request, 'Profile/edit_profile.html', args)
+
+@login_required
+def delete_profile(request):
+    if request.method == 'POST':
+        form = RemoveUser(request.POST)
+
+        if form.is_valid():
+            request.user.delete()
+            auth.logout(request)
+            messages.success(request, 'You have successfully deleted your account')
+            return render(request, 'index.html')
+        else:
+            messages.error(request, "Not able to delete account!")
+    else:
+        form = RemoveUser()
+    arg = {'form': form}
+    return render(request, 'Profile/delete_profile.html', arg)
+
+
 
 @login_required(login_url='/login/')
 def profile(request):
-    return render(request, 'profile.html')
+    return render(request, 'Profile/profile.html')
 
 
 def login(request):

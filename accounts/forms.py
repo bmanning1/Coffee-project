@@ -52,3 +52,14 @@ class UserRegistrationForm(UserCreationForm):
 class UserLoginForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
+
+class EditProfileForm(forms.ModelForm):
+    first_name = forms.CharField(label='First Name')
+    last_name = forms.CharField(label='Last Name')
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name']
+
+class RemoveUser(forms.Form):
+    user_name = forms.CharField(label="Email")

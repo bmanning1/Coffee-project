@@ -15,8 +15,8 @@
             <h2>Star-{{ user.first_name }}</h2>
         </div>
 
-    <div class="col-sm-2"></div>
-    <div class="Profile-info col-sm-8">
+    <div class="col-md-2"></div>
+    <div class="Profile-info col-md-8">
         <h2>Welcome</h2>
         <p>You are logged in as {{ user.email }} </p>
         <p>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex profile</p>
@@ -29,10 +29,29 @@
         {% if subscription_valid == False %}
         <h2>You aren't currently subscribed - click below to shop</h2>
         {% endif %}
-        <a href="/coffees/" class="btn btn-primary topup-btn">Top up your coffees</a>
+        <a href="/coffees" class="btn btn-primary topup-btn">Top up your coffees</a>
 
         <p>Come visit soon, We can't wait to see you!</p>
     </div>
 
-    <div class="col-sm-2"></div>
+    <div class="col-md-2 text-right"><br><a href={% url 'edit_profile' %}>edit profile</a><br>
+        {% if subscription_valid == False %}<a href={% url 'delete_profile' %}>delete account</a><br>{% endif %}
+        {% if subscription_valid == True %}<a class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</a><br>{% endif %}
+        <a href='#'>cancel subscription</a><br>
+        <a href='#'>forgot password</a></div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog delete_modal">
+    <div class="modal-content">
+      <div class="modal-body">
+          <p>Please cancel your subscription before deleting your account.</p>
+            <br>
+        <p><i>Click on the 'cancel subscriptions' button below the 'delete account' button</i></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}

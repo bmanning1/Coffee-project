@@ -1,8 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post
 from .forms import BlogPostForm
-from django.shortcuts import redirect
 
 
 def post_list(request):
@@ -13,6 +12,16 @@ def post_list(request):
     """
     posts = Post.objects.filter(published_date__lte=timezone.now()
                                 ).order_by('-published_date')
+    return render(request, "blog/blogposts.html", {'posts': posts})
+
+
+def top_posts(request):
+    """
+    Get a list of posts and order them
+    by the number of views. Only return the
+    top 5 results. Render it to blogposts.html
+    """
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-views')[:5]
     return render(request, "blog/blogposts.html", {'posts': posts})
 
 
@@ -28,16 +37,6 @@ def post_detail(request, id):
     post.views += 1  # clock up the number of post views
     post.save()
     return render(request, "blog/postdetail.html", {'post': post})
-
-
-def top_posts(request):
-    """
-    Get a list of posts and order them
-    by the number of views. Only return the
-    top 5 results. Render it to blogposts.html
-    """
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-views')[:5]
-    return render(request, "blog/blogposts.html", {'posts': posts})
 
 
 def edit_post(request, id):

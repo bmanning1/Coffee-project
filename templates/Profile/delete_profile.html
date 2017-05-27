@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+
+<form class="login" method="POST" action="{% url 'delete_profile' %}" class="" />
+    <legend>Delete Account {{ user.email }}</legend>
+    <p>Type in your email address to confirm your account deletion</p>
+    {% csrf_token %}
+    {{ form| as_bootstrap }}
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <a class="btn btn-primary" href="/profile">Back</a>
+</form>
+
+{% endblock %}

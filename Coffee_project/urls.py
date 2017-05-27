@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.conf import settings
 from django.contrib import admin
 from home import views
-from accounts.views import register, profile, login, logout
+from accounts.views import register, profile, login, logout, edit_profile, delete_profile
 from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
 from coffees import views as coffee_views
@@ -36,6 +36,8 @@ urlpatterns = [
     # url(r'^pages/', include('django.contrib.flatpages.urls')),
     url(r'^register/$', register, name='register'),
     url(r'^profile/$', coffee_views.user_purchases, name='profile'),
+    url(r'^edit_profile/$', edit_profile, name='edit_profile'),
+    url('^delete_profile$', delete_profile, name="delete_profile"),
     url(r'^login/$', login, name='login'),
     url(r'^logout/$', logout, name='logout'),
 
@@ -45,7 +47,6 @@ urlpatterns = [
     url(r'^paypal-cancel/$', paypal_views.paypal_cancel),
     url(r'^coffees/$', coffee_views.all_coffees),
     url(r'^prices/$', coffee_views.get_price),
-
 
     # Blog URLs
     url(r'^blog/$', blog_views.post_list, name='post_list'),
