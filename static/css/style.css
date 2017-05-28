@@ -172,12 +172,11 @@ a:hover, a:focus {
 
 /************ ABOUT *************/
 .About-title {
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgb(21, 90, 21);
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid thin gainsboro;
 }
 
 .About-title > p {
@@ -191,51 +190,23 @@ img.members {
     width: 120px;
     height: 120px;
     border-radius: 100px;
-    border: thin #333 solid;
+    border: medium #4b4b4b solid;
     margin: 0 20px 0 0;
 }
 
 .about-members {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 0 10%;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-@media (max-width: 1000px) {
-    .about-members {
-        padding: 0;
-    }
-}
-
-.about-members > div {
-    margin: 0 2% 15px 2%;
-    padding-right: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.about-members > div > div > h1 {
-    color: #333;
-}
-
-@media (max-width: 500px) {
-    .about-members > div > div > p {
-        display: none;
-    }
-}
-
-@media (max-width: 500px) {
-    .about-members > div {
-        justify-content: flex-start;
-    }
+.about-members > div > h2 {
+    font-size: 26px;
+    color: #555555;
 }
 
 .personal-coffee {
     background-color: rgb(27, 115, 27);
     padding: 5px 15px;
-    width: calc(100% + 30px);
-    margin-left: -15px;
     color: white !important;
 }
 
@@ -265,7 +236,7 @@ img.members {
 }
 
 .panel-heading {
-    background-color: rgb(16, 66, 16) !important;
+    background-color: rgb(21, 90, 21) !important;
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
@@ -274,7 +245,7 @@ img.members {
 }
 
 .panel-heading:hover {
-    background-color: rgb(0, 41, 0) !important;
+    background-color: rgb(16, 66, 16) !important;
 }
 
 .panel-default {
@@ -284,8 +255,6 @@ img.members {
 .choices-coffee {
     background-color: rgb(21, 90, 21);
     padding: 10px 15px;
-    width: calc(100% + 30px);
-    margin-left: -15px;
     margin-top: 20px;
     color: white !important;
 }
@@ -302,7 +271,7 @@ img.members {
 
 .tab-content > div {
     background-color: gainsboro;
-    color: white;
+    color: #555555;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
@@ -312,21 +281,15 @@ img.members {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 @media (min-width: 600px) {
     .tab-content > div > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
         padding: 0 10%;
         text-align: right;
     }
-}
-
-.personalise-img {
-    border: thin #333 solid;
-    height: 130px;
 }
 
 @media (max-width: 700px) {
@@ -335,15 +298,26 @@ img.members {
     }
 }
 
-.tab-content > div > div > p > b {
-    font-family: 'Indie Flower', cursive;
+.mobile-coffee-name, .tab-content > div > div > p > span {
     font-size: 22px;
+}
+
+@media (min-width: 700px) {
+    .mobile-coffee-name {
+        display: none;
+    }
 }
 
 .tab-content > div > div > img {
     height: 120px;
     padding-left: 40px;
     margin: 10px auto;
+}
+
+@media (max-width: 700px) {
+    .tab-content > div > div > img {
+        margin: 0px auto 10px auto;
+    }
 }
 
 .tab-content > div > p {
@@ -367,7 +341,7 @@ img.members {
     width: 10px;
     height: 10px;
     margin: 5px;
-    background-color: rgb(27, 115, 27);
+    background-color: rgba(51, 51, 51, 0.6);
     border-radius: 100%;
 }
 
@@ -375,7 +349,7 @@ img.members {
     width: 15px;
     height: 15px;
     margin: 5px 5px 0 5px;
-    background-color: rgb(25, 101, 25);
+    background-color: rgba(51, 51, 51, 0.8);
     border-radius: 100%;
 }
 
@@ -389,7 +363,7 @@ img.members {
 }
 
 .About-img {
-    background: url('../../media/images/Coffee13.jpg') no-repeat;
+    background: url('../../media/images/Coffee10.jpg') no-repeat;
     width: 100%;
     height: 350px;
     background-size: cover;
