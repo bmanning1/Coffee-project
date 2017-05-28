@@ -1037,11 +1037,20 @@ input[type=text]:focus, textarea:focus {
     padding: 10px;
 }
 
+.profile-options > div > button {
+    background: none;
+    border: none;
+}
+
 .profile-options > div:hover, .profile-options > div:focus {
     background-color: rgba(139, 69, 19, 0.6);
 }
 
 .profile-options > div > a {
+    color: white;
+}
+
+.profile-options > div > button {
     color: white;
 }
 /************ LOGIN *************/
