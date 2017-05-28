@@ -676,6 +676,15 @@ input[type=text]:focus, textarea:focus {
     margin-top: 20px;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.pagination>li>a, .pagination>li>span, .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+    color: #333333;
+}
 /************ FORUM *************/
 .Forum-img {
     background: url('../../media/images/Coffee9.jpg') no-repeat;

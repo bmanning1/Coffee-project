@@ -8,15 +8,32 @@ from threads.models import Subject, Post, Thread
 from django.forms import formset_factory
 from polls.forms import PollSubjectForm, PollForm
 from polls.models import PollSubject
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def forum(request):
-    return render(request, 'forum/forum.html', {'subjects': Subject.objects.all()})
+    page = request.GET.get('page', 1)
+    subject = Subject.objects.all().order_by('-id')
+    paginator = Paginator(subject, 4)
+    try:
+        subjects = paginator.page(page)
+    except PageNotAnInteger:
+        subjects = paginator.page(1)
+    except EmptyPage:
+        subjects = paginator.page(paginator.num_pages)
+    return render(request, 'forum/forum.html', {'subjects': subjects})
 
 
 def threads(request, subject_id):
     subject = get_object_or_404(Subject, pk=subject_id)
     return render(request, 'forum/threads.html', {'subject': subject})
+
+
+def thread(request, thread_id):
+    thread_ = get_object_or_404(Thread, pk=thread_id)
+    args = {'thread': thread_}
+    args.update(csrf(request))
+    return render(request, 'forum/thread.html', args)
 
 
 @login_required
@@ -69,12 +86,6 @@ def new_thread(request, subject_id):
     args.update(csrf(request))
 
     return render(request, 'forum/thread_form.html', args)
-
-def thread(request, thread_id):
-    thread_ = get_object_or_404(Thread, pk=thread_id)
-    args = {'thread': thread_}
-    args.update(csrf(request))
-    return render(request, 'forum/thread.html', args)
 
 
 @login_required

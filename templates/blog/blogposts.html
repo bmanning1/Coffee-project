@@ -46,6 +46,30 @@
 </article>
 {% endfor %}
 
+{% if posts.has_other_pages %}
+  <ul class="pagination col-sm-12">
+    {% if posts.has_previous %}
+      <li><a href="?page={{ posts.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in posts.paginator.page_range %}
+      {% if posts.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if posts.has_next %}
+      <li><a href="?page={{ posts.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+
+
     <p class="text-center">One of our key aims is to get the community involved with one another. We write these
     blogs to share interesting facts and opinions on coffee for you to talk about with other regulars. So please feel free to comment on the blogs!</p>
     <hr>
