@@ -1015,10 +1015,6 @@ input[type=text]:focus, textarea:focus {
   vertical-align: middle;
 }
 
-.delete_modal {
-    padding: 0 150px;
-}
-
 .delete_modal > div {
     text-align: center;
 }

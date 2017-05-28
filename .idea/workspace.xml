@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="477dfe14-030e-4ea4-abdd-8e3b3df18029" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/blogposts.html" afterPath="$PROJECT_DIR$/templates/blog/blogposts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/forum.html" afterPath="$PROJECT_DIR$/templates/forum/forum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/views.py" afterPath="$PROJECT_DIR$/threads/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,17 +33,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="667" column="17" lean-forward="true" selection-start-line="667" selection-start-column="17" selection-end-line="667" selection-end-column="17" />
+            <state relative-caret-position="192">
+              <caret line="1018" column="11" lean-forward="true" selection-start-line="1018" selection-start-column="11" selection-end-line="1018" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forum.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forum.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/forum/forum.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -182,10 +179,10 @@
         <option value="$PROJECT_DIR$/templates/About.html" />
         <option value="$PROJECT_DIR$/templates/Profile/profile.html" />
         <option value="$PROJECT_DIR$/templates/blog/blogposts.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/forum/forum.html" />
         <option value="$PROJECT_DIR$/threads/views.py" />
         <option value="$PROJECT_DIR$/blog/views.py" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
       </list>
     </option>
   </component>
@@ -1030,11 +1027,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/templates/forum/forum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="667" column="17" lean-forward="true" selection-start-line="667" selection-start-column="17" selection-end-line="667" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="e#1244#1251#1#HTML" expanded="true" />
+            <element signature="e#1309#1316#1#HTML" expanded="true" />
+            <element signature="e#1716#1723#1#HTML" expanded="true" />
+            <element signature="e#1781#1788#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,16 +1050,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/forum/forum.html">
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="e#1244#1251#1#HTML" expanded="true" />
-            <element signature="e#1309#1316#1#HTML" expanded="true" />
-            <element signature="e#1716#1723#1#HTML" expanded="true" />
-            <element signature="e#1781#1788#1#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="192">
+          <caret line="1018" column="11" lean-forward="true" selection-start-line="1018" selection-start-column="11" selection-end-line="1018" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
