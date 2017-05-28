@@ -179,6 +179,24 @@ a:hover, a:focus {
     border-bottom: solid thin gainsboro;
 }
 
+.About-info {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: solid thin gainsboro;
+}
+
+.About-info > p > span {
+    font-size: 22px;
+}
+
+.About-info > p {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+    width: 100%;
+    line-height: 1.5em;
+}
+
 .About-title > p {
     text-align: center;
     padding: 10px 10%;
@@ -1000,6 +1018,27 @@ input[type=text]:focus, textarea:focus {
     padding: 15px 10px 10px 10px;
 }
 
+.QR-code {
+    height: 200px;
+}
+
+.profile-options {
+    margin-top: 10px;
+}
+
+.profile-options > div {
+    background-color: rgba(139, 69, 19, 0.9);
+    text-align: center;
+    padding: 10px;
+}
+
+.profile-options > div:hover, .profile-options > div:focus {
+    background-color: rgba(139, 69, 19, 0.6);
+}
+
+.profile-options > div > a {
+    color: white;
+}
 /************ LOGIN *************/
 .login {
     padding-top: 50px;

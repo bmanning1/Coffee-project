@@ -2,56 +2,71 @@
 {% block content %}
 
     <div class="Profile-img">
-            <div class="Coffees-left">
-                <div class="num-coffees">
-                    {% if subscription_valid == True %}
+        <div class="Coffees-left">
+            <div class="num-coffees">
+                {% if subscription_valid == True %}
                     <div>{{ coffees_left }}</div>
-                    {% endif %}
-                    {% if subscription_valid == False %}
+                {% endif %}
+                {% if subscription_valid == False %}
                     <div>0</div>
-                    {% endif %}
-                </div>
+                {% endif %}
             </div>
-            <h2>Star-{{ user.first_name }}</h2>
         </div>
+        <h2>Star-{{ user.first_name }}</h2>
+    </div>
 
     <div class="col-md-2"></div>
     <div class="Profile-info col-md-8">
         <h2>Welcome</h2>
-        <p>You are logged in as {{ user.email }} </p>
-        <p>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex profile</p>
+        <p>You are logged in as {{ user.email }}<br>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex profile</p>
 
         {% if subscription_valid == True %}
-        <h2>Current subscription - {{ name }}</h2>
-            <p><i class="glyphicon glyphicon-star"></i>  <b>Renews on {{ end_date }}</b></p>
+            <p>Show us the code below when you visit for us to scan.</p>
+            <img class="QR-code" src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=1+Coffee+purchased+at+starbex&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L"
+                 alt="qr code"/>
+            <h2>Current subscription - {{ name }}</h2>
+            <p><i class="glyphicon glyphicon-star"></i> <b>Renews on {{ end_date }}</b></p>
             <p><i class="glyphicon glyphicon-star"></i> <b>{{ coffees_left }} Coffees left until renewal date</b></p>
         {% endif %}
         {% if subscription_valid == False %}
-        <h2>You aren't currently subscribed - click below to shop</h2>
+            <h2>You aren't currently subscribed</h2>
+            <p>Click below to shop<br><i class="fa fa-angle-down" aria-hidden="true"></i></p>
         {% endif %}
         <a href="/coffees" class="btn btn-primary topup-btn">Top up your coffees</a>
 
         <p>Come visit soon, We can't wait to see you!</p>
     </div>
 
-    <div class="col-md-2 text-right"><br><a href={% url 'edit_profile' %}>edit profile</a><br>
-        {% if subscription_valid == False %}<a href={% url 'delete_profile' %}>delete account</a><br>{% endif %}
-        {% if subscription_valid == True %}<a class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</a><br>{% endif %}
-        <a href='#'>cancel subscription</a><br>
-        <a href='#'>forgot password</a></div>
+    <div class="col-md-2"></div>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog delete_modal">
-    <div class="modal-content">
-      <div class="modal-body">
-          <p>Please cancel your subscription before deleting your account.</p>
-            <br>
-        <p><i>Click on the 'cancel subscriptions' button below the 'delete account' button</i></p>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog delete_modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Please cancel your subscription before deleting your account.</p>
+                    <br>
+                    <p><i>Click on the 'cancel subscriptions' button below the 'delete account' button</i></p>
 
-      </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
+    <div class="col-sm-12 profile-options">
+        <div class="col-sm-3">
+            <a href={% url 'edit_profile' %}>edit profile</a>
+        </div>
+        <div class="col-sm-3">
+            {% if subscription_valid == False %}<a href={% url 'delete_profile' %}>delete account</a><br>{% endif %}
+            {% if subscription_valid == True %}
+            <a class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</a><br>{% endif %}
+        </div>
+        <div class="col-sm-3">
+            <a href='#'>cancel subscription</a><br>
+        </div>
+        <div class="col-sm-3">
+            <a href='#'>forgot password</a>
+        </div>
+    </div>
 {% endblock %}
