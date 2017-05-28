@@ -18,12 +18,15 @@
     <div class="col-md-2"></div>
     <div class="Profile-info col-md-8">
         <h2>Welcome</h2>
-        <p>You are logged in as {{ user.email }}<br>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex profile</p>
+        <p>You are logged in as {{ user.email }}<br>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex
+            profile</p>
 
         {% if subscription_valid == True %}
             <p>Show us the code below when you visit for us to scan.</p>
-            <img class="QR-code" src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=1+Coffee+purchased+at+starbex&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L"
-                 alt="qr code"/>
+            <img class="QR-code"
+                 src='https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fstarbex.herokuapp.com&chs=180x180&choe=UTF-8&chld=L|2'
+                 alt='qr code'>
+            <a href='http://www.qrcode-generator.de' border='0' style='cursor:default' rel='nofollow'></a>
             <h2>Current subscription - {{ name }}</h2>
             <p><i class="glyphicon glyphicon-star"></i> <b>Renews on {{ end_date }}</b></p>
             <p><i class="glyphicon glyphicon-star"></i> <b>{{ coffees_left }} Coffees left until renewal date</b></p>
@@ -60,7 +63,7 @@
         <div class="col-sm-3">
             {% if subscription_valid == False %}<a href={% url 'delete_profile' %}>delete account</a><br>{% endif %}
             {% if subscription_valid == True %}
-            <a class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</a><br>{% endif %}
+                <a class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</a><br>{% endif %}
         </div>
         <div class="col-sm-3">
             <a href='#'>cancel subscription</a><br>
