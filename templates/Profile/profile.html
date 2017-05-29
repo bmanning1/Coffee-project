@@ -20,7 +20,9 @@
         <h2>Welcome</h2>
         <p>You are logged in as {{ user.email }}<br>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex
             profile</p>
-
+        {% if first_login %}
+            <p><i class="glyphicon glyphicon-star"></i> As you're a newbie, feel free to visit the <b><a href="/threads/13/">New Members</a></b> section and make
+                sure to introduce your self <b><a href="/thread/4/">here</a></b>.</p> {% endif %}
         {% if subscription_valid == True %}
             <p>Show us the code below when you visit for us to scan.</p>
             <img class="QR-code"
@@ -63,13 +65,14 @@
         <div class="col-sm-3">
             {% if subscription_valid == False %}<a href={% url 'delete_profile' %}>delete account</a><br>{% endif %}
             {% if subscription_valid == True %}
-                <button class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</button><br>{% endif %}
+                <button class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</button>
+                <br>{% endif %}
         </div>
         <div class="col-sm-3">
             <a href='#'>cancel subscription</a><br>
         </div>
         <div class="col-sm-3">
-            <a href='#'>forgot password</a>
+            <a href='/threads/1'>account help</a>
         </div>
     </div>
 {% endblock %}

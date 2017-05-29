@@ -13,15 +13,39 @@
         <a href="{% url 'threads' thread.subject.id %}"><b>Subject: </b>{{ thread.subject.name }} </a>|
         <b>Thread:</b> {{ thread.name }}</p>
     <hr>
-     <div class="col-md-7 posts">
-         {% for post in thread.posts.all %}
+ {% if not thread.poll %}<div class="col-md-2"></div>{% endif %}
+     {% if thread.poll %}<div class="col-md-7 posts">{% endif %}
+     {% if not thread.poll %}<div class="col-md-8 posts">{% endif %}
+         {% for post in thread_posts %}
              {% include "forum/post.html" %}
            {% endfor %}
 
+    {% if thread_posts.has_other_pages %}
+  <ul class="pagination">
+    {% if thread_posts.has_previous %}
+      <li><a href="?page={{ thread_posts.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in thread_posts.paginator.page_range %}
+      {% if thread_posts.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if thread_posts.has_next %}
+      <li><a href="?page={{ thread_posts.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
      </div>
+{% if not thread.poll %}<div class="col-md-2"></div>{% endif %}
 
-    <div class="col-md-5">
         {% if thread.poll %}
+            <div class="col-md-5">
            <div class="poll">
                <div>
                    <h2 class="poll-title">{{ thread.poll.question }}</h2>
@@ -45,8 +69,9 @@
                   {% endfor %}
                </div>
            </div>
+            </div>
        {% endif %}
-    </div>
+
 
         <p class="thread-btn">
             <a href="{% url 'threads' thread.subject.id %}" class="btn btn-primary backforum-btn">Back</a>

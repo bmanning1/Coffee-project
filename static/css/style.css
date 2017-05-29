@@ -777,6 +777,8 @@ input[type=text]:focus, textarea:focus {
 
 .poll-title {
     margin: 0 0 5px 0;
+    font-size: 14px;
+    text-align: center;
 }
 
 .thread-image {

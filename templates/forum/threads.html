@@ -10,7 +10,7 @@
 
  <table class="table table-striped">
         <tbody>
-            {% for thread in subject.threads.all %}
+            {% for thread in subject_threads %}
                 <tr>
                     <td class="forum-thread">{% include "forum/thread_item.html" %}
                         <p><b>Created:</b>
@@ -22,6 +22,29 @@
             {% endfor %}
         </tbody>
     </table>
+
+
+{% if subject_threads.has_other_pages %}
+  <ul class="pagination">
+    {% if subject_threads.has_previous %}
+      <li><a href="?page={{ subject_threads.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in subject_threads.paginator.page_range %}
+      {% if subject_threads.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if subject_threads.has_next %}
+      <li><a href="?page={{ subject_threads.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
     <p>
         <a href="/forum/" class="btn btn-primary backforum-btn">Back</a>
         {% if user.is_authenticated %}

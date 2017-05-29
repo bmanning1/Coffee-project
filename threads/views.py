@@ -14,7 +14,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def forum(request):
     page = request.GET.get('page', 1)
     subject = Subject.objects.all().order_by('-id')
-    paginator = Paginator(subject, 4)
+    paginator = Paginator(subject, 6)
     try:
         subjects = paginator.page(page)
     except PageNotAnInteger:
@@ -26,12 +26,30 @@ def forum(request):
 
 def threads(request, subject_id):
     subject = get_object_or_404(Subject, pk=subject_id)
-    return render(request, 'forum/threads.html', {'subject': subject})
+    subject_threads0 = subject.threads.all().order_by('-created_at')
+    page = request.GET.get('page', 1)
+    paginator = Paginator(subject_threads0, 4)
+    try:
+        subject_threads = paginator.page(page)
+    except PageNotAnInteger:
+        subject_threads = paginator.page(1)
+    except EmptyPage:
+        subject_threads = paginator.page(paginator.num_pages)
+    return render(request, 'forum/threads.html', {'subject': subject, 'subject_threads': subject_threads})
 
 
 def thread(request, thread_id):
     thread_ = get_object_or_404(Thread, pk=thread_id)
-    args = {'thread': thread_}
+    thread_posts0 = thread_.posts.all()
+    page = request.GET.get('page', 1)
+    paginator = Paginator(thread_posts0, 4)
+    try:
+        thread_posts = paginator.page(page)
+    except PageNotAnInteger:
+        thread_posts = paginator.page(1)
+    except EmptyPage:
+        thread_posts = paginator.page(paginator.num_pages)
+    args = {'thread': thread_, 'thread_posts': thread_posts}
     args.update(csrf(request))
     return render(request, 'forum/thread.html', args)
 
