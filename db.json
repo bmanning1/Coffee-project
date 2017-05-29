@@ -1867,18 +1867,6 @@
 },
 {
     "fields": {
-        "created_at": "2017-05-29T10:09:23Z",
-        "subject": 1,
-        "name": "Can't delete my account",
-        "user": [
-            "connormale@hotmail.co.uk"
-        ]
-    },
-    "model": "threads.thread",
-    "pk": 22
-},
-{
-    "fields": {
         "created_at": "2017-05-29T10:09:51Z",
         "subject": 1,
         "name": "I would like to change subscription",
