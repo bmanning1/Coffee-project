@@ -817,6 +817,10 @@ input[type=text]:focus, textarea:focus {
     padding-left: 30px;
 }
 
+.post_break {
+    margin: 0px 0 15px 0;
+}
+
 @media (max-width: 991px) {
     .posts {
         text-align: center;

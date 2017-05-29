@@ -3,102 +3,107 @@
 {% load staticfiles %}
 {% block content %}
 
- <div class="row header">
+    <div class="row header">
 
- <div class="row header forum-header">
-   <div class="jumbotron"><h1>{{ thread.name }}</h1></div>
- </div>
+    <div class="row header forum-header">
+        <div class="jumbotron"><h1>{{ thread.name }}</h1></div>
+    </div>
 
     <p class="align-center"><a href="/forum/"><b>Forum</b></a> |
         <a href="{% url 'threads' thread.subject.id %}"><b>Subject: </b>{{ thread.subject.name }} </a>|
         <b>Thread:</b> {{ thread.name }}</p>
     <hr>
- {% if not thread.poll %}<div class="col-md-2"></div>{% endif %}
-     {% if thread.poll %}<div class="col-md-7 posts">{% endif %}
-     {% if not thread.poll %}<div class="col-md-8 posts">{% endif %}
-         {% for post in thread_posts %}
-             {% include "forum/post.html" %}
-           {% endfor %}
+    {% if not thread.poll %}
+        <div class="col-md-2"></div>{% endif %}
+    {% if thread.poll %}
+        <div class="col-md-7 posts">{% endif %}
+{% if not thread.poll %}
+    <div class="col-md-8 posts">{% endif %}
+{% for post in thread_posts %}
+    {% include "forum/post.html" %}
+    <hr class="post_break">
+{% endfor %}
 
-    {% if thread_posts.has_other_pages %}
-  <ul class="pagination">
-    {% if thread_posts.has_previous %}
-      <li><a href="?page={{ thread_posts.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in thread_posts.paginator.page_range %}
-      {% if thread_posts.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if thread_posts.has_next %}
-      <li><a href="?page={{ thread_posts.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
-    {% endif %}
-  </ul>
-{% endif %}
-     </div>
-{% if not thread.poll %}<div class="col-md-2"></div>{% endif %}
-
-        {% if thread.poll %}
-            <div class="col-md-5">
-           <div class="poll">
-               <div>
-                   <h2 class="poll-title">{{ thread.poll.question }}</h2>
-
-
-                   <p>Here’s how the votes are so far:</p>
-                 {% for subject in thread.poll.subjects.all %}
-                       <div class="col-md-10">
-                           <strong>{{ subject.name }}</strong>
-                           <span class="pull-right">{{ subject|vote_percentage }}%</span>
-                       </div>
-                       {% user_vote_button thread subject user %}
-                    <div class="col-md-10">
-                     <div class="progress">
-                       <div class="progress-bar progress-bar-info" role="progressbar"
-                        aria-value="{{ subject|vote_percentage }}" aria-valuemin="0"
-                        aria-valuemax="100" style="width:{{ subject|vote_percentage }}%;">
-                       </div>
-                     </div>
-                    </div>
-                  {% endfor %}
-               </div>
-           </div>
-            </div>
-       {% endif %}
-
-
-        <p class="thread-btn">
-            <a href="{% url 'threads' thread.subject.id %}" class="btn btn-primary backforum-btn">Back</a>
-            {% if user.is_authenticated %}
-            <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
+{% if thread_posts.has_other_pages %}
+    <ul class="pagination">
+        {% if thread_posts.has_previous %}
+            <li><a href="?page={{ thread_posts.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+            <li class="disabled"><span>&laquo;</span></li>
+        {% endif %}
+        {% for i in thread_posts.paginator.page_range %}
+            {% if thread_posts.number == i %}
+                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
             {% endif %}
-        </p>
+        {% endfor %}
+        {% if thread_posts.has_next %}
+            <li><a href="?page={{ thread_posts.next_page_number }}">&raquo;</a></li>
+        {% else %}
+            <li class="disabled"><span>&raquo;</span></li>
+        {% endif %}
+    </ul>
+{% endif %}
+</div>
+{% if not thread.poll %}
+    <div class="col-md-2"></div>{% endif %}
+
+{% if thread.poll %}
+    <div class="col-md-5">
+        <div class="poll">
+            <div>
+                <h2 class="poll-title">{{ thread.poll.question }}</h2>
 
 
+                <p>Here’s how the votes are so far:</p>
+                {% for subject in thread.poll.subjects.all %}
+                    <div class="col-md-10">
+                        <strong>{{ subject.name }}</strong>
+                        <span class="pull-right">{{ subject|vote_percentage }}%</span>
+                    </div>
+                    {% user_vote_button thread subject user %}
+                    <div class="col-md-10">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info" role="progressbar"
+                                 aria-value="{{ subject|vote_percentage }}" aria-valuemin="0"
+                                 aria-valuemax="100" style="width:{{ subject|vote_percentage }}%;">
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-   <table class="table table-hover">
-             <tbody>
-             <tr>
-                 <th class="align-center">
-                   CREATED
-                 </th>
-                 <th class="align-center">OWNER</th>
-             </tr>
-             <tr class="align-center">
-                 <td>
-                   <time datetime="{{ thread.created_at }}">
-                    {{ thread.created_at|started_time }}
-                   </time>
-                 </td>
-                 <td>{{ thread.user.first_name }} {{ thread.user.last_name }}</td>
+{% endif %}
 
-             </tr>
-           </tbody>
-         </table>
+
+<p class="thread-btn">
+    <a href="{% url 'threads' thread.subject.id %}" class="btn btn-primary backforum-btn">Back</a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
+    {% endif %}
+</p>
+
+
+</div>
+    <table class="table table-hover">
+        <tbody>
+        <tr>
+            <th class="align-center">
+                CREATED
+            </th>
+            <th class="align-center">OWNER</th>
+        </tr>
+        <tr class="align-center">
+            <td>
+                <time datetime="{{ thread.created_at }}">
+                    {{ thread.created_at|started_time }}
+                </time>
+            </td>
+            <td>{{ thread.user.first_name }} {{ thread.user.last_name }}</td>
+
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}
