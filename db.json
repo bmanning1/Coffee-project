@@ -1,6 +1,14 @@
 [
 {
     "fields": {
+        "expire_date": "2017-06-12T17:14:26.950Z",
+        "session_data": "ZDNiOTVjNGNlYTQxMDZiMzc0NGM0OWY0MzM2YWQyZjYwNGQ3NWVjNzp7Il9hdXRoX3VzZXJfaGFzaCI6ImE2NzI2YjlmZmMzMDlhNTY1MDI4MmQ3YmQ5YTZmMjFhNzYzNDk1YTMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9"
+    },
+    "model": "sessions.session",
+    "pk": "3eu5yh2k8poe9n4tvc5gxt8qzi5a1d3s"
+},
+{
+    "fields": {
         "expire_date": "2017-05-29T16:17:10.274Z",
         "session_data": "ZDNiOTVjNGNlYTQxMDZiMzc0NGM0OWY0MzM2YWQyZjYwNGQ3NWVjNzp7Il9hdXRoX3VzZXJfaGFzaCI6ImE2NzI2YjlmZmMzMDlhNTY1MDI4MmQ3YmQ5YTZmMjFhNzYzNDk1YTMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9"
     },
@@ -41,6 +49,14 @@
 },
 {
     "fields": {
+        "expire_date": "2017-06-12T16:19:04.062Z",
+        "session_data": "ZDNiOTVjNGNlYTQxMDZiMzc0NGM0OWY0MzM2YWQyZjYwNGQ3NWVjNzp7Il9hdXRoX3VzZXJfaGFzaCI6ImE2NzI2YjlmZmMzMDlhNTY1MDI4MmQ3YmQ5YTZmMjFhNzYzNDk1YTMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9"
+    },
+    "model": "sessions.session",
+    "pk": "s5ba023cv6inttyn26frkgxt0a9cspil"
+},
+{
+    "fields": {
         "expire_date": "2017-05-30T16:24:23.836Z",
         "session_data": "ZDNiOTVjNGNlYTQxMDZiMzc0NGM0OWY0MzM2YWQyZjYwNGQ3NWVjNzp7Il9hdXRoX3VzZXJfaGFzaCI6ImE2NzI2YjlmZmMzMDlhNTY1MDI4MmQ3YmQ5YTZmMjFhNzYzNDk1YTMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9"
     },
@@ -54,14 +70,6 @@
     },
     "model": "sessions.session",
     "pk": "xa2emcnyli4z77yg0veo860g2xs7wruw"
-},
-{
-    "fields": {
-        "expire_date": "2017-06-12T11:44:21.564Z",
-        "session_data": "MjczYWRhNDE4NDllM2U4Njk1OTEyNmY4NWEyYWY0ZmRjODg3MDcxZTp7Il9hdXRoX3VzZXJfaGFzaCI6ImQyMDExNDkyZjFkOTZjMjZkOTBlOTgxZDQ4MDE5OTkwMGM5MjQxYzIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiOSJ9"
-    },
-    "model": "sessions.session",
-    "pk": "yjg4sga1g7a5vqih3jyxn1ls3ij7ncpm"
 },
 {
     "fields": {
@@ -79,7 +87,7 @@
         "is_active": true,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2017-05-29T11:29:36.193Z",
+        "last_login": "2017-05-29T17:14:26.867Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$20000$PunUDx5Hz1oG$SE+NZpWvD7yoi66itWs1dA+qTTh352nM953KQ+DllcE=",
@@ -1518,10 +1526,11 @@
 {
     "fields": {
         "coffee": 1,
+        "subscription_created_date": "2017-06-13T17:00:47.793Z",
         "user": [
             "rebm01@hotmail.co.uk"
         ],
-        "subscription_end": "2017-06-13T17:00:47.793Z"
+        "subscription_valid": true
     },
     "model": "coffees.purchase",
     "pk": 6
@@ -1529,10 +1538,11 @@
 {
     "fields": {
         "coffee": 1,
+        "subscription_created_date": "2017-06-13T17:01:18.467Z",
         "user": [
             "rebm01@hotmail.co.uk"
         ],
-        "subscription_end": "2017-06-13T17:01:18.467Z"
+        "subscription_valid": true
     },
     "model": "coffees.purchase",
     "pk": 7
@@ -1540,10 +1550,11 @@
 {
     "fields": {
         "coffee": 1,
+        "subscription_created_date": "2017-06-13T18:17:17.792Z",
         "user": [
             "rebm01@hotmail.co.uk"
         ],
-        "subscription_end": "2017-06-13T18:17:17.792Z"
+        "subscription_valid": true
     },
     "model": "coffees.purchase",
     "pk": 8
@@ -1551,10 +1562,11 @@
 {
     "fields": {
         "coffee": 1,
+        "subscription_created_date": "2017-06-13T18:17:18.148Z",
         "user": [
             "rebm01@hotmail.co.uk"
         ],
-        "subscription_end": "2017-06-13T18:17:18.148Z"
+        "subscription_valid": true
     },
     "model": "coffees.purchase",
     "pk": 9
@@ -1562,10 +1574,11 @@
 {
     "fields": {
         "coffee": 1,
+        "subscription_created_date": "2017-06-13T18:20:07.382Z",
         "user": [
             "rebm01@hotmail.co.uk"
         ],
-        "subscription_end": "2017-06-13T18:20:07.382Z"
+        "subscription_valid": true
     },
     "model": "coffees.purchase",
     "pk": 10
@@ -1573,10 +1586,11 @@
 {
     "fields": {
         "coffee": 1,
+        "subscription_created_date": "2017-06-13T18:20:07.721Z",
         "user": [
             "rebm01@hotmail.co.uk"
         ],
-        "subscription_end": "2017-06-13T18:20:07.721Z"
+        "subscription_valid": true
     },
     "model": "coffees.purchase",
     "pk": 11

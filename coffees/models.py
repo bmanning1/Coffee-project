@@ -4,9 +4,8 @@ from django.utils import timezone
 from signals import subscription_created, subscription_was_cancelled
 from paypal.standard.ipn.signals import valid_ipn_received
 
-
 def get_subscription_end_date():
-    return timezone.now() + timezone.timedelta(weeks=4)
+    return timezone.now()
 
 
 class Coffee(models.Model):
@@ -24,7 +23,9 @@ class Coffee(models.Model):
 class Purchase(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='purchases')
     coffee = models.ForeignKey(Coffee)
-    subscription_end = models.DateTimeField(default=get_subscription_end_date)
+    subscription_created_date = models.DateTimeField(default=get_subscription_end_date)
+    # Think of field or flag
+    subscription_valid = models.BooleanField(default=True)# when user elects to cancel, this becomes false.
 
     class Meta:
         app_label = "coffees"

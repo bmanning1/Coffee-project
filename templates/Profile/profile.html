@@ -30,7 +30,7 @@
                  alt='qr code'>
             <a href='http://www.qrcode-generator.de' border='0' style='cursor:default' rel='nofollow'></a>
             <h2>Current subscription - {{ name }}</h2>
-            <p><i class="glyphicon glyphicon-star"></i> <b>Renews on {{ end_date }}</b></p>
+            <p><i class="glyphicon glyphicon-star"></i> <b>Renews in {{ renewal_date }} days</b></p>
             <p><i class="glyphicon glyphicon-star"></i> <b>{{ coffees_left }} Coffees left until renewal date</b></p>
         {% endif %}
         {% if subscription_valid == False %}
@@ -69,10 +69,11 @@
                 <br>{% endif %}
         </div>
         <div class="col-sm-3">
-            <a href='#'>cancel subscription</a><br>
+            <a href="#">cancel subscription</a><br>
         </div>
         <div class="col-sm-3">
             <a href='/threads/1'>account help</a>
         </div>
     </div>
+
 {% endblock %}

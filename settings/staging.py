@@ -18,4 +18,4 @@ SITE_URL = 'starbex.herokuapp.com'
 
 # Paypal environment variables
 PAYPAL_NOTIFY_URL = 'starbex.herokuapp.com/a-very-hard-to-guess-url/'
-PAYPAL_RECEIVER_EMAIL = 'rebm01-facilitator@hotmail.co.uk'
+PAYPAL_RECEIVER_EMAIL = 'rebm01-facilitator1@hotmail.co.uk'
