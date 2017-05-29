@@ -4,6 +4,7 @@ from .models import Post
 from .forms import BlogPostForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 def post_list(request):
     """
     Create a view that will return a

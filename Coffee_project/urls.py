@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.conf import settings
 from django.contrib import admin
 from home import views
-from accounts.views import register, profile, login, logout, edit_profile, delete_profile
+from accounts.views import register, login, logout, edit_profile, delete_profile
 from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
 from coffees import views as coffee_views

@@ -1,10 +1,9 @@
-from datetime import timedelta
-
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
 from signals import subscription_created, subscription_was_cancelled
 from paypal.standard.ipn.signals import valid_ipn_received
+
 
 def get_subscription_end_date():
     return timezone.now() + timezone.timedelta(weeks=4)
@@ -29,6 +28,7 @@ class Purchase(models.Model):
 
     class Meta:
         app_label = "coffees"
+
 
 valid_ipn_received.connect(subscription_created)
 valid_ipn_received.connect(subscription_was_cancelled)

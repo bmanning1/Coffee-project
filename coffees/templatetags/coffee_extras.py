@@ -8,9 +8,9 @@ register = template.Library()
 
 def paypal_form_for(coffee, user):
     all_purcahses = user.purchases.all()
-    if len(all_purcahses)!=0:
+    if len(all_purcahses) != 0:
         html = "Subscribed!"
-    #if user.is_subscribed(coffee):
+    # if user.is_subscribed(coffee):
     #    html = "Subscribed!"
     else:
         paypal_dict = {
@@ -36,5 +36,6 @@ def paypal_form_for(coffee, user):
             html = PayPalPaymentsForm(initial=paypal_dict, button_type='subscribe').render()
 
     return html
+
 
 register.simple_tag(paypal_form_for)

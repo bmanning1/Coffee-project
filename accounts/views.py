@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
 from django.http import HttpResponseRedirect
 
+
 # Create your views here.
 def register(request):
     if request.method == 'POST':
@@ -32,6 +33,7 @@ def register(request):
 
     return render(request, 'register.html', args)
 
+
 @login_required
 def edit_profile(request):
     user = request.user
@@ -47,6 +49,7 @@ def edit_profile(request):
     args = {"form": form}
 
     return render(request, 'Profile/edit_profile.html', args)
+
 
 @login_required
 def delete_profile(request):
@@ -64,7 +67,6 @@ def delete_profile(request):
         form = RemoveUser()
     arg = {'form': form}
     return render(request, 'Profile/delete_profile.html', arg)
-
 
 
 @login_required(login_url='/login/')
