@@ -7,8 +7,11 @@ register = template.Library()
 
 
 def paypal_form_for(coffee, user):
-    if user.purchases.latest('subscription_end').subscription_valid:
-        html = "Subscribed!"
+    all_purcahses = user.purchases.all()
+    number_purchases = len(all_purcahses)
+    if number_purchases != 0:
+        if user.purchases.order_by('subscription_created_date')[0].subscription_valid:
+            html = "Subscribed!"
     else:
         paypal_dict = {
             "business": settings.PAYPAL_RECEIVER_EMAIL,

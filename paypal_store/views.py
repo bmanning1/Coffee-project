@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 def paypal_return(request):
     print request.POST
 
-    purchase = request.user.purchases.latest('subscription_end').coffee
+    purchase = request.user.purchases.order_by('subscription_created_date')[0].coffee
     args = {'price': purchase.price, 'get': request.GET, 'name': purchase.name}
     return render(request, 'paypal/paypal_return.html', args)
 
