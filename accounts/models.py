@@ -25,6 +25,7 @@ class AccountUserManager(UserManager):
 
 class User(AbstractUser):
     objects = AccountUserManager()
+
     # Is the User Subscribed?
     def is_subscribed(self, coffee):
         try:

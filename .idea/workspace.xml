@@ -2,73 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="477dfe14-030e-4ea4-abdd-8e3b3df18029" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/threads/fixtures/subjects.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/threads/fixtures/user.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Coffee_project/urls.py" afterPath="$PROJECT_DIR$/Coffee_project/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Coffee_project/wsgi.py" afterPath="$PROJECT_DIR$/Coffee_project/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/admin.py" afterPath="$PROJECT_DIR$/accounts/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/backends.py" afterPath="$PROJECT_DIR$/accounts/backends.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/forms.py" afterPath="$PROJECT_DIR$/accounts/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/models.py" afterPath="$PROJECT_DIR$/accounts/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/tests.py" afterPath="$PROJECT_DIR$/accounts/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/views.py" afterPath="$PROJECT_DIR$/accounts/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/forms.py" afterPath="$PROJECT_DIR$/blog/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/tests.py" afterPath="$PROJECT_DIR$/blog/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/models.py" afterPath="$PROJECT_DIR$/coffees/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/signals.py" afterPath="$PROJECT_DIR$/coffees/signals.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/templatetags/coffee_extras.py" afterPath="$PROJECT_DIR$/coffees/templatetags/coffee_extras.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/tests.py" afterPath="$PROJECT_DIR$/coffees/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coffees/views.py" afterPath="$PROJECT_DIR$/coffees/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/admin.py" afterPath="$PROJECT_DIR$/home/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/models.py" afterPath="$PROJECT_DIR$/home/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/tests.py" afterPath="$PROJECT_DIR$/home/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/views.py" afterPath="$PROJECT_DIR$/home/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paypal_store/admin.py" afterPath="$PROJECT_DIR$/paypal_store/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paypal_store/models.py" afterPath="$PROJECT_DIR$/paypal_store/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paypal_store/tests.py" afterPath="$PROJECT_DIR$/paypal_store/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paypal_store/views.py" afterPath="$PROJECT_DIR$/paypal_store/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polls/admin.py" afterPath="$PROJECT_DIR$/polls/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polls/forms.py" afterPath="$PROJECT_DIR$/polls/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polls/models.py" afterPath="$PROJECT_DIR$/polls/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polls/tests.py" afterPath="$PROJECT_DIR$/polls/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polls/views.py" afterPath="$PROJECT_DIR$/polls/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings/base.py" afterPath="$PROJECT_DIR$/settings/base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery.js" afterPath="$PROJECT_DIR$/static/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/About.html" afterPath="$PROJECT_DIR$/templates/About.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Profile/delete_profile.html" afterPath="$PROJECT_DIR$/templates/Profile/delete_profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Profile/edit_profile.html" afterPath="$PROJECT_DIR$/templates/Profile/edit_profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Profile/profile.html" afterPath="$PROJECT_DIR$/templates/Profile/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/blogpostform.html" afterPath="$PROJECT_DIR$/templates/blog/blogpostform.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/blogposts.html" afterPath="$PROJECT_DIR$/templates/blog/blogposts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/postdetail.html" afterPath="$PROJECT_DIR$/templates/blog/postdetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/coffees/coffees.html" afterPath="$PROJECT_DIR$/templates/coffees/coffees.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/contact.html" afterPath="$PROJECT_DIR$/templates/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/flatpages/default.html" afterPath="$PROJECT_DIR$/templates/flatpages/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/comment_details.html" afterPath="$PROJECT_DIR$/templates/forum/comment_details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/forum.html" afterPath="$PROJECT_DIR$/templates/forum/forum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/post.html" afterPath="$PROJECT_DIR$/templates/forum/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/post_form.html" afterPath="$PROJECT_DIR$/templates/forum/post_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/thread.html" afterPath="$PROJECT_DIR$/templates/forum/thread.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/thread_form.html" afterPath="$PROJECT_DIR$/templates/forum/thread_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/thread_item.html" afterPath="$PROJECT_DIR$/templates/forum/thread_item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/forum/threads.html" afterPath="$PROJECT_DIR$/templates/forum/threads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/paypal/paypal_cancel.html" afterPath="$PROJECT_DIR$/templates/paypal/paypal_cancel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/paypal/paypal_return.html" afterPath="$PROJECT_DIR$/templates/paypal/paypal_return.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/price.html" afterPath="$PROJECT_DIR$/templates/price.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/forms.py" afterPath="$PROJECT_DIR$/threads/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/models.py" afterPath="$PROJECT_DIR$/threads/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/templatetags/thread_extras.py" afterPath="$PROJECT_DIR$/threads/templatetags/thread_extras.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/tests.py" afterPath="$PROJECT_DIR$/threads/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/views.py" afterPath="$PROJECT_DIR$/threads/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -172,8 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/coffees/signals.py" />
-        <option value="$PROJECT_DIR$/coffees/tests.py" />
         <option value="$PROJECT_DIR$/coffees/views.py" />
         <option value="$PROJECT_DIR$/home/admin.py" />
         <option value="$PROJECT_DIR$/home/models.py" />
@@ -223,6 +156,8 @@
         <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/static/js/jquery.js" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/coffees/tests.py" />
+        <option value="$PROJECT_DIR$/accounts/models.py" />
       </list>
     </option>
   </component>
@@ -309,6 +244,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Coffee-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Coffee-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -651,22 +600,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/paypal_store/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/paypal_store/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paypal_store/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1070,6 +1003,24 @@
         <state relative-caret-position="-18279">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffees/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
