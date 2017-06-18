@@ -49,9 +49,9 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 ----------------
 ### CREDIT
 
-* Scattered Polaroid Gallery - http://tympanus.net/codrops/licensing/
+* Scattered Polaroid Gallery - https://tympanus.net/codrops/2014/01/28/scattered-polaroids-gallery/
 * A lot of my Code I got from Code Institute as it is the course I am taking - I have showed in my annotation that I understand it all and also personalised it a lot to my needs. 
-* Font-Awesome - http://fontawesome.io/license
+* Font-Awesome - http://fontawesome.io/
 * Images were sourced from Pixabay (a free royalty-free images site) or created myself.
 
 ----------------
