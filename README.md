@@ -1,10 +1,12 @@
 # Coffee Project
-### Project 3 with Code Institute - Rebecca Manning
+### Project 3 with Code Institute 
+#### Rebecca Manning
 
 For the final project with Code Institute I chose to create a website for a Coffee shop that provides monthly subscriptions and aims to integrate the local community online ...and so with an attempt at some humour, I named it Starbex.  
 
 ----------------
-### STARBEX - What the project does, needs it fulfills & functionality
+### STARBEX
+#### What the project does, needs it fulfills & functionality
 The project offers customers the chance to purchase a certain number of coffees per month at a discounted price. This makes it quick and easy for them to pop into the store and show the QR code from their phone to buy a coffee. 
 
 The project also aims to integrate the community through online blogs, forums and profiles. Through having to subscribe to coffees, you create your own profile that you can log in and out of. Each profile is unique and has information suited to the user. For example it may show you how many coffees you have left for the month and days till renewal if you are Subscribed. If you aren't subscribed it shows you a link to go and purchase some coffees with the price list. The profile also tells if new members have joined and shows them to the new member section to introduce yourself.
@@ -47,13 +49,14 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 ----------------
 ### CREDIT
 
-Polaroid Gallery
-Code Institute - showed in my annotation that I understand it all. Tweeked it alot 
-Font-Awesome
+* Scattered Polaroid Gallery - http://tympanus.net/codrops/licensing/
+* A lot of my Code I got from Code Institute as it is the course I am taking - I have showed in my annotation that I understand it all and also personalised it a lot to my needs. 
+* Font-Awesome - http://fontawesome.io/license
 * Images were sourced from Pixabay (a free royalty-free images site) or created myself.
 
 ----------------
-### CHALLENGES - What was kept/changed to fit my need
+### CHALLENGES 
+#### What was kept/changed to fit my need
 
 * One of my main aims was to focus on the little details of the website that people using it will see. I really wanted the user to enjoy the unique experience of going through the website. Although this took a lot of time and late nights, it was worth it! I created an animated favicon (although it does not work on chrome), I focussed on making the site interactive as well as a few more small things that I'll let you all discover when visiting the site.
 * As you can see, the site is interactive is places. However, at one point in creating the website I realised a lot of the animation was slowing down the website. So from this, I decided to take out certain things that weren't needed like hovering over the back button in a forum thread and being able to see the page it sends you to.
@@ -70,7 +73,8 @@ Unfortunately I ran out of time to finish certain parts, but if I had a bit long
 * Can not currently post a new thread without a Poll
 
 ----------------
-### PROJECT BRIEF - Code Institute
+### PROJECT BRIEF
+#### Code Institute
 
 **Build An Issue Tracker**
 
@@ -93,7 +97,8 @@ Unfortunately I ran out of time to finish certain parts, but if I had a bit long
 * If you choose to create your own project, the scope should be similar to that of the example brief above, or the we_are_social project from earlier in this stream. If you want some ideas, please ask your mentor for advice and direction.
 
 -----------------
-### PROJECT GUIDELINES - Code Institute
+### PROJECT GUIDELINES 
+#### Code Institute
 
 * Build a web app that fulfills some actual (or imagined) real-world need. This can be of your own choosing and may be domain specific.
 
