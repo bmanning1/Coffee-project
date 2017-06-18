@@ -71,6 +71,7 @@ Unfortunately I ran out of time to finish certain parts, but if I had a bit long
 * Cancel Subscription button working on profile.html and coffees.html
 * Search Bars on Forum page and Blog page working
 * Can not currently post a new thread without a Poll
+* Add some tests to the Apps: coffees, polls and paypal_store
 
 ----------------
 ### PROJECT BRIEF
