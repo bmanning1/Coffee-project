@@ -3,12 +3,8 @@ from .models import Post
 
 
 class PostTests(TestCase):
-    """
-    Here we'll define the tests
-    that we'll run against our Post model
-    """
-
+    # Test for our Post model
     def test_str(self):
+        # Test title of Blog post
         test_title = Post(title='My Latest Blog Post')
-        self.assertEqual(str(test_title),
-                         'My Latest Blog Post')
+        self.assertEqual(str(test_title), 'My Latest Blog Post')

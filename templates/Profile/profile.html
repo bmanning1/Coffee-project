@@ -1,30 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Profile Header -->
     <div class="Profile-img">
         <div class="Coffees-left">
             <div class="num-coffees">
+                <!-- If User is Subscribed then show number of Coffees left for the month -->
                 {% if subscription_valid == True %}
                     <div>{{ coffees_left }}</div>
                 {% endif %}
+                <!-- If User is not Subscribed then show 0 Coffees left for the month -->
                 {% if subscription_valid == False %}
                     <div>0</div>
                 {% endif %}
             </div>
         </div>
+
+        <!-- Profile Title -->
         <h2>Star-{{ user.first_name }}</h2>
     </div>
 
+    <!-- Profile Content -->
     <div class="col-md-2"></div>
     <div class="Profile-info col-md-8">
         <h2>Welcome</h2>
         <p>You are logged in as {{ user.email }}<br>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex
             profile</p>
+
+        <!-- If it is the first login for the User -->
         {% if first_login %}
-            <p><i class="glyphicon glyphicon-star"></i> As you're a newbie, feel free to visit the <b><a href="/threads/13/">New Members</a></b> section and make
+            <p><i class="glyphicon glyphicon-star"></i> As you're a newbie, feel free to visit the <b><a
+                    href="/threads/13/">New Members</a></b> section and make
                 sure to introduce your self <b><a href="/thread/4/">here</a></b>.</p> {% endif %}
+
+        <!-- If User is Subscribed -->
         {% if subscription_valid == True %}
             <p>Show us the code below when you visit for us to scan.</p>
+            <!-- QR code for User to show in Starbex shop -->
             <img class="QR-code"
                  src='https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fstarbex.herokuapp.com&chs=180x180&choe=UTF-8&chld=L|2'
                  alt='qr code'>
@@ -33,18 +45,22 @@
             <p><i class="glyphicon glyphicon-star"></i> <b>Renews in {{ renewal_date }} days</b></p>
             <p><i class="glyphicon glyphicon-star"></i> <b>{{ coffees_left }} Coffees left until renewal date</b></p>
         {% endif %}
+
+        <!-- If User is not Subscribed -->
         {% if subscription_valid == False %}
             <h2>You aren't currently subscribed</h2>
             <p>Click below to shop<br><i class="fa fa-angle-down" aria-hidden="true"></i></p>
         {% endif %}
+
+        <!-- Link to Purchase page -->
         <a href="/coffees" class="btn btn-primary topup-btn">Top up your coffees</a>
 
         <p>Come visit soon, We can't wait to see you!</p>
     </div>
-
     <div class="col-md-2"></div>
 
-    <!-- Modal -->
+
+    <!-- Modal for cancelling subscription before deleting account -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog delete_modal">
             <div class="modal-content">
@@ -58,12 +74,15 @@
         </div>
     </div>
 
+    <!-- Profile Footer options: Edit profile, Delete account, Cancel Subscription and Account help -->
     <div class="col-sm-12 profile-options">
         <div class="col-sm-3">
             <a href={% url 'edit_profile' %}>edit profile</a>
         </div>
         <div class="col-sm-3">
+            <!-- If Not Subscribed then link to Delete account page -->
             {% if subscription_valid == False %}<a href={% url 'delete_profile' %}>delete account</a><br>{% endif %}
+            <!-- If Subscribed then show Modal -->
             {% if subscription_valid == True %}
                 <button class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</button>
                 <br>{% endif %}

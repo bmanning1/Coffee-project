@@ -8,8 +8,10 @@ from django.template.context_processors import csrf
 from django.http import HttpResponseRedirect
 
 
-# Create your views here.
+# All the Account views: Login, Logout, Register, Edit profile, Delete profile
+
 def register(request):
+    # Register view
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
@@ -36,6 +38,7 @@ def register(request):
 
 @login_required
 def edit_profile(request):
+    # Edit profile view with login required
     user = request.user
     form = EditProfileForm(request.POST or None, initial={'first_name': user.first_name, 'last_name': user.last_name})
     if request.method == 'POST':
@@ -53,6 +56,7 @@ def edit_profile(request):
 
 @login_required
 def delete_profile(request):
+    # Delete Profile view with login required
     if request.method == 'POST':
         form = RemoveUser(request.POST)
 
@@ -71,10 +75,12 @@ def delete_profile(request):
 
 @login_required(login_url='/login/')
 def profile(request):
+    # Profile view with login required
     return render(request, 'Profile/profile.html')
 
 
 def login(request):
+    # Login view
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
         if form.is_valid():
@@ -97,6 +103,7 @@ def login(request):
 
 
 def logout(request):
+    # Logout view
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
     return render(request, 'index.html')

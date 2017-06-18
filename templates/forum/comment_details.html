@@ -1,20 +1,22 @@
 {% load thread_extras %}
+<!-- Comment on Thread -->
 <div class="details">
-   <div class="col-md-9">
-       <div>
-           <time datetime="{{ post.created_at }}">
-              <p><i><b>{{ post.user.first_name }} {{ post.user.last_name }}</b>
-               | <b>Posted:</b> {{ post.created_at|started_time }} </i></p>
-           </time>
-       </div>
-   </div>
-   <div class="col-md-3">
-       <div class="pull-right">
-         {% if post.user == user or user.is_staff %}
-           <a href="{% url 'edit_post' thread.id post.id %}"><i class="fa fa-pencil-square-o"></i></a>
-           <a href="{% url 'delete_post' thread.id post.id %}"><i class="fa fa-trash-o"></i></a>
-         {% endif %}
-       </div>
-   </div>
-   <div class="clearfix"></div>
+    <div class="col-md-9">
+        <div>
+            <time datetime="{{ post.created_at }}">
+                <p><i><b>{{ post.user.first_name }} {{ post.user.last_name }}</b>
+                    | <b>Posted:</b> {{ post.created_at|started_time }} </i></p>
+            </time>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="pull-right">
+            <!-- If the User posted the comment or the User is Staff then allow to edit or delete the comment -->
+            {% if post.user == user or user.is_staff %}
+                <a href="{% url 'edit_post' thread.id post.id %}"><i class="fa fa-pencil-square-o"></i></a>
+                <a href="{% url 'delete_post' thread.id post.id %}"><i class="fa fa-trash-o"></i></a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="clearfix"></div>
 </div>

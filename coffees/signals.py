@@ -2,10 +2,8 @@ import arrow
 import models
 
 
-# from .models import Purchase
-
-
 def subscription_created(sender, **kwargs):
+    # Subscription created signal
     ipn_obj = sender
     coffee_id = ipn_obj.custom.split('-')[0]
     user_id = ipn_obj.custom.split('-')[1]
@@ -15,6 +13,7 @@ def subscription_created(sender, **kwargs):
 
 
 def subscription_was_cancelled(sender, **kwargs):
+    # Subscription cancelled signal
     ipn_obj = sender
     coffee_id = ipn_obj.custom.split('-')[0]
     user_id = ipn_obj.custom.split('-')[1]

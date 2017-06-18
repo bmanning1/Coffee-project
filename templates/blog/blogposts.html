@@ -2,81 +2,86 @@
 
 
 {% block blogtitle %}
-<div class="Blog-img">
-    <h2>Blog</h2>
-</div>
+    <!-- Blog Title -->
+    <div class="Blog-img">
+        <h2>Blog</h2>
+    </div>
 {% endblock %}
 
 
 {% block blogcontent %}
     <br>
- <p class="text-center">
-     Come check out our blogs below! Get involved with the local community and
-     share your views by leaving a comment.
-     <br><br>
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-     voluptate velit esse cillum dolore eu fugiat nulla pariatur.
- </p>
+    <!-- Header Information -->
+    <p class="text-center">
+        Come check out our blogs below! Get involved with the local community and
+        share your views by leaving a comment.
+        <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
 
- <form method="get" action="/results/" class="navbar-form text-center blogsearch">
- <i class="glyphicon glyphicon-search"></i>
-    <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder=" Search Here...">
- </form>
+    <!-- Blog Search -->
+    <form method="get" action="/results/" class="navbar-form text-center blogsearch">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder=" Search Here...">
+    </form>
 
-{% for post in posts %}
-    <hr>
-<div class="Blogpost-img" {% if post.image %}
-     style="background: url('/media/{{ post.image }}')" {% endif %}>
-    <a href={{ post.id }}>{{ post.title }}</a>
-</div>
-<div class="news-info">{{ post.published_date }} |
-    <strong>Views</strong> {{ post.views }} |
-    <strong>Tag</strong> {{ post.tag }}</div>
+    <!-- Blog Posts -->
+    {% for post in posts %}
+        <hr>
+        <div class="Blogpost-img" {% if post.image %}
+             style="background: url('/media/{{ post.image }}')" {% endif %}>
+            <a href={{ post.id }}>{{ post.title }}</a>
+        </div>
+        <div class="news-info">{{ post.published_date }} |
+            <strong>Views</strong> {{ post.views }} |
+            <strong>Tag</strong> {{ post.tag }}</div>
 
 
-<article class="col-md-12 blog-post">
-<div class="blogpost-summary">
-<p>{{ post.content|truncatewords:40 }}</p>
-</div>
+        <article class="col-md-12 blog-post">
+            <div class="blogpost-summary">
+                <p>{{ post.content|truncatewords:40 }}</p>
+            </div>
 
-<a class="read-moreblog btn btn-primary" href={{ post.id }}>Read More</a>
-<hr>
-</article>
-{% endfor %}
-
-{% if posts.has_other_pages %}
-  <ul class="pagination col-sm-12">
-    {% if posts.has_previous %}
-      <li><a href="?page={{ posts.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in posts.paginator.page_range %}
-      {% if posts.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
+            <a class="read-moreblog btn btn-primary" href={{ post.id }}>Read More</a>
+            <hr>
+        </article>
     {% endfor %}
-    {% if posts.has_next %}
-      <li><a href="?page={{ posts.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
+
+    <!-- Pagination -->
+    {% if posts.has_other_pages %}
+        <ul class="pagination col-sm-12">
+            {% if posts.has_previous %}
+                <li><a href="?page={{ posts.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+                <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in posts.paginator.page_range %}
+                {% if posts.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if posts.has_next %}
+                <li><a href="?page={{ posts.next_page_number }}">&raquo;</a></li>
+            {% else %}
+                <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+        </ul>
     {% endif %}
-  </ul>
-{% endif %}
 
-
-
+    <!-- Footer Information -->
     <p class="text-center">One of our key aims is to get the community involved with one another. We write these
-    blogs to share interesting facts and opinions on coffee for you to talk about with other regulars. So please feel free to comment on the blogs!</p>
+        blogs to share interesting facts and opinions on coffee for you to talk about with other regulars. So please
+        feel free to comment on the blogs!</p>
     <hr>
     <p class="text-center querycontact">
-    Got an idea for a good blog? Want to have a part on our website?
+        Got an idea for a good blog? Want to have a part on our website?
         Share you idea below and email it over to our team!
-    <br><br>
+        <br><br>
         <a class="btn btn-primary contactstarb" href="mailto:contact@starbex.co.uk">contact@starbex.co.uk</a></p>
 
 {% endblock %}

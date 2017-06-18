@@ -4,9 +4,11 @@ from .models import Subject
 
 
 class SubjectPageTest(TestCase):
+    # Test Forum Subject
     fixtures = ['subjects', 'user']
 
     def test_check_content_is_correct(self):
+        # Test Forum Content Correct
         subject_page = self.client.get('/forum/')
         self.assertTemplateUsed(subject_page, "forum/forum.html")
         subject_page_template_output = render_to_response("forum/forum.html",

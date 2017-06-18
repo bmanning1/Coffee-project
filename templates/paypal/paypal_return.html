@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+    <!-- Confirmation of Payment -->
     <h1>Success!</h1>
-    <br/>
+    <br><br>
     <p>Your payment of £{{ price }}</p>
-    <br/>
+    <br>
     <p>You have now purchased {{ name }}</p>
-
+    <br>
+    <!-- Link back to Profile -->
+    <a href="/profile" class="btn btn-primary topup-btn">Check out your updated Profile</a>
 {% endblock %}
 

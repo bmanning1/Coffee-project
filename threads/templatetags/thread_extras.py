@@ -8,6 +8,7 @@ register = template.Library()
 
 @register.filter
 def get_total_subject_posts(subject):
+    # Total Subject Posts Count
     total_posts = 0
     for thread in subject.threads.all():
         total_posts += thread.posts.count()
@@ -16,11 +17,13 @@ def get_total_subject_posts(subject):
 
 @register.filter
 def started_time(created_at):
+    # Created at time
     return arrow.get(created_at).humanize()
 
 
 @register.simple_tag
 def user_vote_button(thread, subject, user):
+    # Vote on Thread Poll
     vote = thread.poll.votes.filter(user_id=user.id).first()
 
     if not vote:
@@ -39,6 +42,7 @@ def user_vote_button(thread, subject, user):
 
 @register.filter
 def vote_percentage(subject):
+    # Poll Vote percentage
     count = subject.votes.count()
     if count == 0:
         return 0

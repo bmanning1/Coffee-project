@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 {% load thread_extras %}
 {% block content %}
- <div class="row header">
-   <div class="jumbotron"><h1>{{ subject.name }}</h1></div>
- </div>
+    <!-- Threads Title -->
+    <div class="row header">
+        <div class="jumbotron"><h1>{{ subject.name }}</h1></div>
+    </div>
 
- <div class="thread-content">
-    <p><a href="/forum/"><b>Forum</b></a> | <b>Subject:</b> {{ subject.name }}</p>
+    <!-- Threads Content -->
+    <div class="thread-content">
+        <p><a href="/forum/"><b>Forum</b></a> | <b>Subject:</b> {{ subject.name }}</p>
 
- <table class="table table-striped">
-        <tbody>
+        <table class="table table-striped">
+            <tbody>
             {% for thread in subject_threads %}
                 <tr>
                     <td class="forum-thread">{% include "forum/thread_item.html" %}
@@ -17,39 +19,43 @@
                             <time datetime="{{ thread.created_at }}">
                                 {{ thread.created_at|started_time }}
                             </time>
-                        </p></td>
+                        </p>
+                    </td>
                 </tr>
             {% endfor %}
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
-
-{% if subject_threads.has_other_pages %}
-  <ul class="pagination">
-    {% if subject_threads.has_previous %}
-      <li><a href="?page={{ subject_threads.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in subject_threads.paginator.page_range %}
-      {% if subject_threads.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if subject_threads.has_next %}
-      <li><a href="?page={{ subject_threads.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
-    {% endif %}
-  </ul>
-{% endif %}
-    <p>
-        <a href="/forum/" class="btn btn-primary backforum-btn">Back</a>
-        {% if user.is_authenticated %}
-       <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
+        <!-- Pagination -->
+        {% if subject_threads.has_other_pages %}
+            <ul class="pagination">
+                {% if subject_threads.has_previous %}
+                    <li><a href="?page={{ subject_threads.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in subject_threads.paginator.page_range %}
+                    {% if subject_threads.number == i %}
+                        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                    {% else %}
+                        <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if subject_threads.has_next %}
+                    <li><a href="?page={{ subject_threads.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+            </ul>
         {% endif %}
-    </p>
- </div>
+        <p>
+
+            <!-- Back Button -->
+            <a href="/forum/" class="btn btn-primary backforum-btn">Back</a>
+            <!-- If logged in then New Thread Button -->
+            {% if user.is_authenticated %}
+                <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
+            {% endif %}
+        </p>
+    </div>
 {% endblock %}

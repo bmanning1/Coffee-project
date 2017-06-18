@@ -2,21 +2,26 @@
 {% load thread_extras %}
 {% block content %}
 
+<!-- Forum Title -->
 <div class="Forum-img">
     <h2>Forum</h2>
 </div>
 <br>
+
+<!-- Forum Header Information -->
 <p class="text-center">
     Welcome to the forum page where all you questions will be answered.
     Create new threads, comment and even answer polls.
     ...go on, start exploring!
 </p>
 
+<!-- Forum Search -->
 <form method="get" action="/results/" class="navbar-form text-center blogsearch">
     <i class="glyphicon glyphicon-search"></i>
     <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder=" Search Here...">
 </form>
 
+<!-- List of Subjects -->
 {% load bootstrap_tags %}
 {% for subject in subjects %}
 <hr>
@@ -34,26 +39,28 @@
 </section>
 {% endfor %}
 <hr>
+
+<!-- Pagination -->
 {% if subjects.has_other_pages %}
-  <ul class="pagination">
-    {% if subjects.has_previous %}
-      <li><a href="?page={{ subjects.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in subjects.paginator.page_range %}
-      {% if subjects.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if subjects.has_next %}
-      <li><a href="?page={{ subjects.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
-    {% endif %}
-  </ul>
+    <ul class="pagination">
+        {% if subjects.has_previous %}
+            <li><a href="?page={{ subjects.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+            <li class="disabled"><span>&laquo;</span></li>
+        {% endif %}
+        {% for i in subjects.paginator.page_range %}
+            {% if subjects.number == i %}
+                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if subjects.has_next %}
+            <li><a href="?page={{ subjects.next_page_number }}">&raquo;</a></li>
+        {% else %}
+            <li class="disabled"><span>&raquo;</span></li>
+        {% endif %}
+    </ul>
 {% endif %}
 
 {% endblock %}

@@ -4,11 +4,12 @@
 {% block content %}
 
     <div class="row header">
-
+    <!-- Thread Title -->
     <div class="row header forum-header">
         <div class="jumbotron"><h1>{{ thread.name }}</h1></div>
     </div>
 
+    <!-- Thread Content -->
     <p class="align-center"><a href="/forum/"><b>Forum</b></a> |
         <a href="{% url 'threads' thread.subject.id %}"><b>Subject: </b>{{ thread.subject.name }} </a>|
         <b>Thread:</b> {{ thread.name }}</p>
@@ -24,6 +25,7 @@
     <hr class="post_break">
 {% endfor %}
 
+<!-- Pagination -->
 {% if thread_posts.has_other_pages %}
     <ul class="pagination">
         {% if thread_posts.has_previous %}
@@ -46,9 +48,12 @@
     </ul>
 {% endif %}
 </div>
+
+
 {% if not thread.poll %}
     <div class="col-md-2"></div>{% endif %}
 
+<!-- Thread Poll -->
 {% if thread.poll %}
     <div class="col-md-5">
         <div class="poll">
@@ -79,7 +84,9 @@
 
 
 <p class="thread-btn">
+    <!-- Back Button -->
     <a href="{% url 'threads' thread.subject.id %}" class="btn btn-primary backforum-btn">Back</a>
+    <!-- New Post if logged in -->
     {% if user.is_authenticated %}
         <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
     {% endif %}
@@ -87,6 +94,7 @@
 
 
 </div>
+    <!-- Footer Table for Thread creation date and Owner -->
     <table class="table table-hover">
         <tbody>
         <tr>

@@ -4,16 +4,10 @@ from .forms import UserRegistrationForm
 from django import forms
 
 
-class SimpleTest(TestCase):
-    def test_adding_something_simple(self):
-        self.assertEqual(1 + 2, 3)
-
-    def test_adding_something_isnt_equal(self):
-        self.assertNotEqual(1 + 2, 4)
-
-
+# Creating some tests for the User
 class CustomUserTest(TestCase):
     def test_manager_create(self):
+        # Test User creation
         user = User.objects._create_user(None, "test@test.com",
                                          "password",
                                          False, False)
@@ -24,18 +18,20 @@ class CustomUserTest(TestCase):
                                              False, False)
 
     def test_registration_form(self):
+        # Test Registration
         form = UserRegistrationForm({
             'email': 'test@test.com',
-            'password1': 'letmein1',
-            'password2': 'letmein1',
+            'password1': 'password',
+            'password2': 'password',
         })
 
         self.assertTrue(form.is_valid())
 
     def test_registration_form_fails_with_missing_email(self):
+        # Test Registration with missing email
         form = UserRegistrationForm({
-            'password1': 'letmein1',
-            'password2': 'letmein1',
+            'password1': 'password',
+            'password2': 'password',
         })
 
         self.assertFalse(form.is_valid())

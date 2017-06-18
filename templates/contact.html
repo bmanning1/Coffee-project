@@ -1,66 +1,75 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="contact-page">
-    <div class="Contact-info col-lg-4">
-      <h2>Opening hours</h2>
-      <table class="table table-hover">
-        <tbody>
-          <tr>
-            <td>Mon</td>
-            <td class="time">8.30am-6pm</td>
-          </tr>
-          <tr>
-            <td>Tue</td>
-            <td class="time">8.30am-6pm</td>
-          </tr>
-          <tr>
-            <td>Wed</td>
-            <td class="time">8.30pm-6pm</td>
-          </tr>
-          <tr>
-            <td>Thu</td>
-            <td class="time">8.30pm-6pm</td>
-          </tr>
-          <tr>
-            <td>Fri</td>
-            <td class="time">8.30pm-6pm</td>
-          </tr>
-          <tr>
-            <td>Sat</td>
-            <td class="time">9pm-4pm</td>
-          </tr>
-          <tr>
-            <td>Sun</td>
-            <td class="time">9pm-4pm</td>
-          </tr>
-        </tbody>
-      </table>
 
+    <div class="contact-page">
 
-      <h2>Contact</h2>
-      <table class="table table-hover table-condensed contact-details">
-        <tbody>
-          <tr>
-            <td><span class="fa fa-phone"></span></td>
-            <td class="time">+447528600121</td>
-          </tr>
-          <tr>
-            <td><span class="fa fa-envelope"></span></td>
-            <td class="time">contact@starbex.co.uk</td>
-          </tr>
-          <tr>
-            <td><span class="fa fa-home"></span></td>
-            <td class="time">Starbex | Lenton Road | Nottingham | NG7 1DW</td>
-          </tr>
-        </tbody>
-      </table>
-    <a href="/threads/1"><p class="text-center">Not what you're looking for? Click the <b>Link to FAQs</b></p></a>
+        <!-- Contact Information -->
+        <div class="Contact-info col-lg-4">
+
+            <!-- Opening Hours -->
+            <h2>Opening hours</h2>
+            <table class="table table-hover">
+                <tbody>
+                <tr>
+                    <td>Mon</td>
+                    <td class="time">8.30am-6pm</td>
+                </tr>
+                <tr>
+                    <td>Tue</td>
+                    <td class="time">8.30am-6pm</td>
+                </tr>
+                <tr>
+                    <td>Wed</td>
+                    <td class="time">8.30pm-6pm</td>
+                </tr>
+                <tr>
+                    <td>Thu</td>
+                    <td class="time">8.30pm-6pm</td>
+                </tr>
+                <tr>
+                    <td>Fri</td>
+                    <td class="time">8.30pm-6pm</td>
+                </tr>
+                <tr>
+                    <td>Sat</td>
+                    <td class="time">9pm-4pm</td>
+                </tr>
+                <tr>
+                    <td>Sun</td>
+                    <td class="time">9pm-4pm</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- Contact Details -->
+            <h2>Contact</h2>
+            <table class="table table-hover table-condensed contact-details">
+                <tbody>
+                <tr>
+                    <td><span class="fa fa-phone"></span></td>
+                    <td class="time">+447528600121</td>
+                </tr>
+                <tr>
+                    <td><span class="fa fa-envelope"></span></td>
+                    <td class="time">contact@starbex.co.uk</td>
+                </tr>
+                <tr>
+                    <td><span class="fa fa-home"></span></td>
+                    <td class="time">Starbex | Lenton Road | Nottingham | NG7 1DW</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- Link to FAQs -->
+            <a href="/threads/1"><p class="text-center">Not what you're looking for? Click the <b>Link to FAQs</b></p>
+            </a>
+        </div>
+
+        <!-- Google Map (Used a different Coffee shop for template) -->
+        <div class="contact-map col-lg-8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2403.7428243492977!2d-1.1868863841763329!3d52.953050379898464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c21d7169116d%3A0xe4f6dd3f05668992!2sStarbucks+Coffee!5e0!3m2!1sen!2suk!4v1492970322766"
+                    width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
     </div>
-
-    <div class="contact-map col-lg-8">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2403.7428243492977!2d-1.1868863841763329!3d52.953050379898464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c21d7169116d%3A0xe4f6dd3f05668992!2sStarbucks+Coffee!5e0!3m2!1sen!2suk!4v1492970322766"
-            width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-</div>
 
 {% endblock %}

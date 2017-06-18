@@ -23,6 +23,8 @@
 
     START Scattered Polaroids Gallery -->
 
+
+    <!-- START Scattered Polaroid Gallery -->
     <div class="img-polaroid">
         <section id="photostack-2" class="photostack photostack-start">
             <div>
@@ -152,28 +154,38 @@
             }
         });
     </script>
-
     <!-- END Scattered Polaroids Gallery -->
 
+
+    <!-- Home Title -->
     <h2 class="text-center home-title">Welcome to Starbex</h2>
+
+    <!-- Audio and options -->
     <h3 class="text-center">
         <audio autoplay id="player" src="../media/audio/Image.mp3"></audio>
 
         <a onclick="document.getElementById('player').play()"><span
-                class="glyphicon glyphicon-play-circle" ></span></a>
+                class="glyphicon glyphicon-play-circle"></span></a>
         <a onclick="document.getElementById('player').pause()"><span class="glyphicon glyphicon-pause"></span></a>
         <a onclick="document.getElementById('player').muted=!document.getElementById('player').muted">
             <span class="glyphicon glyphicon-volume-off"></span></a>
     </h3>
+
+    <!-- Home Summary of Starbex with links -->
     <p class="text-center home-info">
-        <b>Starbex</b> is your local coffee shop with a twist. We offer <a href="/prices" style="color:#317eac">monthly
+        <b>Starbex</b> is your local coffee shop with a twist. We offer <a href="/prices" class="home-link">monthly
         subscription packages</a> for coffees which come with many benefits.
         Our aim is to integrate the community online and in store with our friendly and sociable environment filled with
-        regulars. From <a href="/blog" style="color:#317eac">Blogs</a> and <a href="/forum" style="color:#317eac">Forums</a> to Personalised coffees, <b>Starbex</b> provides a unique service to our loyal
+        regulars. From <a href="/blog" class="home-link">Blogs</a> and <a href="/forum"
+                                                                              class="home-link">Forums</a> to
+        Personalised coffees, <b>Starbex</b> provides a unique service to our loyal
         customers. <br><br>...So what are you waiting for? Come and have a look around our website!
         <br>
     </p>
+
+    <!-- Home Footer Link to Announcements -->
     <p class="text-center buypagelink home-announcements">
         Keep up to date with our announcements <a href="/threads/2/"><b>here</b></a>.
         We update it weekly!</p>
+
 {% endblock %}

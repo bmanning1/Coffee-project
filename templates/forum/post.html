@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load emoticons_tags %}
+<!-- Post on Thread -->
 <section class="row comment">
     <div class="col-md-3 comment-profile">
         <div class="thread-image">
@@ -9,7 +10,7 @@
     <div class="col-md-9 ">
         <div class="comment-content">
             {% autoescape off %}
-                {{ post.comment|emoticons }}
+            {{ post.comment|emoticons }}
             {% endautoescape %}
         </div>
         {% include "forum/comment_details.html" %}
