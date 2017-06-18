@@ -53,9 +53,9 @@ I wanted the home page to be a wow to the sight but simplisitc design.
 ----------------
 ### PROJECT BRIEF - Code Institute
 
-Build An Issue Tracker
+**Build An Issue Tracker**
 
->Now that you’re a full fledged web developer you’ve decided it’s probably time for you to start your very own cool, modern startup, offering the extremely awesome UnicornAttractor webapp to your users. It’s really really amazing, but we don’t care about it at all in this project. The interesting thing is the business model that you’ve decided upon – you chose to offer the service and bug fixes for free, but ask for money from your users to develop additional features.
+>Now that you’re a full fledged web developer you’ve decided it’s probably time for you to start your very own cool, modern startup, offering the extremely awesome UnicornAttractor webapp to your users. It’s really really amazing, but we don’t care about it at all in this project. The interesting thing is the business model that you’ve decided upon – you chose to offer the service and bug fixes for free, but ask for money from your users to develop additional features. 
 
 >To manage the tracking of bugs and feature requests, you decided to create an Issue Tracker that will allow your users to submit and track any issues (bugs or feature requests) related to using the UnicornAttractor.
 
@@ -69,24 +69,37 @@ Build An Issue Tracker
 
 >And of course, as this project is going to be lifeblood of your company, it’s important that new developers that join the company will be able to get up and running as quickly as possible. Documentation is the best way to achieve this.
 
-Choose Your Own Project
+**Choose Your Own Project**
 
 >If you choose to create your own project, the scope should be similar to that of the example brief above, or the we_are_social project from earlier in this stream. If you want some ideas, please ask your mentor for advice and direction.
 
 -----------------
 ### PROJECT GUIDELINES - Code Institute
 
-* Build a web app that fulfills some actual (or imagined) real-world need. This can be of your own choosing and may be domain specific.
-* Write a README.md file for your project that explains what the project does and the need that it fulfills. It should also describe the functionality of the project, as well as the technologies used. Detail how the project was deployed and tested and if some of the work was based off other code, explain what was kept and/or how it was changed to fit your need. A project submitted without a README.md file will FAIL.
-* The project must be a brand new Django project, composed of multiple apps (an app for each reusable component in your project).
-* The project should include an authentication mechanism, allowing a user to register and log in, and there should be a good reason as to why the users would need to do so. E.g. a user would have to register in order to persist their shopping cart between sessions (otherwise it would be lost).
-* At least one of your Django apps should contain some kind of e-commerce functionality using Stripe and/or Paypal. This may be a shopping, or subscriptions, or single payments, etc.
-* Include at least one form with validation, that will allow users to create and edit models in the backend (in addition to the authentication mechanism).
-* The project will need to connect to an SQL database using Django’s ORM, or to a Document-Oriented database (e.g. MongoDB) using pymongo.
-* The UI should be responsive, use either media queries or a responsive framework such as Bootstrap to make sure that the site looks well on all commonly-used devices.
-* As well as having a responsive UI, the app should have a great user experience.
-* The frontend should contain some JavaScript logic to enhance the user experience.
-* Whenever relevant, the backend should integrate with third-party Python/Django packages, such as Disqus, Django Rest Framework, etc. Strive to choose the best tool for each purpose and avoid reinventing the wheel, unless your version of the wheel is shinier (and if so, consider also releasing your wheel as a standalone open source project).
-* Make sure to test your project extensively. In particular, make sure that no unhandled exceptions are visible to the users, in any circumstances. Use automated Django tests wherever possible. For your JavaScript code, consider using Jasmine tests.
-* Use Git & GitHub for version control. Each new piece of functionality should be in a separate commit.
-* Deploy the final version of your code to a hosting platform such as Heroku.
+>Build a web app that fulfills some actual (or imagined) real-world need. This can be of your own choosing and may be domain specific.
+
+>Write a README.md file for your project that explains what the project does and the need that it fulfills. It should also describe the functionality of the project, as well as the technologies used. Detail how the project was deployed and tested and if some of the work was based off other code, explain what was kept and/or how it was changed to fit your need. A project submitted without a README.md file will FAIL.
+
+>The project must be a brand new Django project, composed of multiple apps (an app for each reusable component in your project).
+
+>The project should include an authentication mechanism, allowing a user to register and log in, and there should be a good reason as to why the users would need to do so. E.g. a user would have to register in order to persist their shopping cart between sessions (otherwise it would be lost).
+
+>At least one of your Django apps should contain some kind of e-commerce functionality using Stripe and/or Paypal. This may be a shopping, or subscriptions, or single payments, etc.
+
+>Include at least one form with validation, that will allow users to create and edit models in the backend (in addition to the authentication mechanism).
+
+>The project will need to connect to an SQL database using Django’s ORM, or to a Document-Oriented database (e.g. MongoDB) using pymongo.
+
+>The UI should be responsive, use either media queries or a responsive framework such as Bootstrap to make sure that the site looks well on all commonly-used devices.
+
+>As well as having a responsive UI, the app should have a great user experience.
+
+>The frontend should contain some JavaScript logic to enhance the user experience.
+
+>Whenever relevant, the backend should integrate with third-party Python/Django packages, such as Disqus, Django Rest Framework, etc. Strive to choose the best tool for each purpose and avoid reinventing the wheel, unless your version of the wheel is shinier (and if so, consider also releasing your wheel as a standalone open source project).
+
+>Make sure to test your project extensively. In particular, make sure that no unhandled exceptions are visible to the users, in any circumstances. Use automated Django tests wherever possible. For your JavaScript code, consider using Jasmine tests.
+
+>Use Git & GitHub for version control. Each new piece of functionality should be in a separate commit.
+
+>Deploy the final version of your code to a hosting platform such as Heroku.
