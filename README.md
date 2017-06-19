@@ -1,13 +1,24 @@
 # Coffee Project
+<<<<<<< HEAD
 ### Project 3 with Code Institute
 #### Rebecca Manning
 
 For the final project with Code Institute I chose to create a website for a Coffee shop that provides monthly subscriptions and aims to integrate the local community online ...and so with an attempt at some humour, I named it Starbex.
+=======
+### Project 3 with Code Institute 
+#### Rebecca Manning
+
+For the final project with Code Institute I chose to create a website for a Coffee shop that provides monthly subscriptions and aims to integrate the local community online ...and so with an attempt at some humour, I named it Starbex.  
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 
 ----------------
 ### STARBEX
 #### What the project does, needs it fulfills & functionality
+<<<<<<< HEAD
 The project offers customers the chance to purchase a certain number of coffees per month at a discounted price. This makes it quick and easy for them to pop into the store and show the QR code from their phone to buy a coffee.
+=======
+The project offers customers the chance to purchase a certain number of coffees per month at a discounted price. This makes it quick and easy for them to pop into the store and show the QR code from their phone to buy a coffee. 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 
 The project also aims to integrate the community through online blogs, forums and profiles. Through having to subscribe to coffees, you create your own profile that you can log in and out of. Each profile is unique and has information suited to the user. For example it may show you how many coffees you have left for the month and days till renewal if you are Subscribed. If you aren't subscribed it shows you a link to go and purchase some coffees with the price list. The profile also tells if new members have joined and shows them to the new member section to introduce yourself.
 
@@ -27,7 +38,11 @@ When you're logged in you can can get involved by reading regular blogs as well 
 * Paypal
 
 ----------------
+<<<<<<< HEAD
 ### DEPLOYMENT
+=======
+### DEPLOYMENT 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 **Heroku** - https://starbex.herokuapp.com/
 
 Try it out for youself and log in with someone who has purchased and someone who hasn't to see the difference
@@ -41,7 +56,11 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 ### TESTING
 
 * [flake8](http://flake8.pycqa.org/en/latest/)
+<<<<<<< HEAD
 * https://validator.w3.org/
+=======
+* https://validator.w3.org/ 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 * I frequenty asked friends, family and peers to have a look trhough my website and give feedback on code, functionality or aesthetics that could be improved.
 * Testing code in each App, created under tests.py.
 * I constantly tested the website on different browsers as well as different size screens.
@@ -50,19 +69,31 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 ### CREDIT
 
 * Scattered Polaroid Gallery - https://tympanus.net/codrops/2014/01/28/scattered-polaroids-gallery/
+<<<<<<< HEAD
 * A lot of my Code I got from Code Institute as it is the course I am taking - I have showed in my annotation that I understand it all and also personalised it a lot to my needs.
+=======
+* A lot of my Code I got from Code Institute as it is the course I am taking - I have showed in my annotation that I understand it all and also personalised it a lot to my needs. 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 * Font-Awesome - http://fontawesome.io/
 * Images were sourced from Pixabay (a free royalty-free images site) or created myself.
 
 ----------------
+<<<<<<< HEAD
 ### CHALLENGES
+=======
+### CHALLENGES 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 #### What was kept/changed to fit my need
 
 * One of my main aims was to focus on the little details of the website that people using it will see. I really wanted the user to enjoy the unique experience of going through the website. Although this took a lot of time and late nights, it was worth it! I created an animated favicon (although it does not work on chrome), I focussed on making the site interactive as well as a few more small things that I'll let you all discover when visiting the site.
 * As you can see, the site is interactive is places. However, at one point in creating the website I realised a lot of the animation was slowing down the website. So from this, I decided to take out certain things that weren't needed like hovering over the back button in a forum thread and being able to see the page it sends you to.
 * Although the website does not have a mobile first design, I focussed a lot on making sure it works. I kept checking on different size screens and resolutions as I went through the project.
 * The About page was editted a lot as I had a particular way I wanted it to look and feel. It needed to be straight to the point and not boring which is why I made it so interactive.
+<<<<<<< HEAD
 * I wanted the home page to be simplistic but also attention grabbing for new, potential customers. With this in mind I found a Polaroid Gallery which I used and added some coffee shop music.
+=======
+* I wanted the home page to be simplistic but also attention grabbing for new, potential customers. With this in mind I found a Polaroid Gallery which I used and added some coffee shop music. 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 
 ----------------
 ### TO-DO
@@ -79,7 +110,11 @@ Unfortunately I ran out of time to finish certain parts, but if I had a bit long
 
 **Build An Issue Tracker**
 
+<<<<<<< HEAD
 * Now that you’re a full fledged web developer you’ve decided it’s probably time for you to start your very own cool, modern startup, offering the extremely awesome UnicornAttractor webapp to your users. It’s really really amazing, but we don’t care about it at all in this project. The interesting thing is the business model that you’ve decided upon – you chose to offer the service and bug fixes for free, but ask for money from your users to develop additional features.
+=======
+* Now that you’re a full fledged web developer you’ve decided it’s probably time for you to start your very own cool, modern startup, offering the extremely awesome UnicornAttractor webapp to your users. It’s really really amazing, but we don’t care about it at all in this project. The interesting thing is the business model that you’ve decided upon – you chose to offer the service and bug fixes for free, but ask for money from your users to develop additional features. 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 
 * To manage the tracking of bugs and feature requests, you decided to create an Issue Tracker that will allow your users to submit and track any issues (bugs or feature requests) related to using the UnicornAttractor.
 
@@ -98,7 +133,11 @@ Unfortunately I ran out of time to finish certain parts, but if I had a bit long
 * If you choose to create your own project, the scope should be similar to that of the example brief above, or the we_are_social project from earlier in this stream. If you want some ideas, please ask your mentor for advice and direction.
 
 -----------------
+<<<<<<< HEAD
 ### PROJECT GUIDELINES
+=======
+### PROJECT GUIDELINES 
+>>>>>>> d380224054139df4acd8752342202dbcc467fda3
 #### Code Institute
 
 * Build a web app that fulfills some actual (or imagined) real-world need. This can be of your own choosing and may be domain specific.
