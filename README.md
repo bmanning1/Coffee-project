@@ -29,7 +29,6 @@ When you're logged in you can can get involved by reading regular blogs as well 
 * Paypal
 
 ----------------
-<<<<<<< HEAD
 ### DEPLOYMENT
 
 **Heroku** - https://starbex.herokuapp.com/
