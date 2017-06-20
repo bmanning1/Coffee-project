@@ -72,7 +72,7 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 
 Unfortunately I ran out of time to finish certain parts, but if I had a bit longer I would have worked on:
 * Cancel Subscription button working on profile.html and coffees.html
-* Search Bars on Forum page and Blog page working
+* Search Bars on Forum page and Blog page could be made so that if you search say 'Cof', it still comes up with 'Coffee' rather than having to select the exact match from the autocomplete options.
 * Can not currently post a new thread without a Poll
 * Add some tests to the Apps: coffees, polls and paypal_store
 
