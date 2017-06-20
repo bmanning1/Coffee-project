@@ -26,6 +26,8 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/demo.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/component.css" %}"/>
 
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
     <!-- Scripts -->
     <!-- Polaroid for Home page -->
     <script src="{% static "js/polaroid-js/modernizr.min.js" %}"></script>
@@ -122,5 +124,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 <!-- Personalised JQuery -->
 <script src="{% static "js/jquery.js" %}"></script>
+<!-- Autocomplete for Search bar -->
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+{% block scripts %}
+{% endblock %}
 
 </html>

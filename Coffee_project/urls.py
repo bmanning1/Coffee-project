@@ -44,7 +44,8 @@ urlpatterns = [
     url(r'^blog/(?P<id>\d+)/$', blog_views.post_detail),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
-    # Forum URLS: Forum Base, Threads, New Thread, Singular Thread, New Post, Edit Post, Delete Post, Thread vote
+    # Forum URLS: Search, Subjects, Threads, New Thread, Singular Thread, New Post, Edit Post, Delete Post, Thread vote
+    url(r'^results/$', forum_views.results),
     url(r'^forum/$', forum_views.forum),
     url(r'^threads/(?P<subject_id>\d+)/$', forum_views.threads, name='threads'),
     url(r'^new_thread/(?P<subject_id>\d+)/$', forum_views.new_thread, name='new_thread'),

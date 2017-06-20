@@ -16,9 +16,11 @@
 </p>
 
 <!-- Forum Search -->
-<form method="get" action="/results/" class="navbar-form text-center blogsearch">
+<form method="get" action="/results/">
+<div class="ui-widget text-center blogsearch" method="get" action="/results/">
     <i class="glyphicon glyphicon-search"></i>
-    <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder=" Search Here...">
+    <input type="text" id="automplete-1" name="q" placeholder=" Search Subject...">
+</div>
 </form>
 
 <!-- List of Subjects -->
@@ -63,4 +65,20 @@
     </ul>
 {% endif %}
 
+{% endblock %}
+
+<!-- Autocomplete Javascript -->
+{% block scripts %}
+    <script>
+        $(function () {
+            var subjects = [
+                {% for subject in all_subjects %}
+                "{{ subject.name }}",
+                {% endfor %}
+            ];
+            $("#automplete-1").autocomplete({
+                source: subjects
+            });
+        });
+    </script>
 {% endblock %}
