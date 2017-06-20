@@ -48,6 +48,7 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 * I frequenty asked friends, family and peers to have a look trhough my website and give feedback on code, functionality or aesthetics that could be improved.
 * Testing code in each App, created under tests.py.
 * I constantly tested the website on different browsers as well as different size screens.
+* Manual testing
 
 ----------------
 ### CREDIT
