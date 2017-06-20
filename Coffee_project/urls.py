@@ -39,7 +39,8 @@ urlpatterns = [
     url(r'^coffees/$', coffee_views.all_coffees),
     url(r'^prices/$', coffee_views.get_price),
 
-    # Blog URLS: List Blogs and individual Blog
+    # Blog URLS: Search, List Blogs and individual Blog
+    url(r'^blogresults/$', blog_views.blogresults),
     url(r'^blog/$', blog_views.post_list, name='post_list'),
     url(r'^blog/(?P<id>\d+)/$', blog_views.post_detail),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),

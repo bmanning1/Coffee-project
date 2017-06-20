@@ -23,9 +23,11 @@
     </p>
 
     <!-- Blog Search -->
-    <form method="get" action="/results/" class="navbar-form text-center blogsearch">
-        <i class="glyphicon glyphicon-search"></i>
-        <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder=" Search Here...">
+    <form method="get" action="/blogresults/">
+        <div class="ui-widget text-center blogsearch">
+            <i class="glyphicon glyphicon-search"></i>
+            <input type="text" id="automplete-1" name="q" placeholder=" Search Names...">
+        </div>
     </form>
 
     <!-- Blog Posts -->
@@ -84,4 +86,20 @@
         <br><br>
         <a class="btn btn-primary contactstarb" href="mailto:contact@starbex.co.uk">contact@starbex.co.uk</a></p>
 
+{% endblock %}
+
+<!-- Autocomplete Javascript -->
+{% block scripts %}
+    <script>
+        $(function () {
+            var posts = [
+                {% for post in all_posts %}
+                    "{{ post.title }}",
+                {% endfor %}
+            ];
+            $("#automplete-1").autocomplete({
+                source: posts
+            });
+        });
+    </script>
 {% endblock %}

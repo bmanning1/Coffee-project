@@ -5,10 +5,17 @@ from .forms import BlogPostForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-# Blog views: List of Blog posts, Singular Blog post and Edit a Blog post
+# Blog views: Search, List of Blog posts, Singular Blog post and Edit a Blog post
+
+def blogresults(request):
+    # Subject search ('blog/blogsearch.html' template)
+    q = request.GET.get('q')
+    posts = Post.objects.filter(title=q)
+    return render(request, 'blog/blogsearch.html',{'posts':posts})
 
 def post_list(request):
-    # List of Blog posts published prior to'now' view ('blogposts.html' template)
+    # List of Blog posts published prior to 'now' view ('blogposts.html' template)
+    all_posts = Post.objects.all()
     posts = Post.objects.filter(published_date__lte=timezone.now()
                                 ).order_by('-published_date')
     # Create a Paginator that wraps at 4 posts
@@ -20,7 +27,7 @@ def post_list(request):
         blogs = paginator.page(1)
     except EmptyPage:
         blogs = paginator.page(paginator.num_pages)
-    return render(request, "blog/blogposts.html", {'posts': blogs})
+    return render(request, "blog/blogposts.html", {'posts': blogs, 'all_posts': all_posts})
 
 
 def post_detail(request, id):
