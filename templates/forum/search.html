@@ -12,6 +12,14 @@
 
         <table class="table table-striped">
             <tbody>
+
+            <!-- If no matching subject names then inform User -->
+            {% if not threads %}
+                <h2>Sorry, No Matches!</h2>
+                <p class="text-center">Go back and search again with the drop down options</p>
+            {% endif %}
+
+            <!-- List of matching threads in matching subject name -->
             {% for thread in threads %}
                 <tr>
                     <td class="forum-thread">{% include "forum/thread_item.html" %}

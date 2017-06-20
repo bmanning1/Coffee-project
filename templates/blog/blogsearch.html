@@ -3,6 +3,17 @@
 
 {% block content %}
 
+    <!-- If no matching post titles then inform User and provide an option to go back and try again -->
+    {% if not posts %}
+        <div class="Blogpost-img">
+            <h2>Sorry, No Matches!</h2>
+        </div>
+        <br>
+        <p class="text-center">Go back and search again with the drop down options</p>
+        <!-- Back to Blogs List Button -->
+        <a class="read-moreblog btn btn-primary center-block" href="/blog">Back</a>
+    {% endif %}
+
     <!-- Searching through matching post titles to the search -->
     {% for post in posts %}
         <!-- Blog Post Title -->
