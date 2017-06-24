@@ -9,7 +9,7 @@ For the final project with Code Institute I chose to create a website for a Coff
 ### STARBEX
 #### What the project does, needs it fulfills & functionality
 
-The project offers customers the chance to purchase a certain number of coffees per month at a discounted price. This makes it quick and easy for them to pop into the store and show the QR code from their phone to buy a coffee.
+The project offers customers the chance to purchase a certain number of coffees per month at a discounted price. This makes it quick and easy for them to pop into the store and show the QR code (currently a template one as there is not a store for people to go into) from their phone to buy a coffee.
 
 The project also aims to integrate the community through online blogs, forums and profiles. Through having to subscribe to coffees, you create your own profile that you can log in and out of. Each profile is unique and has information suited to the user. For example it may show you how many coffees you have left for the month and days till renewal if you are Subscribed. If you aren't subscribed it shows you a link to go and purchase some coffees with the price list. The profile also tells if new members have joined and shows them to the new member section to introduce yourself.
 
@@ -29,7 +29,7 @@ When you're logged in you can can get involved by reading regular blogs as well 
 * Paypal
 
 ----------------
-### DEPLOYMENT
+### DEMO
 
 **Heroku** - https://starbex.herokuapp.com/
 
@@ -43,18 +43,24 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 ----------------
 ### TESTING
 
-* [flake8](http://flake8.pycqa.org/en/latest/)
-* https://validator.w3.org/
+* [flake8](http://flake8.pycqa.org/en/latest/) - Looked at errors and fixed them if needed
+* https://validator.w3.org/ - Looked at errors and fixed them if needed
 * I frequenty asked friends, family and peers to have a look trhough my website and give feedback on code, functionality or aesthetics that could be improved.
 * Testing code in each App, created under tests.py.
 * I constantly tested the website on different browsers as well as different size screens.
 * Manual testing
+    * I used the Google Chrome developer tools to test my website on various different screen sizes. I then confirmed this by testing it on my Iphone6, friends' Iphone5, Ipads and Laptops.
+    * I downloaded different browsers; Firefox, Chrome and Internet Explorer to test my site on. I also viewed the site from a macbook to test safari.
+    * The links were tested to see that they guide the user to the right area.
+    *
+    *
+    *
 
 ----------------
 ### CREDIT
 
 * Scattered Polaroid Gallery - https://tympanus.net/codrops/2014/01/28/scattered-polaroids-gallery/
-* A lot of my Code I got from Code Institute as it is the course I am taking - I have showed in my annotation that I understand it all and also personalised it a lot to my needs.
+* Credit to Code Institute as it is the course I am taking - I have showed in my annotation that I understand it all and also personalised it a lot to my needs. I used it as a base to my site and to follow methods on how to build up a site using Django.
 * Font-Awesome - http://fontawesome.io/
 * Images were sourced from Pixabay (a free royalty-free images site) or created myself.
 
@@ -67,15 +73,19 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
 * Although the website does not have a mobile first design, I focussed a lot on making sure it works. I kept checking on different size screens and resolutions as I went through the project.
 * The About page was editted a lot as I had a particular way I wanted it to look and feel. It needed to be straight to the point and not boring which is why I made it so interactive.
 * I wanted the home page to be simplistic but also attention grabbing for new, potential customers. With this in mind I found a Polaroid Gallery which I used and added some coffee shop music.
+* On the profile page, the user needed to be informed what the large number at the top of the page means. To do this, I decided to use a tooltip feature when hovered over or clicked on a mobile.
+* Under Coffee choices on the about page, I wanted images that would be able to describe the coffee so that users don't get bored with large paragraphs of text. As there were no free images online with this, I decided to create my own which describe what is in each coffee.
 
 ----------------
 ### TO-DO
 
 Unfortunately I ran out of time to finish certain parts, but if I had a bit longer I would have worked on:
-* Cancel Subscription button working on profile.html and coffees.html
+* Cancel Subscription button working on profile.html and coffees.html. User needs to be able to click it to head over to a page to cancel the subscription.
 * Search Bars on Forum page and Blog page could be made so that if you search say 'Cof', it still comes up with 'Coffee' rather than having to select the exact match from the autocomplete options.
-* Can not currently post a new thread without a Poll
+* Can not currently post a new thread without a Poll.
 * Add some tests to the Apps: coffees, polls and paypal_store. I would have also improved and added more testing in the other apps as this was my weakest area.
+* Create a change password option or a better 'forgotten password' option that will send a link to the user's email to create a new password.
+* Decide if I'm using the flatpages in parts of my website and delete if not.
 
 ----------------
 ### PROJECT BRIEF
