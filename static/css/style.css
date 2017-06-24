@@ -1106,7 +1106,6 @@ input[type=text]:focus, textarea:focus {
     color: #333;
     padding: 5px 10px;
     border-radius: 5px;
-    position: absolute;
     z-index: 1;
     margin-top: 70px;
 }
