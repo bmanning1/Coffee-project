@@ -11,7 +11,8 @@ def blogresults(request):
     # Subject search ('blog/blogsearch.html' template)
     q = request.GET.get('q')
     posts = Post.objects.filter(title=q)
-    return render(request, 'blog/blogsearch.html',{'posts':posts})
+    return render(request, 'blog/blogsearch.html', {'posts': posts})
+
 
 def post_list(request):
     # List of Blog posts published prior to 'now' view ('blogposts.html' template)

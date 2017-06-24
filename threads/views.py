@@ -10,6 +10,7 @@ from polls.forms import PollSubjectForm, PollForm
 from polls.models import PollSubject
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 # Forum views:
 # Search Subjects, List Subjects, List Threads, Singular Thread, New Thread,
 # New Post, Edit Post, Delete Post and Thread Vote
@@ -18,7 +19,8 @@ def results(request):
     # Subject search ('forum/search.html' template)
     q = request.GET.get('q')
     threads = Thread.objects.filter(subject__name=q)
-    return render(request, 'forum/search.html',{'threads':threads})
+    return render(request, 'forum/search.html', {'threads': threads})
+
 
 def forum(request):
     # List Subjects view with paginator wrapping at 6 Subjects ('forum/forum.html' template)
