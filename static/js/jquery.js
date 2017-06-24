@@ -31,5 +31,8 @@ $(document).ready(function () {
     $('.Coffees-left').mouseout(function () {
         $('.tooltiptext').css({'display':'none'});
     });
+    $('.tooltiptext').click(function () {
+        $('.tooltiptext').css({'display':'none'});
+    });
 
 });
