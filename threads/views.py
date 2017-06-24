@@ -16,14 +16,14 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # New Post, Edit Post, Delete Post and Thread Vote
 
 def results(request):
-    # Subject search ('forum/search.html' template)
+    """ Subject search ('forum/search.html' template) """
     q = request.GET.get('q')
     threads = Thread.objects.filter(subject__name=q)
     return render(request, 'forum/search.html', {'threads': threads})
 
 
 def forum(request):
-    # List Subjects view with paginator wrapping at 6 Subjects ('forum/forum.html' template)
+    """ List Subjects view with paginator wrapping at 6 Subjects ('forum/forum.html' template) """
     page = request.GET.get('page', 1)
     all_subjects = Subject.objects.all()
     subject = Subject.objects.all().order_by('-id')
@@ -38,7 +38,7 @@ def forum(request):
 
 
 def threads(request, subject_id):
-    # List Threads for a Subject with paginator wrapping at 4 Threads ('forum/threads.html' template)
+    """ List Threads for a Subject with paginator wrapping at 4 Threads ('forum/threads.html' template) """
     subject = get_object_or_404(Subject, pk=subject_id)
     subject_threads0 = subject.threads.all().order_by('-created_at')
     page = request.GET.get('page', 1)
@@ -53,7 +53,7 @@ def threads(request, subject_id):
 
 
 def thread(request, thread_id):
-    # Singular Thread view with paginator wrapping at 4 Posts ('forum/thread.html' template)
+    """ Singular Thread view with paginator wrapping at 4 Posts ('forum/thread.html' template) """
     thread_ = get_object_or_404(Thread, pk=thread_id)
     thread_posts0 = thread_.posts.all()
     page = request.GET.get('page', 1)
@@ -71,7 +71,7 @@ def thread(request, thread_id):
 
 @login_required
 def new_thread(request, subject_id):
-    # Create a new Thread view and Poll with 3 options with login required('forum/thread_form.html' template)
+    """ Create a new Thread view and Poll with 3 options with login required('forum/thread_form.html' template) """
     subject = get_object_or_404(Subject, pk=subject_id)
     poll_subject_formset = formset_factory(PollSubjectForm, extra=3)
     if request.method == "POST":
@@ -124,7 +124,7 @@ def new_thread(request, subject_id):
 
 @login_required
 def new_post(request, thread_id):
-    # New Post view with login required ('forum/post_form.html' template)
+    """ New Post view with login required ('forum/post_form.html' template) """
     thread = get_object_or_404(Thread, pk=thread_id)
 
     if request.method == "POST":
@@ -153,7 +153,7 @@ def new_post(request, thread_id):
 
 @login_required
 def edit_post(request, thread_id, post_id):
-    # Edit post view with login required ('forum/post_form.html' template)
+    """ Edit post view with login required ('forum/post_form.html' template) """
     thread = get_object_or_404(Thread, pk=thread_id)
     post = get_object_or_404(Post, pk=post_id)
 
@@ -179,7 +179,7 @@ def edit_post(request, thread_id, post_id):
 
 @login_required
 def delete_post(request, thread_id, post_id):
-    # Delete Post view with login required
+    """ Delete Post view with login required """
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
 
@@ -190,7 +190,7 @@ def delete_post(request, thread_id, post_id):
 
 @login_required
 def thread_vote(request, thread_id, subject_id):
-    # Thread vote view with login required
+    """ Thread vote view with login required """
     thread = Thread.objects.get(id=thread_id)
 
     subject = thread.poll.votes.filter(user=request.user)

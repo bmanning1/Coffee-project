@@ -6,8 +6,8 @@ from paypal.standard.forms import PayPalPaymentsForm
 register = template.Library()
 
 
-# Paypal Form dependent on the User being subscribed already
 def paypal_form_for(coffee, user):
+    """ Paypal Form dependent on the User being subscribed already """
     all_purcahses = user.purchases.all()
     number_purchases = len(all_purcahses)
     # If User Purchases is not empty and the latest Purchase is valid then User is Subscribed

@@ -4,9 +4,10 @@ from django.conf import settings
 
 
 class Post(models.Model):
-    # Post new blog model with options: Author, Title, Content, Created Date, Published Date, Views, Tag, Image
+    """ Post new blog model with options: Author, Title, Content, Created Date, Published Date, Views, Tag, Image """
+
     class Meta:
-        # This ensures build in the IDE
+        """ This ensures build in the IDE """
         app_label = "blog"
 
     # Author is linked to a registered User in the 'auth_user' table
@@ -22,7 +23,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to="images", blank=True, null=True)
 
     def publish(self):
-        # Save published date as now
+        """ Save published date as now """
         self.published_date = timezone.now()
         self.save()
 

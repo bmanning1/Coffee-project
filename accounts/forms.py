@@ -4,7 +4,7 @@ from accounts.models import User
 
 
 class UserRegistrationForm(UserCreationForm):
-    # Registration Form options
+    """ Registration Form options """
     password1 = forms.CharField(
         label='Password',
         widget=forms.PasswordInput
@@ -29,7 +29,7 @@ class UserRegistrationForm(UserCreationForm):
         exclude = ['username']
 
     def clean_password2(self):
-        # Make sure password created matches the password confirmation
+        """ Make sure password created matches the password confirmation """
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
 
@@ -40,8 +40,9 @@ class UserRegistrationForm(UserCreationForm):
         return password2
 
     def save(self, commit=True):
+        """ Set username to email address """
         instance = super(UserRegistrationForm, self).save(commit=False)
-        # Set to email address
+
         instance.username = instance.email
 
         if commit:
@@ -51,13 +52,13 @@ class UserRegistrationForm(UserCreationForm):
 
 
 class UserLoginForm(forms.Form):
-    # Login Form options
+    """ Login Form options """
     email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
 
 
 class EditProfileForm(forms.ModelForm):
-    # Edit Profile Form options
+    """ Edit Profile Form options """
     first_name = forms.CharField(label='First Name')
     last_name = forms.CharField(label='Last Name')
 
@@ -67,5 +68,5 @@ class EditProfileForm(forms.ModelForm):
 
 
 class RemoveUser(forms.Form):
-    # Delete User Account confirmation Form
+    """ Delete User Account confirmation Form """
     user_name = forms.CharField(label="Email")

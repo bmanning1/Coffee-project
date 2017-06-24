@@ -3,7 +3,7 @@ from models import User
 
 class EmailAuth(object):
     def authenticate(self, email=None, password=None):
-        # Check the password of User
+        """ Check the password of User """
         try:
             user = User.objects.get(email=email)
             if user.check_password(password):
@@ -13,7 +13,7 @@ class EmailAuth(object):
             return None
 
     def get_user(self, user_id):
-        # Retrieve User by django authentication system
+        """ Retrieve User by django authentication system """
         try:
             user = User.objects.get(pk=user_id)
             if user.is_active:

@@ -4,10 +4,11 @@ from .forms import UserRegistrationForm
 from django import forms
 
 
-# Creating some tests for the User
 class CustomUserTest(TestCase):
+    """ Creating some tests for the User """
+
     def test_manager_create(self):
-        # Test User creation
+        """ Test User creation """
         user = User.objects._create_user(None, "test@test.com",
                                          "password",
                                          False, False)

@@ -3,7 +3,7 @@ from models import Poll, PollSubject
 
 
 class PollForm(forms.ModelForm):
-    # Poll Form question for Thread post in Forums
+    """ Poll Form question for Thread post in Forums """
     question = forms.CharField(label="What is your poll about?")
 
     class Meta:
@@ -12,7 +12,7 @@ class PollForm(forms.ModelForm):
 
 
 class PollSubjectForm(forms.ModelForm):
-    # Poll Subject Form for Thread post in Forums
+    """ Poll Subject Form for Thread post in Forums """
     name = forms.CharField(label="Poll subject name", required=True)
 
     def __init__(self, *args, **kwargs):

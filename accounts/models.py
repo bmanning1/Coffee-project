@@ -7,7 +7,7 @@ from django.utils import timezone
 class AccountUserManager(UserManager):
     def _create_user(self, username, first_name, last_name, email, password,
                      is_staff, is_superuser, **extra_fields):
-        # Creates and saves a User with the given username, email and password
+        """ Creates and saves a User with the given username, email and password """
         now = timezone.now()
         if not email:
             raise ValueError('The given username must be set')
@@ -26,8 +26,8 @@ class AccountUserManager(UserManager):
 class User(AbstractUser):
     objects = AccountUserManager()
 
-    # Is the User Subscribed?
     def is_subscribed(self, coffee):
+        """ Is the User Subscribed? """
         try:
             purchase = self.purchases.get(coffee__pk=coffee.pk)
         except Exception:

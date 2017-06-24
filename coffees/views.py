@@ -8,7 +8,7 @@ from django.utils import timezone
 
 @login_required
 def all_coffees(request):
-    # List of Coffees and Purchase options with login required ('coffees/coffees.html' template)
+    """ List of Coffees and Purchase options with login required ('coffees/coffees.html' template) """
     coffees = Coffee.objects.all()
     all_purcahses = request.user.purchases.all()
     number_purchases = len(all_purcahses)
@@ -23,8 +23,8 @@ def all_coffees(request):
 
 @login_required
 def user_purchases(request):
-    # User Purchases information with login required for Profile page to know what information to show
-    # ('Profile/profile.html' template)
+    """ User Purchases information with login required for Profile page to know what information to show 
+    ('Profile/profile.html' template) """
     all_purchases = request.user.purchases.all()
     number_purchases = len(all_purchases)
     # Used to know if User has just logged in (within the last half hour) to welcome them to the site as a new member
