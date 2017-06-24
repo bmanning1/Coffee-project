@@ -1098,6 +1098,19 @@ input[type=text]:focus, textarea:focus {
     color: white;
 }
 
+.tooltiptext {
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 70px;
+}
+
 /************ LOGIN *************/
 .login {
     padding-top: 50px;
@@ -1108,7 +1121,3 @@ input[type=text]:focus, textarea:focus {
         text-align: center;
     }
 }
-
-/************ LOGOUT *************/
-
-/************ REGISTER *************/

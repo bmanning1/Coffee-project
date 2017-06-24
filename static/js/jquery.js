@@ -24,4 +24,12 @@ $(document).ready(function () {
         $(this).animate({borderColor: '#4b4b4b'}, 'slow');
     });
 
+    /* Display text to show what the number in the coffee pot on the profile page means when hovered over */
+    $('.Coffees-left').mouseover(function () {
+        $('.tooltiptext').css({'display': 'inherit'});
+    });
+    $('.Coffees-left').mouseout(function () {
+        $('.tooltiptext').css({'display':'none'});
+    });
+
 });
