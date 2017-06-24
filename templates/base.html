@@ -25,9 +25,10 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/normalize.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/demo.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/polaroid-css/component.css" %}"/>
+    <!-- CSS for search bars -->
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
 
-<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
     <!-- Scripts -->
     <!-- Polaroid for Home page -->
     <script src="{% static "js/polaroid-js/modernizr.min.js" %}"></script>
@@ -42,7 +43,7 @@
 
 <div class="masthead navbar-fixed-top">
 
-    <!-- Social media links -->
+    <!-- Social media links with empty template tags as no accounts -->
     <div class="navbar-header header1">
         <div class="pull-right">
             <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
@@ -54,11 +55,13 @@
 
     <!-- Header Options -->
     <div class="navbar-header">
+        <!-- Collapsed navbar on mobile display -->
         <button type="button" class="navbar-toggle mobile-nav" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
+
         <a class="navbar-brand starbex" href="/"><i class="fa fa-coffee" aria-hidden="true"></i> Starbex</a>
     </div>
 
@@ -73,6 +76,8 @@
         </ul>
 
         <ul class="nav nav-pills pull-right">
+            <!-- If the user is logged in, option to logout or view profile.
+            If not then show an option to register or login. -->
             {% if user.is_authenticated %}
                 <li><a class="options" href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span> Profile</a>
                 </li>
@@ -87,7 +92,7 @@
         </ul>
     </div>
 
-    <!-- Alert messages -->
+    <!-- Alert messages. For example when logged in successfully it tells the user -->
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -102,7 +107,7 @@
 
 <div class="container">
 
-    <!-- All the page contents -->
+    <!-- All the page contents/template htmls -->
     <div class="container">
         {% block content %}
         {% endblock %}
@@ -125,8 +130,8 @@
 <!-- Personalised JQuery -->
 <script src="{% static "js/jquery.js" %}"></script>
 <!-- Autocomplete for Search bar -->
-<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 {% block scripts %}
 {% endblock %}

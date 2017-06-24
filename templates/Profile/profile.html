@@ -30,16 +30,16 @@
         <p>You are logged in as {{ user.email }}<br>Welcome {{ user.first_name }} {{ user.last_name }} to your Starbex
             profile</p>
 
-        <!-- If it is the first login for the User -->
+        <!-- If it is the first login for the User, show links to new member information and introductions page -->
         {% if first_login %}
             <p><i class="glyphicon glyphicon-star"></i> As you're a newbie, feel free to visit the <b><a
                     href="/threads/13/">New Members</a></b> section and make
                 sure to introduce your self <b><a href="/thread/4/">here</a></b>.</p> {% endif %}
 
         <!-- If User is Subscribed -->
-        {% if subscription_valid == True %}
+        {% if subscription_valid %}
             <p>Show us the code below when you visit for us to scan.</p>
-            <!-- QR code for User to show in Starbex shop -->
+            <!-- QR code for User to show in Starbex shop (placement one as the shop doesn't exist) -->
             <img class="QR-code"
                  src='https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fstarbex.herokuapp.com&chs=180x180&choe=UTF-8&chld=L|2'
                  alt='qr code'>
@@ -71,7 +71,6 @@
                     <p>Please cancel your subscription before deleting your account.</p>
                     <br>
                     <p><i>Click on the 'cancel subscriptions' button below the 'delete account' button</i></p>
-
                 </div>
             </div>
         </div>
@@ -85,7 +84,7 @@
         <div class="col-sm-3">
             <!-- If Not Subscribed then link to Delete account page -->
             {% if subscription_valid == False %}<a href={% url 'delete_profile' %}>delete account</a><br>{% endif %}
-            <!-- If Subscribed then show Modal -->
+            <!-- If Subscribed then show Modal above -->
             {% if subscription_valid == True %}
                 <button class="delete_profile" data-toggle="modal" data-target="#myModal">delete account</button>
                 <br>{% endif %}

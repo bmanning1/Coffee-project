@@ -2,17 +2,21 @@
 {% load emoticons_tags %}
 <!-- Post on Thread -->
 <section class="row comment">
+
     <div class="col-md-3 comment-profile">
         <div class="thread-image">
+            <!-- Display the initials of the user for a user logo/picture alongside their comments -->
             <div><p><b>{{ post.user.first_name|make_list|first }}{{ post.user.last_name|make_list|first }}</b></p></div>
         </div>
     </div>
+
     <div class="col-md-9 ">
         <div class="comment-content">
             {% autoescape off %}
             {{ post.comment|emoticons }}
             {% endautoescape %}
         </div>
+
         {% include "forum/comment_details.html" %}
     </div>
 

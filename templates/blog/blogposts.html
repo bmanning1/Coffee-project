@@ -22,7 +22,7 @@
         voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </p>
 
-    <!-- Blog Search -->
+    <!-- Blog Search with autocomplete. Takes user to /blogresults page and displays chosen blog -->
     <form method="get" action="/blogresults/">
         <div class="ui-widget text-center blogsearch">
             <i class="glyphicon glyphicon-search"></i>
@@ -52,7 +52,7 @@
         </article>
     {% endfor %}
 
-    <!-- Pagination -->
+    <!-- Pagination so that the page is kept tidy -->
     {% if posts.has_other_pages %}
         <ul class="pagination col-sm-12">
             {% if posts.has_previous %}
@@ -75,7 +75,7 @@
         </ul>
     {% endif %}
 
-    <!-- Footer Information -->
+    <!-- Footer Information with option to email into the company -->
     <p class="text-center">One of our key aims is to get the community involved with one another. We write these
         blogs to share interesting facts and opinions on coffee for you to talk about with other regulars. So please
         feel free to comment on the blogs!</p>

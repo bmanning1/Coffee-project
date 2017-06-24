@@ -19,9 +19,9 @@
                 {% csrf_token %}
                 {{ form|as_bootstrap }}
                 <div class="form-group">
-                    <!-- Back Button -->
+                    <!-- Back Button to thread -->
                     <a class="btn btn-primary" href="javascript:history.back()">Back</a>
-                    <!-- Submit Button -->
+                    <!-- Submit button taking user back to thread with the new post -->
                     <button type="submit" class="btn btn-primary">{{ button_text }}</button>
                 </div>
             </form>

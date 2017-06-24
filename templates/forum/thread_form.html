@@ -1,18 +1,37 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
-
 {% block head_js %}
     <script type="text/javascript" src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="application/javascript">
-        tinyMCE.init({mode: "textareas", theme: 'modern', plugins: 'paste'})
+        tinyMCE.init({
+            mode: "textareas",
+            theme: 'modern',
+            plugins: 'paste'
+        });
+    </script>
+    <!-- JQuery for the poll -->
+    <script>
+        $(function () {
+            if (!$('#id_is_a_poll').is('checked')) {
+                $('#poll_form').hide()
+            }
 
+            $('#id_is_a_poll').click(function (el) {
+                var poll_form = $('#poll_form')
+
+                if (poll_form.is(":visible")) {
+                    poll_form.hide()
+                } else {
+                    poll_form.show()
+                }
+            })
+        })
     </script>
 {% endblock %}
 
-
 {% block content %}
+
     <!-- New Thread Form with option of Poll -->
     <section class="center-form">
         <div class="col-md-9">
@@ -31,29 +50,13 @@
                     {% endfor %}
                 </div>
                 <div class="form-group">
+                    <!-- Back button to subject -->
                     <a class="btn btn-primary" href="javascript:history.back()">Back</a>
-                    <button type="submit" class="btn btn-primary"> Post New Thread</button>
+                    <!-- New thread submit button that takes user to the new thread -->
+                    <button type="submit" class="btn btn-primary">Post New Thread</button>
                 </div>
             </form>
         </div>
     </section>
 
-    <!-- JQuery Stuff here -->
-    <script>
-        $(function () {
-            if (!$('#id_is_a_poll').is('checked')) {
-                $('#poll_form').hide()
-            }
-
-            $('#id_is_a_poll').click(function (el) {
-                var poll_form = $('#poll_form')
-
-                if (poll_form.is(":visible")) {
-                    poll_form.hide()
-                } else {
-                    poll_form.show()
-                }
-            })
-        })
-    </script>
 {% endblock %}

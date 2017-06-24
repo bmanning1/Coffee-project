@@ -2,15 +2,15 @@
 {% load bootstrap_tags %}
 {% block content %}
 
-    <!-- Edit Profile Form -->
+    <!-- Edit Profile Form. Edit first and last name options. -->
     <form class="login" method="POST" action="{% url 'edit_profile' %}" class=""/>
     <legend>Edit Profile</legend>
     {% csrf_token %}
     {{ form| as_bootstrap }}
 
-    <!-- Save Button -->
+    <!-- Save button that takes user back to profile -->
     <button class="btn btn-primary" type="submit">Save</button>
-    <!-- Back Button -->
+    <!-- Back button to profile page -->
     <a class="btn btn-primary" href="/profile">Back</a>
     </form>
 

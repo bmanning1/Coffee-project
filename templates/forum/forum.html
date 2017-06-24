@@ -15,12 +15,13 @@
     ...go on, start exploring!
 </p>
 
-<!-- Forum Search -->
+<!-- Forum Search with autocomplete. If search matches a particular subject then it takes the user to
+'/results' page displaying the chosen subject's threads -->
 <form method="get" action="/results/">
-<div class="ui-widget text-center blogsearch">
-    <i class="glyphicon glyphicon-search"></i>
-    <input type="text" id="automplete-1" name="q" placeholder=" Search Subject...">
-</div>
+    <div class="ui-widget text-center blogsearch">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" id="automplete-1" name="q" placeholder=" Search Subject...">
+    </div>
 </form>
 
 <!-- List of Subjects -->
@@ -42,7 +43,7 @@
 {% endfor %}
 <hr>
 
-<!-- Pagination -->
+<!-- Pagination to keep the page tidy -->
 {% if subjects.has_other_pages %}
     <ul class="pagination">
         {% if subjects.has_previous %}
@@ -67,13 +68,13 @@
 
 {% endblock %}
 
-<!-- Autocomplete Javascript -->
+<!-- Autocomplete Javascript (for search bar) -->
 {% block scripts %}
     <script>
         $(function () {
             var subjects = [
                 {% for subject in all_subjects %}
-                "{{ subject.name }}",
+                    "{{ subject.name }}",
                 {% endfor %}
             ];
             $("#automplete-1").autocomplete({

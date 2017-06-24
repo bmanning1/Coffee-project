@@ -16,7 +16,9 @@
         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
         fugiat nulla pariatur.
     </p>
-    <h6 class="text-center">Please read the <a href="/prices/" data-toggle="modal" data-target="#myModal"><b>Terms and
+
+    <!-- Terms and Conditions link to modal below -->
+    <h6 lass="text-center">Please read the <a href="/prices/" data-toggle="modal" data-target="#myModal"><b>Terms and
         Conditions</b></a> before purchasing</h6>
 
     <!-- Terms and Conditions Modal -->
@@ -76,8 +78,9 @@
     </div>
     <hr>
 
-    <!-- If Subscribed -->
-    {% if subscription_valid == True %}
+    <!-- If Subscribed then tell user the current subscription
+    and inform them that they have to cancel their subscription to purchase another package -->
+    {% if subscription_valid %}
         <p class="text-center text-capitalize"><u><b>Currently subscribed to {{ name }} <br></b></u> Click <b><a
                 href="#">here</a></b> to cancel your subscription to be able to purchase another coffee package.</p>
     {% endif %}
@@ -89,7 +92,7 @@
             <th>Name</th>
             <th class="Coffee-description">Description</th>
             <th>Price</th>
-            <!-- If Not Subscribed -->
+            <!-- If Not Subscribed then show a 'Subscribe' column for paypal links -->
             {% if subscription_valid == False %}
                 <th class="Subscribe-label">Subscribe</th>
             {% endif %}
@@ -101,7 +104,7 @@
                 <td>{{ coffee.name }}</td>
                 <td class="Coffee-description">{{ coffee.description }}</td>
                 <td>£{{ coffee.price }}</td>
-                <!-- If Not Subscribed -->
+                <!-- If Not Subscribed then give the user the option to buy a package on Paypal -->
                 {% if subscription_valid == False %}
                     <td class="Subscribe-paypal">{% paypal_form_for coffee user %}</td>
                 {% endif %}
@@ -111,7 +114,7 @@
     </table>
     <hr>
 
-    <!-- Purchase Footer Information -->
+    <!-- Purchase Footer Information with option to email a query in -->
     <p class="text-center querycontact">Got a question? No worries, just email us over the query through the link below
         and one of our team will get back to you as soon as possible.
         <br>

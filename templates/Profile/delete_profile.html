@@ -2,16 +2,16 @@
 {% load bootstrap_tags %}
 {% block content %}
 
-    <!-- Delete Profile Form -->
+    <!-- Delete Profile Form. User can type in their email to confirm deletion -->
     <form class="login" method="POST" action="{% url 'delete_profile' %}" class=""/>
     <legend>Delete Account {{ user.email }}</legend>
     <p>Type in your email address to confirm your account deletion</p>
     {% csrf_token %}
     {{ form| as_bootstrap }}
 
-    <!-- Submit Button -->
+    <!-- Submit button that logs the user out and deletes the user's account if the form above is valid -->
     <button class="btn btn-primary" type="submit">Submit</button>
-    <!-- Back Button -->
+    <!-- Back button that takes the user to their profile -->
     <a class="btn btn-primary" href="/profile">Back</a>
     </form>
 

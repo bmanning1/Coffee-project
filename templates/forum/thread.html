@@ -3,65 +3,69 @@
 {% load staticfiles %}
 {% block content %}
 
-    <div class="row header">
+<div class="row header">
     <!-- Thread Title -->
     <div class="row header forum-header">
         <div class="jumbotron"><h1>{{ thread.name }}</h1></div>
     </div>
 
-    <!-- Thread Content -->
+    <!-- Thread Content with layout determined by a poll being in the thread -->
     <p class="align-center"><a href="/forum/"><b>Forum</b></a> |
         <a href="{% url 'threads' thread.subject.id %}"><b>Subject: </b>{{ thread.subject.name }} </a>|
         <b>Thread:</b> {{ thread.name }}</p>
     <hr>
     {% if not thread.poll %}
-        <div class="col-md-2"></div>{% endif %}
+        <div class="col-md-2"></div>
+    {% endif %}
     {% if thread.poll %}
-        <div class="col-md-7 posts">{% endif %}
-{% if not thread.poll %}
-    <div class="col-md-8 posts">{% endif %}
-{% for post in thread_posts %}
-    {% include "forum/post.html" %}
-    <hr class="post_break">
-{% endfor %}
+        <div class="col-md-7 posts">
+    {% endif %}
+    {% if not thread.poll %}
+        <div class="col-md-8 posts">
+    {% endif %}
+    {% for post in thread_posts %}
+        {% include "forum/post.html" %}
+        <hr class="post_break">
+    {% endfor %}
 
-<!-- Pagination -->
-{% if thread_posts.has_other_pages %}
-    <ul class="pagination">
-        {% if thread_posts.has_previous %}
-            <li><a href="?page={{ thread_posts.previous_page_number }}">&laquo;</a></li>
-        {% else %}
-            <li class="disabled"><span>&laquo;</span></li>
-        {% endif %}
-        {% for i in thread_posts.paginator.page_range %}
-            {% if thread_posts.number == i %}
-                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+    <!-- Pagination to keep page tidy -->
+    {% if thread_posts.has_other_pages %}
+        <ul class="pagination">
+            {% if thread_posts.has_previous %}
+                <li><a href="?page={{ thread_posts.previous_page_number }}">&laquo;</a></li>
             {% else %}
-                <li><a href="?page={{ i }}">{{ i }}</a></li>
+                <li class="disabled"><span>&laquo;</span></li>
             {% endif %}
-        {% endfor %}
-        {% if thread_posts.has_next %}
-            <li><a href="?page={{ thread_posts.next_page_number }}">&raquo;</a></li>
-        {% else %}
-            <li class="disabled"><span>&raquo;</span></li>
-        {% endif %}
-    </ul>
-{% endif %}
+            {% for i in thread_posts.paginator.page_range %}
+                {% if thread_posts.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if thread_posts.has_next %}
+                <li><a href="?page={{ thread_posts.next_page_number }}">&raquo;</a></li>
+            {% else %}
+                <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+        </ul>
+    {% endif %}
+
 </div>
 
-
 {% if not thread.poll %}
-    <div class="col-md-2"></div>{% endif %}
+    <div class="col-md-2"></div>
+{% endif %}
 
-<!-- Thread Poll -->
+<!-- Thread Poll (If there is one). Option to vote unless already voted -->
 {% if thread.poll %}
     <div class="col-md-5">
         <div class="poll">
             <div>
                 <h2 class="poll-title">{{ thread.poll.question }}</h2>
 
-
                 <p>Here’s how the votes are so far:</p>
+
                 {% for subject in thread.poll.subjects.all %}
                     <div class="col-md-10">
                         <strong>{{ subject.name }}</strong>
@@ -77,6 +81,7 @@
                         </div>
                     </div>
                 {% endfor %}
+
             </div>
         </div>
     </div>
@@ -84,9 +89,9 @@
 
 
 <p class="thread-btn">
-    <!-- Back Button -->
+    <!-- Back button taking user to the subject -->
     <a href="{% url 'threads' thread.subject.id %}" class="btn btn-primary backforum-btn">Back</a>
-    <!-- New Post if logged in -->
+    <!-- New Post if logged in. Takes user to the new post form -->
     {% if user.is_authenticated %}
         <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
     {% endif %}
@@ -97,21 +102,22 @@
     <!-- Footer Table for Thread creation date and Owner -->
     <table class="table table-hover">
         <tbody>
-        <tr>
-            <th class="align-center">
-                CREATED
-            </th>
-            <th class="align-center">OWNER</th>
-        </tr>
-        <tr class="align-center">
-            <td>
-                <time datetime="{{ thread.created_at }}">
-                    {{ thread.created_at|started_time }}
-                </time>
-            </td>
-            <td>{{ thread.user.first_name }} {{ thread.user.last_name }}</td>
-
-        </tr>
+            <tr>
+                <th class="align-center">
+                    CREATED
+                </th>
+                <th class="align-center">
+                    OWNER
+                </th>
+            </tr>
+            <tr class="align-center">
+                <td>
+                    <time datetime="{{ thread.created_at }}">
+                        {{ thread.created_at|started_time }}
+                    </time>
+                </td>
+                <td>{{ thread.user.first_name }} {{ thread.user.last_name }}</td>
+            </tr>
         </tbody>
     </table>
 {% endblock %}

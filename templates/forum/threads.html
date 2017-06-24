@@ -8,8 +8,10 @@
 
     <!-- Threads Content -->
     <div class="thread-content">
+        <!-- Tells user the path they've taken and option to click 'Forum' to return -->
         <p><a href="/forum/"><b>Forum</b></a> | <b>Subject:</b> {{ subject.name }}</p>
 
+        <!-- List of threads in the subject -->
         <table class="table table-striped">
             <tbody>
             {% for thread in subject_threads %}
@@ -26,7 +28,7 @@
             </tbody>
         </table>
 
-        <!-- Pagination -->
+        <!-- Pagination to keep page tidy -->
         {% if subject_threads.has_other_pages %}
             <ul class="pagination">
                 {% if subject_threads.has_previous %}
@@ -48,14 +50,15 @@
                 {% endif %}
             </ul>
         {% endif %}
-        <p>
 
-            <!-- Back Button -->
+        <p>
+            <!-- Back Button to take user to the list of subjects -->
             <a href="/forum/" class="btn btn-primary backforum-btn">Back</a>
-            <!-- If logged in then New Thread Button -->
+            <!-- If logged in then New Thread Button which takes user to thread form page -->
             {% if user.is_authenticated %}
                 <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
             {% endif %}
         </p>
+
     </div>
 {% endblock %}
