@@ -50,6 +50,6 @@ def user_purchases(request):
 
 
 def get_price(request):
-    # List of Coffee prices view ('price.html' template)
+    """  List of Coffee prices view ('price.html' template) """
     coffees = Coffee.objects.all()
     return render(request, "price.html", {"coffees": coffees})
