@@ -52,9 +52,21 @@ mrfairtrade@hotmail.co.uk | mrf01 | No
     * I used the Google Chrome developer tools to test my website on various different screen sizes. I then confirmed this by testing it on my Iphone6, friends' Iphone5, Ipads and Laptops.
     * I downloaded different browsers; Firefox, Chrome and Internet Explorer to test my site on. I also viewed the site from a macbook to test safari.
     * The links were tested to see that they guide the user to the right area.
-    *
-    *
-    *
+    * Tested the music playing on the home page. Made sure it automatically started and all the control buttons worked.
+    * Checked that the photo gallery on the home page worked properly with the images flipping when clicking the buttons below. I also checked that it all displayed and worked properly on different screen sizes.
+    * I tested on the rebm01@hotmail.co.uk account a few times that paypal payment and the correct return payment worked. I made sure the database then was updated to tell the user what they are subscribed to.
+    * The profile was tested for a first time user as well as non-subscribed and subscribed members. I checked that all the correct information was displayed.
+    * I made sure the edit profile and delete account forms worked and correctly updated the database. I made sure the delete account button would tell the user to cancel their subscription first if they were subscribed.
+    * The paginator on the blog and forum pages were tested to see that they wrapped the blogs and forum subjects correctly and also that the numbered navigation buttons worked.
+    * I tested the search bars on the blog and forum pages making sure that they take you to the correct post, or if there is no match then it informs the user with an option to go back and try again. The autocomplete on the search bars was tested to see if all the posts display. At first I realised that the paginator was affecting this so created a new variable in the corresponding views file to display all the subjects.
+    * Made sure that all the correct items were displayed from the database. For example, I checked that all the right forum subjects were shown as well as their specific threads and comments. I also made sure the numbers that tell the user how many threads and posts in the subject were correct as well as the owner of a thread and other details.
+    * New threads, posts, comments as well as editing and deleting posts were all checked to see if they worked and updated the database and site correctly. They were also tested to see if they take the user to the right page after submission.
+    * Creating and voting on polls was checked to see if it displayed the correct percentage and also stopped the user from voting twice.
+    * I tested all the forms to make sure that if any spaces were left empty then the user is informed that they need to be filled in before submission. I also checked that they all worked correctly.
+    * Made sure that the pills and tabs on the 'about' page runs smoothly. I checked that if you click the right option the corresponding pill or tab would display.
+    * I checked that the tooltip over the large number on the profile page works. I also checked it on mobile display which led me to adding another click function in jQuery, as hovering doesn't work on mobiles.
+    * The login and logout forms were checked to see if they worked correctly and then changed what was shown in the header navbar. The login was also tested to see that if you log in with an account that doesn't exist then it informs the user. I also made sure that when you register, it add the new account to the database so you can then login with it.
+    * All the jQuery was tested to make sure that it does what it's supposed to do even on different screen sizes or browsers.
 
 ----------------
 ### CREDIT
