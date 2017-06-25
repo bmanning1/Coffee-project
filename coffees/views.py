@@ -23,8 +23,7 @@ def all_coffees(request):
 
 @login_required
 def user_purchases(request):
-    """ User Purchases information with login required for Profile page to know what information to show 
-    ('Profile/profile.html' template) """
+    """ User Purchases information with login required for Profile page ('Profile/profile.html' template) """
     all_purchases = request.user.purchases.all()
     number_purchases = len(all_purchases)
     # Used to know if User has just logged in (within the last half hour) to welcome them to the site as a new member

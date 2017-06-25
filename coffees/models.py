@@ -24,8 +24,7 @@ class Coffee(models.Model):
 
 
 class Purchase(models.Model):
-    """ Purchase model with The User who is purchasing, type of Coffee subscription, 
-    Purchase date and if the subscription is valid """
+    """ Purchase model: user who is purchasing, subscription name, purchase date and if the subscription is valid """
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='purchases')
     coffee = models.ForeignKey(Coffee)
     subscription_created_date = models.DateTimeField(default=get_subscription_end_date)
