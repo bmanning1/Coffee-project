@@ -19,7 +19,7 @@ def results(request):
     """ Subject search ('forum/search.html' template) """
     q = request.GET.get('q')
     threads = Thread.objects.filter(subject__name=q)
-    return render(request, 'forum/search.html', {'threads': threads})
+    return render(request, 'forum/search.html', {'threads': threads, 'subject': q})
 
 
 def forum(request):

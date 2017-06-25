@@ -8,7 +8,7 @@
 
     <!-- Threads Content -->
     <div class="thread-content">
-        <p><a href="/forum/"><b>Forum</b></a> | <b>Subject:</b> {{ subject.name }}</p>
+        <p><a href="/forum/"><b>Forum</b></a> | <b>Subject:</b> {{ subject }}</p>
 
         <table class="table table-striped">
             <tbody>
@@ -37,10 +37,7 @@
 
             <!-- Back Button to forum page -->
             <a href="/forum/" class="btn btn-primary backforum-btn">Back</a>
-            <!-- If logged in then New Thread Button (taking user to thread form) -->
-            {% if user.is_authenticated %}
-                <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
-            {% endif %}
+            
         </p>
     </div>
 {% endblock %}
