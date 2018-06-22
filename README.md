@@ -37,7 +37,6 @@ Try it out for youself and log in with someone who has purchased and someone who
 
 Email | Password | Subscribed
 ------------ | ------------- | -------------
-rebm@hotmail.co.uk | beccam01 | Yes
 mrfairtrade@hotmail.co.uk | mrf01 | No
 
 ----------------
